@@ -1,0 +1,29 @@
+section.album(data-id)
+  .album__content
+    button.album__close(type='button' aria-label='Закрыть альбом')
+    .album__head
+      a.album__title(href='#')= data.albums[0].title
+      .rambler-share
+      time.album__publish-data(data-datetime= data.albums[0].systemData)= data.albums[0].publishData
+    .album__wrapper
+      .album__slider-wrapper
+        ul.album__slider-list
+          each album, index in data.albums
+            li.album__slider-item(data-index=index)
+              h3.album__item-title.visually-hidden= album.title
+              span.album__item-author.visually-hidden= album.author ? album.author : ''
+              img.album__item-image(src=album.image + '.jpg' srcset=album.image + '@2x.jpg 2x' alt=album.title)
+      .album__meta(aria-hidden='true')
+        span.album__meta-author
+        span.album__meta-title
+        .album__counter
+          span.album__counter-current 1
+          span.album__counter-all / 1
+      .album__btns
+        button.album__btn.album__btn--prev(type='button')
+        button.album__btn.album__btn--next(type='button')
+    ul.album__pag
+      each album, index in data.albums
+        li.album__pag-item
+          button.album__pag-btn(type='button')
+            img.album__pag-image(src=album.image + '.jpg' alt=album.title)

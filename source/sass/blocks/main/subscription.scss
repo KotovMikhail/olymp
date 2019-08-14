@@ -1,0 +1,67 @@
+.subscription {
+  display: flex;
+  margin: 60px 0;
+  padding: 50px;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  background-color: $pampas-color;
+}
+
+.subscription__title {
+  margin: 3px 85px 0 8px;
+
+  font-size: 24px;
+  letter-spacing: 1.1px;
+
+  text-align: right;
+
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+
+  color: $putty-color;
+}
+
+.subscription__field {
+  padding: 0;
+  padding-top: 8px;
+
+  flex-grow: 1;
+
+  border: none;
+}
+
+.subscription__label {
+  display: block;
+  margin-bottom: 23px;
+
+  font-size: 17px;
+  letter-spacing: 0.57px;
+
+  color: $putty-color;
+}
+
+.subscription__input {
+  width: 62%;
+  padding: 22px 0;
+  margin-bottom: 37px;
+
+  font-size: 17px;
+  letter-spacing: 0.4px;
+
+  background: none;
+  color: $putty-color;
+  border: none;
+  border-bottom: 2px solid $putty-color;
+  outline: none;
+
+  &::placeholder {
+    color: $putty-color;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $dark-blue-color;
+  }
+}

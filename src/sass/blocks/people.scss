@@ -1,0 +1,204 @@
+.people {
+  font-weight: 300;
+
+  &__aside {
+    background-color: $pampas-color;
+    padding: 10px 0 25px;
+
+    @media (max-width: $media-md) {
+      padding: 10px 0 25px;
+    }
+
+    @media (max-width: $media-tb) {
+      padding: 0 0 12px;
+    }
+  }
+
+  &__filter {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__filter-form {
+    justify-content: flex-start;
+
+    .filter-select {
+      margin-right: 140px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @media (max-width: $media-md) {
+        margin-right: 115px;
+      }
+
+      @media (max-width: $media-tb) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__filter-results {
+    display: flex;
+
+    @media (max-width: $media-md) {
+      padding: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    max-width: 1400px;
+    margin: 4px auto 268px;
+    padding: 0 58px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+
+    @media (max-width: $media-md) {
+      padding: 0 30px;
+      margin-bottom: 155px;
+    }
+
+    @media (max-width: $media-xs) {
+      display: block;
+    }
+
+    @media (max-width: $media-tb) {
+      padding: 0 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: 47.7%;
+    padding: 29px 0 25px;
+    align-items: flex-start;
+    border-bottom: 2px solid $putty-color;
+
+    @media (max-width: $media-xs) {
+      display: block;
+      width: 100%;
+      padding-top: 24px;
+    }
+  }
+
+  &__profesion,
+  &__place,
+  &__from {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+    color: $putty-color;
+  }
+
+  &__first {
+    width: 55%;
+    padding-right: 10px;
+    flex-shrink: 0;
+
+    @media (max-width: $media-xs) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__name {
+    display: inline;
+    padding: 3px 0px 2px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 300;
+    color: $dark-blue-color;
+    transition: 0.2s;
+
+    &:hover,
+    &:focus {
+      background: $putty-color;
+      color: $white-color;
+    }
+  }
+
+  &__carousel-item &__profesion,
+  &__carousel-item &__place,
+  &__carousel-item &__from {
+    line-height: 20px;
+  }
+
+  &__carousel-item &__profesion {
+    margin-top: 5px;
+  }
+
+  &__image {
+    display: block;
+    margin-bottom: 15px;
+    overflow: hidden;
+
+    img {
+      transform: scale(1);
+      transition: 0.2s;
+      transition-property: transform;
+    }
+
+    @media (max-width: $media-xs) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__carousel {
+    padding-top: 5px;
+    padding-bottom: 1px;
+    background: $pampas-color;
+  }
+
+  &__carousel-wrapper {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 58px;
+    flex-direction: column;
+
+    @media (max-width: $media-md) {
+      padding: 0 30px;
+    }
+
+    @media (max-width: $media-tb) {
+      padding: 32px 20px 70px;
+    }
+  }
+
+  &__carousel-hidde {
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+
+  &__carousel-item {
+    width: 164px;
+    margin-right: 60px;
+
+    @media (max-width: $media-xs) {
+      width: 155px;
+      margin-right: 25px;
+    }
+  }
+
+  &__carousel-btns {
+    align-self: flex-end;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    &:hover,
+    &:focus {
+      .people__name {
+        background: $putty-color;
+        color: $white-color;
+      }
+
+      .people__image img {
+        transform: scale(1.15);
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+include _event-info
+include _request-info
+include _person
+include _gallery-slider
+include _social
+include _party-card-list
+include _reviews
+include _card
+include _card-tile
+include _collection-card
+include _date-link
+
+mixin event(data, className)
+  main.event(class=className ? className : '')
+    div.event__event-page-header(class='event-page-header' style=data.image ? 'background: none;' : '')
+      div.image-container
+        if (data.image)
+          img.event-page-header__image(src=data.image srcset=data.image2x alt = data.title width='1400' height='750')
+      div.event-page-header__container(class="container")
+        div.event-page-header__content
+          div.event-page-header__top-group
+            a.event-page-header__back-link(href=data.backLink ? data.backLink : '#')
+              | вернуться
+              svg(width=24 height=15)
+                use(xlink:href='img/sprite/sprite.svg#arrow-back')
+            button.button-star(class=data.fullStar ? 'event-page-header__button-star button-star--full' : 'event-page-header__button-star' type='button' aria-label='Добавить в избранное' title='Добавить в избранное')
+              svg(width='24' height='22')
+                use(xlink:href='img/sprite/sprite.svg#icon-star')
+              if data.fullStar
+                span.button-star__hint в избранном
+              else
+                span.button-star__hint добавить в избранное
+          div.event-page-header__bottom-group
+            ul.event-page-header__links-list
+              each item in data.dateLinks
+                li.event-page-header__links-item
+                  +date-link(item, 'event-page-header')
+            div.event-page-header__info
+              span.event-page-header__type= data.type
+              p.event-page-header__program
+                span
+                  span.event-page-header__program-right-indent
+                    span.event-page-header__program-left-indent= data.program
+              h1.event-page-header__title(class=data.titleSize ? `event-page-header__title--${data.titleSize}` : '')= data.title
+            p.event-page-header__age-restrictions= data.age
+
+    .container
+      div.event__top-group
+        if data.generalInfo
+          +event-info(data.generalInfo, 'event')
+        if data.requestInfo
+          +request-info(data.requestInfo, 'event')
+
+      div.event__author
+        div.event__about-author(class='text-container')
+          each paragraph in data.author.about
+            p= paragraph
+        if data.additional
+          div.event__additional(class='text-container accordion')
+            each item in data.additional
+              h3.event__additional-title.link= item.title
+              p.event__additional-text= item.text
+                if item.link
+                a.event__additional-link.link(href=item.link)= item.link
+        div.event__person
+          p.event__person-position= data.author.specialty
+          +person(data.author, '--blue')
+
+        div.event__social
+          +social
+
+      if data.gallerySliderData
+        div.event__gallery-slider-wrap
+          h2.event__subtitle Галерея
+          +gallery-slider(data.gallerySliderData, 'event')
+
+      if (data.partyCards || data.partySchedule)
+        div.event__party
+          h2.event__subtitle Участники
+          if data.partyCards
+            +party-card-list(data.partyCards, 'event')
+
+          if data.partySchedule
+            dl.event__schedule-list
+              each item in data.partySchedule
+                div.event__schedule-item
+                  dt.event__schedule-termin= item.role
+                  dd.event__schedule-description
+                    span.event__schedule-name= item.persone.name
+                    span.event__schedule-surname= item.persone.surname
+
+      if data.reviews
+        div.event__reviews-content
+          h2.event__subtitle Отзывы
+          +reviews(data.reviews, 'event')
+
+      div.event__most-interesting(class='most-interesting')
+        h2.most-interesting__title Вам может быть интересно
+        ul.most-interesting__list
+          each item in data.mostInteresting
+            li.most-interesting__item
+              if (item.type === 'видео')
+                +card(item)(className = 'most-interesting__card most-interesting__card--video')
+              else
+                +card(item)(className = 'most-interesting__card')
+
+      div.event__related-events(class='related-events')
+        h2.related-events__title Похожие события
+        ul.related-events__list
+          each item in data.relatedEvents
+            if (item.type === 'коллекция')
+              li.related-events__item
+                +collection-card(item, 'related-events')
+            else
+              li.related-events__item
+                +card-tile(item, 'related-events')

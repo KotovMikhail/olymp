@@ -1,0 +1,25 @@
+mixin card-tile-template(className)
+  div.template#card-template
+    article.card-tile(class=className ? `${className}__card`:'')
+      button.button-star(class='card-tile__button-star' type='button' aria-label='Добавить в избранное' title='Добавить в избранное')
+        svg
+          use(xlink:href='img/sprite/sprite.svg#icon-star')
+          span.button-star__hint добавить в избранное
+      a.card-tile__interactive-block
+        div(class=`card-tile__link ${className}__card-image-link`)
+          div.card-tile__wrap
+            img
+            div.card-tile__top-inner
+              div.card-tile__date-info
+                p.card-tile__day
+                span.card-tile__time-week
+              p.card-tile__type
+            div.card-tile__bottom-inner
+              p.card-tile__regalia
+                span
+              p.card-tile__age-restrictions
+        h2.card-tile__title
+          span.link
+      p.card-tile__producer
+      p.card-tile__country
+      a.card-tile__place(class='link' href='#')

@@ -1,0 +1,8 @@
+mixin filter-results(className, text)
+  div.filter-results(class=className ? `${className}__filter-results` : '')
+    //- if (text)
+    //-   div(class=className ? `${className}__filter-result filter-result` : 'filter-result')
+    //-     p.filter-result__text= text
+    //-     button.filter-result__button(type="button" aria-label='удалить фильтр')
+    //-       svg()
+    //-         use(xlink:href='img/sprite/sprite.svg#icon-close')

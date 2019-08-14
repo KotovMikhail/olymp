@@ -1,0 +1,19 @@
+.link {
+  color: $dark-blue-color;
+  padding-top: 2px;
+
+  outline: none;
+
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+
+    background-color: $putty-color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

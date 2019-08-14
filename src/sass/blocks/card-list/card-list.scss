@@ -1,0 +1,254 @@
+.card-list {
+  position: static;
+
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 26px;
+  margin-bottom: 0;
+  margin-left: 0;
+
+  @include mobile {
+    border-bottom: none;
+    margin-top: 0;
+    margin-bottom: 22px;
+  }
+}
+
+.card-list__wrap {
+  // flex-grow: 1;
+  width: 100%;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid $putty-color;
+
+  @include mobile {
+    padding-bottom: 29px;
+    border-bottom: 1px solid $putty-color;
+  }
+}
+
+.card-list__date {
+  position: relative;
+  left: -7px;
+  top: -3px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 113px;
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 90px;
+  line-height: 1;
+  color: $dark-blue-color;
+
+  &--repeat {
+    visibility: hidden;
+  }
+
+  @include mobile {
+    font-size: 46px;
+    min-width: 59px;
+    left: 0;
+  }
+}
+
+.card-list__day {
+  @include mobile {
+    margin-bottom: 17px;
+  }
+}
+
+.card-list__time-week {
+  font-size: 15px;
+  line-height: 1.47;
+  width: 100%;
+  margin-top: -15px;
+  margin-left: 3px;
+
+  @include mobile {
+    width: 85%;
+    margin-left: 0;
+  }
+}
+
+.card-list__top-inner {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-right: 25px;
+
+  @include mobile {
+    padding-right: 0;
+    margin-bottom: 17px;
+  }
+}
+
+.card-list__title-link {
+  display: inline;
+  outline: none;
+
+  vertical-align: middle;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+    transition: background-color 0.4s;
+  }
+
+  &:hover,
+  &:focus {
+    &:before {
+      background-color: $pampas-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.card-list__title {
+  display: inline;
+  margin-right: 30px;
+
+  font-size: 34px;
+  line-height: 0.94;
+  vertical-align: middle;
+
+  @include mobile {
+    display: block;
+    font-size: 26px;
+    margin-bottom: 17px;
+    line-height: 1.15;
+  }
+}
+
+.card-list__regalia {
+  display: inline-block;
+  margin: 0;
+  margin-right: 17px;
+  padding-top: 3px;
+
+  vertical-align: middle;
+
+  @include mobile {
+    margin-left: 14px;
+  }
+}
+
+.card-list__type {
+  display: inline-block;
+  margin: 0;
+  margin-right: 13px;
+  padding: 4px 13px;
+
+  font-size: 10px;
+  vertical-align: middle;
+  color: $putty-color;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  background-color: $pampas-color;
+
+  @include mobile {
+    margin-right: 9px;
+  }
+}
+
+.card-list__button-star {
+  position: absolute;
+  top: 27px;
+  right: calc((100% - 1284px) / 2);
+
+  color: $dark-blue-color;
+
+  @include desktop {
+    right: 58px;
+  }
+
+  @include mobile {
+    top: 0;
+    right: 16px;
+  }
+}
+
+.card-list__age-restrictions {
+  display: inline-block;
+  margin-left: 0;
+
+  vertical-align: middle;
+  color: $putty-color;
+}
+
+.card-list__bottom-inner {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.card-list__info {
+  flex-basis: 39.7%;
+  margin-right: 34px;
+
+  @include mobile {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.card-list__additional-info {
+  margin: 0;
+  flex-basis: 100%;
+
+  font-size: 15px;
+  line-height: 1.47;
+  color: $dark-blue-color;
+}
+
+.card-list__program {
+  flex-basis: 25.8%;
+  margin: 0;
+  margin-right: 34px;
+
+  font-size: 15px;
+  line-height: 1.47;
+  color: $putty-color;
+
+  @include mobile {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 9px;
+  }
+}
+
+.card-list__place {
+  flex-basis: 23%;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include mobile {
+    flex-basis: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+extends layouts/_layout
+include components/_header
+include components/_card
+
+block title
+  | Театральная олимпиада 2019 | Личный кабинет
+
+block meta
+  link(href="libs/nice-select/nice-select.css", rel="stylesheet")
+
+block header
+  +header('', true)
+
+block main
+  main.lk
+    h1.visually-hidden Личный кабинет
+    aside.lk__menu
+      .container
+        ul.lk__menu-list
+          li.lk__menu-item
+            a.lk__menu-link.lk__menu-link--active(href='lk-favorites.html') Избранное
+          li.lk__menu-item
+            a.lk__menu-link(href='lk-request.html') Заявки
+          li.lk__menu-item
+            a.lk__menu-link(href='lk-editor.html') Личные данные
+        ul.lk__options
+          li.lk__options-item
+            a.lk__calendar(href='#') добавить в календарь
+          li.lk__options-item
+            form.lk__reminders(method='POST' action='#')
+              input.lk__reminders-input.visually-hidden(type="checkbox" name='reminders' id='reminders')
+              label.lk__reminders-label(for='reminders') получать напоминания
+              span.lk__reminders-desc За 2 дня до события вы будете получать напоминания на e-mail
+              span.invalid-text
+    section
+      h2.visually-hidden Ваши избранные события
+      .container
+        ul.lk__events-list
+          each event in data.events
+            li.lk__event
+              +card(event)(className='lk__events-card card--events')
+
+
+block footer
+  include components/_footer

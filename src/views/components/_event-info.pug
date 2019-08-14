@@ -1,0 +1,9 @@
+mixin event-info(opt, classNames, place)
+  div.event-info(class=classNames ? `${classNames}__info` : '')
+    if place
+      a.event-info__place(href!=place.link)= place.name
+    dl.event-info__list
+      each item in opt
+        div.event-info__item
+          dt.event-info__termin= item.termin ? `${item.termin}:` : ''
+          dd.event-info__description= item.description

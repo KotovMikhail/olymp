@@ -1,0 +1,52 @@
+extends layouts/_layout
+include components/_header
+include components/_character-filter
+include components/_card-list
+include components/_playbill-page-header
+
+
+block meta
+  link(href="libs/nice-select/nice-select.css", rel="stylesheet")
+
+block title
+  | Театральная олимпиада 2019 Афиша
+
+block header
+  +header('Афиша')
+
+block main
+
+  main.playbill(class='playbill--list')
+    +playbill-page-header(true)
+
+    div(class='playbill__content container')
+      div.playbill__date-filter
+        form.playbill__month-form(class='month-form')
+          select(class="filter-select playbill__month-select month-select" name='playbill-month-select' id='playbill-month-select')
+            option(value="Месяц" disabled) Месяц
+            -var months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+            each month, index in months
+              if (month === 'Июнь')
+                option(value=index selected)= month
+              else
+              option(value=index)= month
+        +character-filter(31, 'playbill', 13)
+
+    div.cards
+      span.playbill__warning в программе возможны изменения
+      ul.playbill__card-list.fill-content
+        for event, index in data.playbillListEvents
+          li.playbill__card-item(class='playbill__card-item--list')
+            div.container
+              if (data.playbillListEvents[index - 1] && event.day === data.playbillListEvents[index - 1].day)
+                +card-list(event, 'playbill', true)
+              else
+                +card-list(event, 'playbill')
+
+    div.container
+      a.playbill__reset-month(class='reset' href='#') июль 2019
+
+    include components/_filter-result-template
+
+block footer
+  include components/_footer

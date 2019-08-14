@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="libs/nice-select/nice-select.css" rel="stylesheet">
+    <title>Театральная олимпиада 2019 | Личный кабинет
+    </title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/svgxuse.min.js" async defer></script>
+  </head>
+  <body>
+    <div class="overflowWrap">
+      <header class="header">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Театральная олимпиада 2019">
+            <svg width="120" height="143" aria-hidden="true">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg></a><a class="header__monogram" href="#" aria-label="Год театра в России">
+            <svg class="header__monogram-color" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram.svg#monogram"></use>
+            </svg>
+            <svg class="header__monogram-white" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram-white.svg#monogram"></use>
+            </svg></a>
+          <div class="header__content">
+            <button class="header__close" type="button" aria-label="Закрыть меню">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav__pages">
+                <li class="nav__pages-item nav__pages-item--with-sub">
+                  <input class="nav__pages-checkbox visually-hidden" type="checkbox" id="0" tabindex="0"/>
+                  <label class="nav__pages-link nav__pages-link--with-sub" for="0">Олимпиада</label>
+                  <ul class="nav__sub-pages">
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="about.html">О проекте</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="comitet.html">Международный комитет</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="platforms.html">Площадки</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="#">Пресс-центр</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="gallery.html">Галерея</a></li>
+                  </ul>
+                </li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="news.html">Новости</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="playbill.html">Афиша</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="people.html">Участники</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="partners.html">Партнеры</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="contacts.html">Контакты</a></li>
+              </ul><a class="nav__search-btn search-btn" href="#" aria-label="Открыть поиск">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                </svg></a>
+              <div class="nav__user"><a class="nav__user-btn nav__user-btn--favorites" href="#">
+                  <svg class="nav__user-icon" width="20" height="20" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                  </svg><span class="nav__user-text">избранное</span><span class="nav__user-quantity">(17)</span></a>
+              </div>
+              <form class="user-form login" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="login-email" name="login-email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="login-password" name="login-password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Войти</button><a class="user-form__recovery" href="lk-reset-password.html">Забыли пароль?</a><a class="user-form__register" href="#">Зарегистрироваться</a>
+              </form>
+              <form class="user-form registration" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="name" name="name" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="name">Имя</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="surname" name="surname" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="surname">Фамилия</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="password" name="password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__consent-input" type="checkbox" id="consent" name="consent" required="required"/>
+                  <label class="user-form__consent-label" for="consent">
+                    Согласие на обработку персональных данных в соответствии с
+                    <a class="user-form__consent-link" href="#">пользовательским соглашением</a>
+                  </label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Зарегистрироваться</button><a class="user-form__login" href="#">Уже зарегистрированы</a>
+              </form>
+              <form class="user-form recovery" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="recovery-email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="recovery-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__recover-text">На данную почту вам придет письмо со ссылкой для восстановления пароля</p>
+                <button class="user-form__btn" type="submit">восстановить пароль</button>
+              </form>
+              <div class="nav__sub">
+                <ul class="nav__social">
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Instagram">
+                      <svg class="nav__social-icon" width="19" height="19" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Facebook">
+                      <svg class="nav__social-icon" width="8" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на VK">
+                      <svg class="nav__social-icon" width="20" height="11" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Youtube">
+                      <svg class="nav__social-icon" width="23" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-youtube"></use>
+                      </svg></a></li>
+                </ul><a class="nav__lang" href="#" aria-label="Read in English">eng</a>
+              </div>
+            </nav>
+          </div>
+          <form class="search" method="get" action="#">
+            <button class="search__close" type="button" aria-label="Закрыть поиск">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search__wrapper">
+              <svg class="search__icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+              </svg>
+              <input class="search__input" type="search" id="search" name="search" aria-label="Поиск по сайту"/>
+            </div>
+          </form><a class="header__search-btn search-btn" href="#" aria-label="Открыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+            </svg></a>
+          <button class="header__burger" type="button" aria-label="Открыть меню">
+            <svg width="30" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="lk">
+        <h1 class="visually-hidden">Личный кабинет</h1>
+        <aside class="lk__menu">
+          <div class="container">
+            <ul class="lk__menu-list">
+              <li class="lk__menu-item"><a class="lk__menu-link lk__menu-link--active" href="lk-favorites.html">Избранное</a></li>
+              <li class="lk__menu-item"><a class="lk__menu-link" href="lk-request.html">Заявки</a></li>
+              <li class="lk__menu-item"><a class="lk__menu-link" href="lk-editor.html">Личные данные</a></li>
+            </ul>
+            <ul class="lk__options">
+              <li class="lk__options-item"><a class="lk__calendar" href="#">добавить в календарь</a></li>
+              <li class="lk__options-item">
+                <form class="lk__reminders" method="POST" action="#">
+                  <input class="lk__reminders-input visually-hidden" type="checkbox" name="reminders" id="reminders">
+                  <label class="lk__reminders-label" for="reminders">получать напоминания</label><span class="lk__reminders-desc">За 2 дня до события вы будете получать напоминания на e-mail</span><span class="invalid-text"></span>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <section>
+          <h2 class="visually-hidden">Ваши избранные события</h2>
+          <div class="container">
+            <ul class="lk__events-list">
+              <li class="lk__event">
+                <article class="card lk__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Мать</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-1.jpg" srcset="img/afisha/afisha-1@2x.jpg 2x" alt="Мать" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">11 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                          <div class="card__program"><span>золотая маска</span></div><span class="card__age">14+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Cпектакль</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Габриэла Карризо</span><span class="card__from">Брюссель, Бельгия</span><a class="card__place" href="one-place.html">Новая сцена Александринского театра</a>
+                </article>
+              </li>
+              <li class="lk__event">
+                <article class="card lk__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Все, что произошло и могло произойти</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-2.jpg" srcset="img/afisha/afisha-2@2x.jpg 2x" alt="Все, что произошло и могло произойти" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">10 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                          <div class="card__program"><span>Программа Международного комитета  Театральной олимпиады-2019</span></div><span class="card__age">12+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Балет</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Хайнер Гёббельс</span><span class="card__from">Манчестер, UK</span><a class="card__place" href="one-place.html">Artplay</a>
+                </article>
+              </li>
+              <li class="lk__event">
+                <article class="card lk__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Трагедия мщения</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-5.jpg" srcset="img/afisha/afisha-5@2x.jpg 2x" alt="Трагедия мщения" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">11 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                          <div class="card__program"><span>net</span></div><span class="card__age">18+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Cпектакль</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Деклан Доннелан</span><span class="card__from">Театр Пикколо, Милан, Италия</span><a class="card__place" href="one-place.html">Александринский театр. Основная сцена</a>
+                </article>
+              </li>
+              <li class="lk__event">
+                <article class="card lk__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Карусель</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-3.jpg" srcset="img/afisha/afisha-3@2x.jpg 2x" alt="Карусель" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">11 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                          <div class="card__program"><span>net</span></div><span class="card__age">18+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Cпектакль</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Андрей Щербан</span><span class="card__from">Театр Буландра, Бухарест, Румыния</span><a class="card__place" href="one-place.html">Молодёжный театр на Фонтанке</a>
+                </article>
+              </li>
+              <li class="lk__event">
+                <article class="card lk__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Песочный человек</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-4.jpg" srcset="img/afisha/afisha-4@2x.jpg 2x" alt="Песочный человек" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">12 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom"><span class="card__age">18+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Опера</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Роберт Уилсон</span><span class="card__from">Театр Буландра, Бухарест, Румыния</span><a class="card__place" href="one-place.html">Театр-фестиваль «Балтийский дом»</a>
+                </article>
+              </li>
+              <li class="lk__event">
+                <article class="card lk__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Опасная жалость</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-5.jpg" srcset="img/afisha/afisha-5@2x.jpg 2x" alt="Опасная жалость" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">14 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                          <div class="card__program"><span>точка доступа</span></div><span class="card__age">14+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Балет</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Саймон Макберни</span><span class="card__from">Шаубюне, Берлин, Германия</span><a class="card__place" href="one-place.html">Новая сцена Александринского театра</a>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"><span class="footer__rights">ⓒ All rights reserved.</span><a class="footer__link" href="#">Политика конфиденциальности</a><span class="footer__credits">разработка<a href="#">
+            <svg width="70" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#greenlabs"></use>
+            </svg><span class="visually-hidden">Greenlabs</span></a></span></footer>
+    </div>
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/formdata.min.js"></script>
+    <script src="libs/ofi.min.js"></script>
+    <script src="libs/nice-select/nice-select.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

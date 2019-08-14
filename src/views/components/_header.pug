@@ -1,0 +1,68 @@
+mixin header(current='', login=false)
+  header.header(class!=attributes.className)
+    .header__overlay
+    .header__wrapper
+      a.header__logo(href='main.html' aria-label='Театральная олимпиада 2019')
+        svg(width='120' height='143' aria-hidden='true')
+          use(xlink:href='img/logo.svg#logo')
+      a.header__monogram(href='#' aria-label='Год театра в России')
+        svg.header__monogram-color(width='90' height='71' aria-hidden='true')
+          use(xlink:href='img/logo-monogram.svg#monogram')
+        svg.header__monogram-white(width='90' height='71' aria-hidden='true')
+          use(xlink:href='img/logo-monogram-white.svg#monogram')
+      .header__content
+        button.header__close(type='button' aria-label='Закрыть меню')
+          svg(width='24' height='24' aria-hidden='true')
+            use(xlink:href='img/sprite/sprite.svg#icon-close')
+        nav.nav
+          ul.nav__pages
+            each page, index in data.header.pages
+              if page.subPages
+                li.nav__pages-item.nav__pages-item--with-sub
+                  input.nav__pages-checkbox.visually-hidden(type='checkbox' id=index  tabindex='0')
+                  label.nav__pages-link.nav__pages-link--with-sub(class=(page.name === current ? "nav__pages-link--active" : "") for=index)= page.name
+                  ul.nav__sub-pages
+                    each subPage in page.subPages
+                      li.nav__sub-pages-item
+                        a.nav__sub-pages-link(href=subPage.url)= subPage.name
+              else
+                li.nav__pages-item
+                  a.nav__pages-link(class=(page.name === current ? "nav__pages-link--active" : "") href=page.url)= page.name
+          a.nav__search-btn.search-btn(href='#' aria-label='Открыть поиск')
+            svg(width='20' height='20' aria-hidden='true')
+              use(xlink:href='img/sprite/sprite.svg#icon-search')
+          .nav__user
+            if login
+              a.nav__user-btn.nav__user-btn--favorites(href='#')
+                svg.nav__user-icon(width='20' height='20' aria-hidden='true')
+                  use(xlink:href='img/sprite/sprite.svg#icon-star')
+                span.nav__user-text избранное
+                span.nav__user-quantity (17)
+            else
+              a.nav__user-btn.nav__user-btn--login(href='#')
+                span.nav__user-text регистрация
+          include _login
+          include _registration
+          include _recovery
+          .nav__sub
+            ul.nav__social
+              each social in data.header.socials
+                li.nav__social-item
+                  a.nav__social-link(href='#' aria-label='Наша страница на ' + social.name)
+                    svg.nav__social-icon(width=social.iconWidth height=social.iconHeight aria-hidden='true')
+                      use(xlink:href='img/sprite/sprite.svg' + social.icon)
+            a.nav__lang(href='#' aria-label='Read in English') eng
+      form.search(method='get' action='#')
+        button.search__close(type='button' aria-label='Закрыть поиск')
+          svg(width='24' height='24' aria-hidden='true')
+            use(xlink:href='img/sprite/sprite.svg#icon-close')
+        .search__wrapper
+          svg.search__icon(width='20' height='20' aria-hidden='true')
+            use(xlink:href='img/sprite/sprite.svg#icon-search')
+          input.search__input(type='search' id='search' name='search' aria-label='Поиск по сайту')
+      a.header__search-btn.search-btn(href='#' aria-label='Открыть поиск')
+        svg(width='22' height='22' aria-hidden='true')
+          use(xlink:href='img/sprite/sprite.svg#icon-search')
+      button.header__burger(type='button' aria-label='Открыть меню')
+        svg(width='30' height='22' aria-hidden='true')
+          use(xlink:href='img/sprite/sprite.svg#icon-burger')

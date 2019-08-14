@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="libs/nice-select/nice-select.css" rel="stylesheet">
+    <title>Новости
+    </title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/svgxuse.min.js" async defer></script>
+  </head>
+  <body>
+    <div class="overflowWrap">
+      <header class="header">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Театральная олимпиада 2019">
+            <svg width="120" height="143" aria-hidden="true">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg></a><a class="header__monogram" href="#" aria-label="Год театра в России">
+            <svg class="header__monogram-color" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram.svg#monogram"></use>
+            </svg>
+            <svg class="header__monogram-white" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram-white.svg#monogram"></use>
+            </svg></a>
+          <div class="header__content">
+            <button class="header__close" type="button" aria-label="Закрыть меню">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav__pages">
+                <li class="nav__pages-item nav__pages-item--with-sub">
+                  <input class="nav__pages-checkbox visually-hidden" type="checkbox" id="0" tabindex="0"/>
+                  <label class="nav__pages-link nav__pages-link--with-sub" for="0">Олимпиада</label>
+                  <ul class="nav__sub-pages">
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="about.html">О проекте</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="comitet.html">Международный комитет</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="platforms.html">Площадки</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="#">Пресс-центр</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="gallery.html">Галерея</a></li>
+                  </ul>
+                </li>
+                <li class="nav__pages-item"><a class="nav__pages-link nav__pages-link--active" href="news.html">Новости</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="playbill.html">Афиша</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="people.html">Участники</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="partners.html">Партнеры</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="contacts.html">Контакты</a></li>
+              </ul><a class="nav__search-btn search-btn" href="#" aria-label="Открыть поиск">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                </svg></a>
+              <div class="nav__user"><a class="nav__user-btn nav__user-btn--login" href="#"><span class="nav__user-text">регистрация</span></a>
+              </div>
+              <form class="user-form login" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="login-email" name="login-email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="login-password" name="login-password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Войти</button><a class="user-form__recovery" href="lk-reset-password.html">Забыли пароль?</a><a class="user-form__register" href="#">Зарегистрироваться</a>
+              </form>
+              <form class="user-form registration" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="name" name="name" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="name">Имя</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="surname" name="surname" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="surname">Фамилия</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="password" name="password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__consent-input" type="checkbox" id="consent" name="consent" required="required"/>
+                  <label class="user-form__consent-label" for="consent">
+                    Согласие на обработку персональных данных в соответствии с
+                    <a class="user-form__consent-link" href="#">пользовательским соглашением</a>
+                  </label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Зарегистрироваться</button><a class="user-form__login" href="#">Уже зарегистрированы</a>
+              </form>
+              <form class="user-form recovery" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="recovery-email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="recovery-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__recover-text">На данную почту вам придет письмо со ссылкой для восстановления пароля</p>
+                <button class="user-form__btn" type="submit">восстановить пароль</button>
+              </form>
+              <div class="nav__sub">
+                <ul class="nav__social">
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Instagram">
+                      <svg class="nav__social-icon" width="19" height="19" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Facebook">
+                      <svg class="nav__social-icon" width="8" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на VK">
+                      <svg class="nav__social-icon" width="20" height="11" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Youtube">
+                      <svg class="nav__social-icon" width="23" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-youtube"></use>
+                      </svg></a></li>
+                </ul><a class="nav__lang" href="#" aria-label="Read in English">eng</a>
+              </div>
+            </nav>
+          </div>
+          <form class="search" method="get" action="#">
+            <button class="search__close" type="button" aria-label="Закрыть поиск">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search__wrapper">
+              <svg class="search__icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+              </svg>
+              <input class="search__input" type="search" id="search" name="search" aria-label="Поиск по сайту"/>
+            </div>
+          </form><a class="header__search-btn search-btn" href="#" aria-label="Открыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+            </svg></a>
+          <button class="header__burger" type="button" aria-label="Открыть меню">
+            <svg width="30" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="news">
+        <div class="page-title">
+          <h1 class="page-title__wrapper">Новости</h1>
+        </div>
+        <aside class="news__filter-wrap">
+          <button class="filter-button news__filter-button-open" type="button">Фильтр</button>
+          <div class="filter news__filter">
+            <button class="filter__button-close news__filter-button-close" type="button"></button>
+            <form class="filter__form news__filter-form" action="#">
+              <select class="filter-select filter-select--forever news__filter-select" name="city" multiple="multiple" id="city">
+                <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Город</option>
+                <option value="all">все</option>
+                <option value="Barcelona">Барселона</option>
+                <option value="Paris">Париж</option>
+                <option value="Toga">Тога</option>
+                <option value="St.Petersburg">Санкт-Петербург</option>
+                <option value="Manchester">Манчестер</option>
+                <option value="Milan">Милан</option>
+              </select>
+              <select class="filter-select filter-select--forever news__filter-select" name="month" multiple="multiple" id="month">
+                <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Месяц</option>
+                <option value="0">Январь</option>
+                <option value="1">Февраль</option>
+                <option value="2">Март</option>
+                <option value="3">Апрель</option>
+                <option value="4">Май</option>
+                <option value="5">Июнь</option>
+                <option value="6">Июль</option>
+                <option value="7">Август</option>
+                <option value="8">Сентябрь</option>
+                <option value="9">Октябрь</option>
+                <option value="10">Ноябрь</option>
+                <option value="11">Декабрь</option>
+              </select>
+              <select class="filter-select filter-select--forever news__filter-select" name="place" multiple="multiple" id="place">
+                <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Площадка</option>
+                <option value="all">все</option>
+                <option value="St. Petersburg Theater «Music Hall»">Санкт-Петербургский Театр «Мюзик-Холл»</option>
+                <option value="Alexandrinsky Theater. Main stage">Александринский театр. Основная сцена</option>
+                <option value="Khabarovsk Regional Drama Theater, Khabarovsk">Хабаровский краевой театр драмы, Хабаровск</option>
+              </select>
+              <fieldset class="filter__field news__filter-field">
+                <ul class="filter__list news__filter-list">
+                  <li class="filter__item news__filter-item">
+                    <label class="filter__label news__filter-label">
+                      <input class="filter__input visually-hidden news__filter-input" type="checkbox" name="news"/><span class="filter__checkbox news__filter-checkbox"></span><span class="filter__text news__filter-text">новости</span>
+                    </label>
+                  </li>
+                  <li class="filter__item news__filter-item">
+                    <label class="filter__label news__filter-label">
+                      <input class="filter__input visually-hidden news__filter-input" type="checkbox" name="collection"/><span class="filter__checkbox news__filter-checkbox"></span><span class="filter__text news__filter-text">коллекции</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+          </div>
+          <div class="container">
+            <div class="filter-results news__filter-results"></div>
+          </div>
+        </aside>
+        <div class="container">
+          <ul class="news__list fill-content">
+            <li class="news__item news__item--big">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Сотрудничество между российскими и зарубежными культурными институтами обсудили в Сочи</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-1.jpg" srcset="img/news/news-1@2x.jpg 2x" alt="Сотрудничество между российскими и зарубежными культурными институтами обсудили в Сочи" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Совместно с Форумом в рамках XII Зимнего международного фестиваля искусств прошли конференция и выставка</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item news__item--big">
+              <article class="card card--news"><a class="card__link">
+                  <h3 class="card__title card__title--top"><span>5 современных хореографических постановок</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-2.jpg" srcset="img/news/news-2@2x.jpg 2x" alt="5 современных хореографических постановок" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div><span class="card__type">коллекция</span>
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Определены даты Санкт-Петербургского международного культурного форума на ближайшие три года</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-3.jpg" srcset="img/news/news-3@2x.jpg 2x" alt="Определены даты Санкт-Петербургского международного культурного форума на ближайшие три года" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Форум пройдет с 14 по 16 ноября 2019 года, с 12 по 14 ноября 2020-го, с 11 по 13 ноября 2021-го.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Культурные планы</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-4.jpg" srcset="img/news/news-4@2x.jpg 2x" alt="Культурные планы" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Шемякин и дзен, частушки и рэп-баттлы, итальянская и японская киноклассика, Бах и Моцарт — события, которые мы рекомендуем посетить в ближайшие две недели в Санкт-Петербурге.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Всероссийский театральный марафон открылся на Приморской сцене Мариинского театра</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-5.jpg" srcset="img/news/news-5@2x.jpg 2x" alt="Всероссийский театральный марафон открылся на Приморской сцене Мариинского театра" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Старт марафону дала 18 января постановка «Спящая красавица».</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Интервью: «Тратить силы на борьбу с ленивым зрителем не стоит»</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-6.jpg" srcset="img/news/news-6@2x.jpg 2x" alt="Интервью: «Тратить силы на борьбу с ленивым зрителем не стоит»" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Участник форума и актер Евгений Миронов рассказал журналистам, что сейчас происходит со зрителем.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Интервью: «Культура — замечательный повод для сближения»</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-7.jpg" srcset="img/news/news-7@2x.jpg 2x" alt="Интервью: «Культура — замечательный повод для сближения»" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Участник форума Маурицио Чекконе, глава центра «Эрмитаж-Италия», рассказал об успешно реализованных проектах и планах на будущее.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Программа «Катар — страна-гость» была приурочена к Перекрестному Году культуры Катара и России 2018</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-8.jpg" srcset="img/news/news-8@2x.jpg 2x" alt="Программа «Катар — страна-гость» была приурочена к Перекрестному Году культуры Катара и России 2018" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Форум открыл России культуру и современное искусство Катара.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item news__item--big">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Во Владивостоке стартует Всероссийский театральный марафон</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-9.jpg" srcset="img/news/news-9@2x.jpg 2x" alt="Во Владивостоке стартует Всероссийский театральный марафон" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Совместно с Форумом в рамках XII Зимнего международного фестиваля искусств прошли конференция и выставка</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item news__item--big">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Форум дал новый импульс диалогу культур России и Италии</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-10.jpg" srcset="img/news/news-10@2x.jpg 2x" alt="Форум дал новый импульс диалогу культур России и Италии" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Программа «Италия — страна - гость» связала богатую историю российско-итальянского сотрудничества с современностью.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>В рамках программы VK Talents художники и фотографы ВКонтакте представили на Форуме свои работы</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-11.jpg" srcset="img/news/news-11@2x.jpg 2x" alt="В рамках программы VK Talents художники и фотографы ВКонтакте представили на Форуме свои работы" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">С теплом из Петербурга</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Санкт-Петербург в седьмой раз принимал центральное событие культурной жизни России</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-12.jpg" srcset="img/news/news-12@2x.jpg 2x" alt="Санкт-Петербург в седьмой раз принимал центральное событие культурной жизни России" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Смотрите видео о VII Санкт-Петербургском международном культурном форуме.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Подводим итоги работы секции «Театр»</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-13.jpg" srcset="img/news/news-13@2x.jpg 2x" alt="Подводим итоги работы секции «Театр»" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">В рамках секции состоялось вручение Европейской Театральной Премии и презентации Театральной Олимпиады 2019</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Современное изобразительное искусство стало одной из тем многочисленных дискуссий на Форуме</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-14.jpg" srcset="img/news/news-14@2x.jpg 2x" alt="Современное изобразительное искусство стало одной из тем многочисленных дискуссий на Форуме" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">В рамках секции «Изобразительное искусство» свои экспозиции представили Италия и Катар — страны - гости Форума.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Культурные планы</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-15.jpg" srcset="img/news/news-15@2x.jpg 2x" alt="Культурные планы" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Шемякин и дзен, частушки и рэп-баттлы, итальянская и японская киноклассика, Бах и Моцарт — события, которые мы рекомендуем посетить в ближайшие две недели в Санкт-Петербурге.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Определены даты Санкт-Петербургского международного культурного форума на ближайшие три года</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-16.jpg" srcset="img/news/news-16@2x.jpg 2x" alt="Определены даты Санкт-Петербургского международного культурного форума на ближайшие три года" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Форум пройдет с 14 по 16 ноября 2019 года, с 12 по 14 ноября 2020-го, с 11 по 13 ноября 2021-го.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="news__item news__item--big">
+              <article class="card card--news"><a class="card__link">
+                  <h3 class="card__title card__title--top"><span>17 спектаклей о смысле жизни, которые покорили мир</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-17.jpg" srcset="img/news/news-17@2x.jpg 2x" alt="17 спектаклей о смысле жизни, которые покорили мир" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div><span class="card__type">коллекция</span>
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+              </article>
+            </li>
+            <li class="news__item news__item--big">
+              <article class="card card--news"><a class="card__link" href="one-news.html">
+                  <h3 class="card__title"><span>Власти Петербурга выделят 853 млн руб. в 2019 году на поддержку проектов в сфере культуры</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/news/news-18.jpg" srcset="img/news/news-18@2x.jpg 2x" alt="Власти Петербурга выделят 853 млн руб. в 2019 году на поддержку проектов в сфере культуры" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div>
+                <p class="card__desc">Программа «Италия — страна - гость» связала богатую историю российско-итальянского сотрудничества с современностью.</p>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <div class="template playbill-page-header" id="filter-result-template">
+        <div class="filter-result playbill-page-header__filter-result">
+          <p class="filter-result__text"></p>
+          <button class="filter-result__button" type="button" aria-label="удалить фильтр">
+            <svg>
+              <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <footer class="footer"><span class="footer__rights">ⓒ All rights reserved.</span><a class="footer__link" href="#">Политика конфиденциальности</a><span class="footer__credits">разработка<a href="#">
+            <svg width="70" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#greenlabs"></use>
+            </svg><span class="visually-hidden">Greenlabs</span></a></span></footer>
+    </div>
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/formdata.min.js"></script>
+    <script src="libs/ofi.min.js"></script>
+    <script src="libs/nice-select/nice-select.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

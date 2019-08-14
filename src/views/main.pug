@@ -1,0 +1,98 @@
+extends layouts/_layout
+include components/_header
+include components/_carousel-btns
+include components/_card
+
+block title
+  | Театральная олимпиада 2019 | Главная
+
+block header
+  +header(className='header--black')
+
+block main
+  main
+    .main-title
+      .main-title__wrapper.carousel
+        ul.main-title__carousel.carousel__wrapper(aria-hidden='true')
+          each slide in data.main.headerSlider
+            li.main-title__carousel-item.carousel__item
+              div.main-title__image-container
+                picture
+                  source(media='(max-width: 767px)' srcset= slide.image + '-m.jpg')
+                  img.main-title__image(width='1400' height='750' src=slide.image + '.jpg' srcset=slide.image + '@2x.jpg 2x' alt='Крассивые кадры')
+        .main-title__text
+          +carousel-btns(className='main-title__btns')
+          h1.main-title__name Театральная<br>олимпиада
+          span.main-title__age 20
+          span.main-title__year 19
+
+    section.main-section.carousel
+      h2.main-section__title
+        a.main-section__title-link(href='playbill.html') Афиша
+      .main-section__wrapper
+        .main-section__head
+          a.main-section__all-link(href='playbill.html') Все
+          +carousel-btns
+        ul.carousel__wrapper
+          - for (var e = 0; e < 5; e++)
+            li.main-section__item.carousel__item
+              +card(data.events[e])(className='main-section__events-card card--events')
+
+    section.main-section.carousel
+      h2.main-section__title
+        a.main-section__title-link(herf='news.html') Новости
+      .main-section__wrapper
+        .main-section__head
+          a.main-section__all-link(href='news.html') Все
+          +carousel-btns
+        ul.carousel__wrapper
+          - for (var n = 0; n < 5; n++)
+            if !data.news[n].titleTop
+              li.main-section__item.carousel__item
+                +card(data.news[n])(className='main-section__news-card')
+
+    div.subscription( action='#')
+      .subscription__wrapper
+        h2.subscription__title Регистрация
+        div.subscription__field
+          div.subscription__label Зарегистрируйтесь, чтобы первыми узнавать о полезных новостях и билетах на спектакли. Вы сможете формировать свой календарь событий, регистрироваться на образовательные мероприятия и получать напоминания
+          a.subscription__btn(href='#') регистрация
+
+    section.main-gallery.carousel
+      .main-gallery__head
+        h2.main-gallery__title
+          a.main-gallery__title-link(href='gallery.html') Галерея
+        +carousel-btns(className='main-gallery__btns')
+        a.main-gallery__all-link(href='gallery.html') Все
+      .main-gallery__carousel
+        ul.main-gallery__carousel-wrapper.carousel__wrapper
+          each item in data.gallery
+            li.main-gallery__item.carousel__item(class = item.big ? 'main-gallery__item--big' : 'main-gallery__item--small')
+              +card(item)
+
+    .main-banner
+      a.main-banner__link(href='#')
+        img.main-banner__image(src='img/main/header-2.jpg' srcset='img/main/header-2@2x.jpg 2x' alt='Банер')
+
+    section.main-partners
+      h2.main-partners__title
+        | Генеральные
+        br
+        | партнеры
+      ul.main-partners__list
+        li.main-partners__item
+          a.main-partners__link(href='#' title='Риа новости')
+            img.main-partners__image(width='142' height='35' src='img/partners/ria.png' srcset='img/partners/ria@2x.png 2x' alt='Риа новости')
+        li.main-partners__item
+          a.main-partners__link(href='#' title='Телеканал Культура')
+            img.main-partners__image(width='153' height='35' src='img/partners/kultyra.png' srcset='img/partners/kultyra@2x.png 2x' alt='Телеканал Культура')
+        li.main-partners__item
+          a.main-partners__link(href='#' title='ТАСС')
+            img.main-partners__image(width='62' height='80' src='img/partners/tass.png' srcset='img/partners/tass@2x.png 2x' alt='ТАСС')
+        li.main-partners__item
+          a.main-partners__link(href='#' title='Radio Monte Carlo')
+            img.main-partners__image(width='130' height='77' src='img/partners/montecarlo.png' srcset='img/partners/montecarlo@2x.png 2x' alt='Radio Monte Carlo')
+
+
+block footer
+  include components/_footer

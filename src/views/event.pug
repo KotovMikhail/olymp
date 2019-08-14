@@ -1,0 +1,15 @@
+extends layouts/_layout
+include components/_header
+include components/_event
+
+block title
+  | Театральная олимпиада 2019 Событие
+
+block header
+  +header('Афиша')(className=data.eventInfo.image ? 'header--black':'')
+
+block main
+  +event(data.eventInfo, className=!data.eventInfo.image ? 'event--no-image' : '')
+
+block footer
+  include components/_footer

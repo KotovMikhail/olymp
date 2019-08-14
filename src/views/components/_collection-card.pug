@@ -1,0 +1,14 @@
+mixin collection-card(opt, className)
+  article.collection-card(class=className ? `${className}__collection-card` : '')
+    a(class=`collection-card__link ${className}__collection-card-link` href=opt.href ? opt.href : '#')
+      img(src=opt.image srcset= `${opt.image2x} 2x` alt=opt.title)
+      div.collection-card__content
+        p.collection-card__type= opt.type
+        h2.collection-card__title= opt.title
+    button.button-star(class=opt.fullStar ? 'collection-card__button-star button-star--full' : 'collection-card__button-star' type='button' aria-label='Добавить в избранное' title='Добавить в избранное')
+      svg
+        use(xlink:href='img/sprite/sprite.svg#icon-star')
+      if opt.fullStar
+        span.button-star__hint в избранном
+      else
+        span.button-star__hint добавить в избранное

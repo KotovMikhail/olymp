@@ -1,0 +1,10 @@
+form.user-form.recovery(action='#')
+  button.user-form__close(type='button' aria-label='Открыть меню')
+    svg(width='24' height='24' aria-hidden='true')
+      use(xlink:href='img/sprite/sprite.svg#icon-close')
+  p.user-form__part
+    input.user-form__input(type='email' id='recovery-email' name='email' placeholder=' ' required)
+    label.user-form__label(for='recovery-email') E-mail
+    span.invalid-text
+  p.user-form__recover-text На данную почту вам придет письмо со ссылкой для восстановления пароля
+  button.user-form__btn(type='submit') восстановить пароль

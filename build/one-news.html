@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Театральная олимпиада 2019 | Remote X
+    </title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/svgxuse.min.js" async defer></script>
+  </head>
+  <body>
+    <div class="overflowWrap">
+      <header class="header">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Театральная олимпиада 2019">
+            <svg width="120" height="143" aria-hidden="true">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg></a><a class="header__monogram" href="#" aria-label="Год театра в России">
+            <svg class="header__monogram-color" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram.svg#monogram"></use>
+            </svg>
+            <svg class="header__monogram-white" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram-white.svg#monogram"></use>
+            </svg></a>
+          <div class="header__content">
+            <button class="header__close" type="button" aria-label="Закрыть меню">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav__pages">
+                <li class="nav__pages-item nav__pages-item--with-sub">
+                  <input class="nav__pages-checkbox visually-hidden" type="checkbox" id="0" tabindex="0"/>
+                  <label class="nav__pages-link nav__pages-link--with-sub" for="0">Олимпиада</label>
+                  <ul class="nav__sub-pages">
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="about.html">О проекте</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="comitet.html">Международный комитет</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="platforms.html">Площадки</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="#">Пресс-центр</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="gallery.html">Галерея</a></li>
+                  </ul>
+                </li>
+                <li class="nav__pages-item"><a class="nav__pages-link nav__pages-link--active" href="news.html">Новости</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="playbill.html">Афиша</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="people.html">Участники</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="partners.html">Партнеры</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="contacts.html">Контакты</a></li>
+              </ul><a class="nav__search-btn search-btn" href="#" aria-label="Открыть поиск">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                </svg></a>
+              <div class="nav__user"><a class="nav__user-btn nav__user-btn--login" href="#"><span class="nav__user-text">регистрация</span></a>
+              </div>
+              <form class="user-form login" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="login-email" name="login-email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="login-password" name="login-password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Войти</button><a class="user-form__recovery" href="lk-reset-password.html">Забыли пароль?</a><a class="user-form__register" href="#">Зарегистрироваться</a>
+              </form>
+              <form class="user-form registration" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="name" name="name" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="name">Имя</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="surname" name="surname" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="surname">Фамилия</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="password" name="password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__consent-input" type="checkbox" id="consent" name="consent" required="required"/>
+                  <label class="user-form__consent-label" for="consent">
+                    Согласие на обработку персональных данных в соответствии с
+                    <a class="user-form__consent-link" href="#">пользовательским соглашением</a>
+                  </label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Зарегистрироваться</button><a class="user-form__login" href="#">Уже зарегистрированы</a>
+              </form>
+              <form class="user-form recovery" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="recovery-email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="recovery-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__recover-text">На данную почту вам придет письмо со ссылкой для восстановления пароля</p>
+                <button class="user-form__btn" type="submit">восстановить пароль</button>
+              </form>
+              <div class="nav__sub">
+                <ul class="nav__social">
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Instagram">
+                      <svg class="nav__social-icon" width="19" height="19" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Facebook">
+                      <svg class="nav__social-icon" width="8" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на VK">
+                      <svg class="nav__social-icon" width="20" height="11" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Youtube">
+                      <svg class="nav__social-icon" width="23" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-youtube"></use>
+                      </svg></a></li>
+                </ul><a class="nav__lang" href="#" aria-label="Read in English">eng</a>
+              </div>
+            </nav>
+          </div>
+          <form class="search" method="get" action="#">
+            <button class="search__close" type="button" aria-label="Закрыть поиск">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search__wrapper">
+              <svg class="search__icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+              </svg>
+              <input class="search__input" type="search" id="search" name="search" aria-label="Поиск по сайту"/>
+            </div>
+          </form><a class="header__search-btn search-btn" href="#" aria-label="Открыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+            </svg></a>
+          <button class="header__burger" type="button" aria-label="Открыть меню">
+            <svg width="30" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="one-news">
+        <div class="one-news__top-wrap"></div>
+        <section class="one-article"><a class="event-page-header__back-link" href="#">вернуться</a>
+          <h1 class="one-article__title">Remote X</h1>
+          <p class="one-article__date">19—06—2019</p>
+          <div class="one-article__content"><p>В Remote X группа из 50 человек отправилась в город в наушниках. Они руководствуются синтетическим голосом - как мы их знаем из GPS-навигаторов. Встреча с этим искусственным интеллектом побуждает группу провести эксперимент над собой. Как принимаются совместные решения? За кем мы следуем, руководствуясь алгоритмами?</p>
+            <div class="gallery-slider one-article__gallery-slider">
+              <button class="gallery-slider__miniature-button gallery-slider__miniature-button--prev" type="button"></button>
+              <div class="swiper-container gallery-slider__container">
+                <div class="swiper-wrapper gallery-slider__wrapper">
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/news/news-1.jpg" srcset="img/news/news-1@2x.jpg 2x" alt="Песочный человек"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Песочный человек</p>
+                  </div>
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/news/news-5.jpg" srcset="img/news/news-5@2x.jpg 2x" alt="Песочный человек"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Песочный человек</p>
+                  </div>
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/news/news-19.jpg" srcset="img/news/news-19@2x.jpg 2x" alt="Песочный человек"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Песочный человек</p>
+                  </div>
+                </div>
+                <div class="gallery-slider__pagination"></div>
+              </div>
+              <div class="gallery-slider__buttons-wrap">
+                <button class="gallery-slider__miniature-button gallery-slider__miniature-button--next" type="button"><img class="gallery-slider__img" src="img/news/news-5.jpg" srcset="img/news/news-5@2x.jpg 2x" alt="Песочный человек"/></button>
+                <div class="gallery-slider__slider-buttons-inner">
+                  <button class="gallery-slider__button-arrow gallery-slider__button-arrow--prev button-arrow button-arrow--prev" type="button"></button>
+                  <button class="gallery-slider__button-arrow gallery-slider__button-arrow--next button-arrow button-arrow--next" type="button"></button>
+                </div>
+              </div>
+            </div><p>50 человек следят друг за другом, принимают индивидуальные решения и при этом остаются всегда частью группы. Хотя искусственный интеллект наблюдает за поведением человека на расстоянии, голос за шагом звучит более знакомо. Попутно бинауральные записи и партитуры обеспечивают саундтрек для городского пейзажа. Путешествие по городу все больше напоминает коллективный фильм.</p><p>Remote X ставит под сомнение искусственный интеллект, большие данные и нашу предсказуемость.По мере того, как проект путешествует из города в город, каждая новая версия для конкретного сайта основывается на драматургии предыдущего города.</p>
+          </div>
+          <div class="rambler-share"></div>
+        </section>
+      </main>
+      <footer class="footer"><span class="footer__rights">ⓒ All rights reserved.</span><a class="footer__link" href="#">Политика конфиденциальности</a><span class="footer__credits">разработка<a href="#">
+            <svg width="70" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#greenlabs"></use>
+            </svg><span class="visually-hidden">Greenlabs</span></a></span></footer>
+    </div>
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/formdata.min.js"></script>
+    <script src="libs/ofi.min.js"></script>
+    <script src="libs/nice-select/nice-select.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

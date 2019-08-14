@@ -1,0 +1,5 @@
+mixin filter-checkbox(data, className)
+  label.filter__label(class=`${className}__filter-label`)
+    input.filter__input.visually-hidden(class=`${className}__filter-input` type="checkbox" name=`${data.name}`)
+    span.filter__checkbox(class=`${className}__filter-checkbox`)
+    span.filter__text(class=`${className}__filter-text`)= data.value

@@ -1,0 +1,12 @@
+.text-container {
+  max-width: 1060px;
+
+  a {
+    &:hover,
+    &:focus {
+      padding-top: 2px;
+      background-color: $putty-color;
+      color: $white-color;
+    }
+  }
+}

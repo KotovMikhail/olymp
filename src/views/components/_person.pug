@@ -1,0 +1,13 @@
+mixin person(opt, prefix)
+  if opt
+    div.person(class=prefix ? `person${prefix}` : '')
+      a.person__interactive-block(href=opt.href ? opt.href : '#')
+        if opt.image
+          div.person__image-wrap
+            img(src=opt.image srcset=opt.image2x alt=`${opt.name} ${opt.surname}` width='164' height='210')
+        p.person__name
+          span= opt.name
+          span= opt.surname
+        p.person__info= opt.info
+  else
+    div.person

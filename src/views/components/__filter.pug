@@ -1,0 +1,24 @@
+include ../components/_filter-select
+include ../components/_filter-checkbox
+
+mixin filter(opt, className)
+  button.filter-button(class=className ? `${className}__filter-button-open` : '' type="button") Фильтр
+  div.filter(class=className ? `${className}__filter` : '')
+    button.filter__button-close(class=className ? `${className}__filter-button-close` : '' type="button")
+    form.filter__form(class=className ? `${className}__filter-form` : '' action='#')
+      if opt.search
+        div.filter__search(class=className ? `${className}__search` : '')
+          label.filter__search-label(class=className ? `${className}__search-label` : '' for='search-input')
+            svg(width='20' height='20' aria-hidden='true')
+              use(xlink:href='img/sprite/sprite.svg#icon-search')
+          input.filter__search-input(class=className ? `${className}__search-input` : '' type='search' id='search-input' name='search-input' aria-label='Введите значение для поиска' value=data.searchResults.search)
+          button.filter__search-submit(class=className ? `${className}__search-submit` : '' type="submit") найти
+      if opt.selects
+        each filter in opt.selects
+          +filter-select(filter, className)
+      if opt.checkbox
+        fieldset.filter__field(class=`${className}__filter-field`)
+          ul.filter__list(class=`${className}__filter-list`)
+            each filter in opt.checkbox
+              li.filter__item(class=`${className}__filter-item`)
+                +filter-checkbox(filter, className)

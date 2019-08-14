@@ -1,0 +1,53 @@
+extends layouts/_layout
+include components/_header
+include components/_page-title
+include components/_carousel-btns
+include components/__filter
+include components/_filter-results
+
+block title
+  | Театральная олимпиада 2019 | Участники
+
+block meta
+  link(href="libs/nice-select/nice-select.css", rel="stylesheet")
+
+block header
+  +header('Участники')
+
+block main
+  main.people
+    +pageTitle('Участники')
+    section.people__carousel.carousel
+      .people__carousel-wrapper
+        h2.visually-hidden Интересные участники
+        .people__carousel-hidde
+          ul.carousel__wrapper
+            - for (var p = 0; p < 12; p++)
+              li.people__carousel-item.carousel__item
+                article.people__card
+                  a.people__link(href='#')
+                    .people__image
+                      img(width='164' height='210' src=data.people[p].image + '.jpg' srcset=data.people[p].image + '@2x.jpg 2x' alt=data.people[p].name)
+                    h2.people__name(href='#')= data.people[p].name
+                  span.people__profesion= data.people[p].profesion
+                  span.people__place= data.people[p].place
+                  span.people__from= data.people[p].from
+        +carousel-btns(className='people__carousel-btns')
+    aside.people__aside
+      .container
+        +filter(data.peopleFilterData, 'people')
+        +filter-results('people')
+    include components/_alphabet
+    ul.people__list.fill-content
+      - for (var p = 6; p < data.people.length; p++)
+        li.people__item
+          .people__first
+            a.people__name(href='#')= data.people[p].name
+            span.people__profesion= data.people[p].profesion
+          .people__second
+            span.people__place= data.people[p].place
+            span.people__from= data.people[p].from
+    include components/_filter-result-template
+
+block footer
+  include components/_footer

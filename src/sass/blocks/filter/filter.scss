@@ -1,0 +1,140 @@
+.filter {
+  &__list {
+    @include reset-list();
+  }
+
+  &__field {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  &__item {
+    margin-right: 28px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__label {
+    padding-left: 27px;
+    letter-spacing: -0.5px;
+    color: $putty-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $dark-blue-color;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:checked {
+      color: $dark-blue-color;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    appearance: none;
+
+    &:checked+.filter__checkbox {
+      background-color: $putty-color;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:checked~.filter__text {
+      color: $dark-blue-color;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $putty-color;
+    margin-left: -27px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__text {
+    transition: all 0.2s ease-in-out;
+  }
+
+  @include mobile {
+    display: block;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $white-color;
+    padding-top: 88px;
+    z-index: 500;
+    visibility: hidden;
+    overflow-y: auto;
+    transform: scale(0.75);
+
+
+    &--open {
+      // display: block;
+      visibility: visible;
+      transform-origin: 50% 0;
+      transition: all 0.2s cubic-bezier(0.5,0,0,1.25),opacity 0.15s ease-out;
+      opacity: 1;
+      transform: scale(1);
+
+    }
+  }
+}
+
+.filter__button-close {
+  display: none;
+
+  @include mobile {
+    display: block;
+    @include reset-button;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      background-color: $putty-color;
+      top: 50%;
+      right: 0;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.filter__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  border-bottom: 2px solid $putty-color;
+
+  @include mobile {
+    border: none;
+    flex-direction: column;
+    width: 100%;
+  }
+}

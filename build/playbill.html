@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="libs/nice-select/nice-select.css" rel="stylesheet">
+    <title>Театральная олимпиада 2019 Афиша
+    </title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/svgxuse.min.js" async defer></script>
+  </head>
+  <body>
+    <div class="overflowWrap">
+      <header class="header">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Театральная олимпиада 2019">
+            <svg width="120" height="143" aria-hidden="true">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg></a><a class="header__monogram" href="#" aria-label="Год театра в России">
+            <svg class="header__monogram-color" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram.svg#monogram"></use>
+            </svg>
+            <svg class="header__monogram-white" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram-white.svg#monogram"></use>
+            </svg></a>
+          <div class="header__content">
+            <button class="header__close" type="button" aria-label="Закрыть меню">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav__pages">
+                <li class="nav__pages-item nav__pages-item--with-sub">
+                  <input class="nav__pages-checkbox visually-hidden" type="checkbox" id="0" tabindex="0"/>
+                  <label class="nav__pages-link nav__pages-link--with-sub" for="0">Олимпиада</label>
+                  <ul class="nav__sub-pages">
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="about.html">О проекте</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="comitet.html">Международный комитет</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="platforms.html">Площадки</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="#">Пресс-центр</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="gallery.html">Галерея</a></li>
+                  </ul>
+                </li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="news.html">Новости</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link nav__pages-link--active" href="playbill.html">Афиша</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="people.html">Участники</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="partners.html">Партнеры</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="contacts.html">Контакты</a></li>
+              </ul><a class="nav__search-btn search-btn" href="#" aria-label="Открыть поиск">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                </svg></a>
+              <div class="nav__user"><a class="nav__user-btn nav__user-btn--login" href="#"><span class="nav__user-text">регистрация</span></a>
+              </div>
+              <form class="user-form login" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="login-email" name="login-email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="login-password" name="login-password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Войти</button><a class="user-form__recovery" href="lk-reset-password.html">Забыли пароль?</a><a class="user-form__register" href="#">Зарегистрироваться</a>
+              </form>
+              <form class="user-form registration" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="name" name="name" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="name">Имя</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="surname" name="surname" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="surname">Фамилия</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="password" name="password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__consent-input" type="checkbox" id="consent" name="consent" required="required"/>
+                  <label class="user-form__consent-label" for="consent">
+                    Согласие на обработку персональных данных в соответствии с
+                    <a class="user-form__consent-link" href="#">пользовательским соглашением</a>
+                  </label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Зарегистрироваться</button><a class="user-form__login" href="#">Уже зарегистрированы</a>
+              </form>
+              <form class="user-form recovery" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="recovery-email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="recovery-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__recover-text">На данную почту вам придет письмо со ссылкой для восстановления пароля</p>
+                <button class="user-form__btn" type="submit">восстановить пароль</button>
+              </form>
+              <div class="nav__sub">
+                <ul class="nav__social">
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Instagram">
+                      <svg class="nav__social-icon" width="19" height="19" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Facebook">
+                      <svg class="nav__social-icon" width="8" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на VK">
+                      <svg class="nav__social-icon" width="20" height="11" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Youtube">
+                      <svg class="nav__social-icon" width="23" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-youtube"></use>
+                      </svg></a></li>
+                </ul><a class="nav__lang" href="#" aria-label="Read in English">eng</a>
+              </div>
+            </nav>
+          </div>
+          <form class="search" method="get" action="#">
+            <button class="search__close" type="button" aria-label="Закрыть поиск">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search__wrapper">
+              <svg class="search__icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+              </svg>
+              <input class="search__input" type="search" id="search" name="search" aria-label="Поиск по сайту"/>
+            </div>
+          </form><a class="header__search-btn search-btn" href="#" aria-label="Открыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+            </svg></a>
+          <button class="header__burger" type="button" aria-label="Открыть меню">
+            <svg width="30" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="playbill">
+        <div class="playbill-page-header">
+          <div class="container">
+            <h1 class="playbill-page-header__title">Афиша</h1>
+            <button class="filter-button playbill-page-header__filter-button-open" type="button">Фильтр</button>
+            <div class="filter playbill-page-header__filter">
+              <button class="filter__button-close playbill-page-header__filter-button-close" type="button"></button>
+              <form class="filter__form playbill-page-header__filter-form" action="#">
+                <select class="filter-select filter-select--forever playbill-page-header__filter-select" name="city" multiple="multiple" id="city">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Город</option>
+                  <option value="all">все</option>
+                  <option value="Barcelona">Барселона</option>
+                  <option value="Paris">Париж</option>
+                  <option value="Toga">Тога</option>
+                  <option value="St.Petersburg">Санкт-Петербург</option>
+                  <option value="Manchester">Манчестер</option>
+                  <option value="Milan">Милан</option>
+                </select>
+                <select class="filter-select filter-select--forever playbill-page-header__filter-select" name="type" multiple="multiple" id="type">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Спектакль</option>
+                  <option value="all">все</option>
+                  <option value="Spectacle">Спектакль</option>
+                  <option value="Ballet">Балет</option>
+                  <option value="Opera">Опера</option>
+                  <option value="Exhibition">Выставка</option>
+                </select>
+                <select class="filter-select filter-select--forever playbill-page-header__filter-select" name="program" multiple="multiple" id="program">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Программа</option>
+                  <option value="all">все</option>
+                  <option value="MTFthem.Chekhov">МТФ им. Чехова</option>
+                  <option value="Access point">Точка доступа</option>
+                  <option value="Golden mask">Золотая маска</option>
+                  <option value="Baltic house">Балтийский дом</option>
+                  <option value="NET">NET</option>
+                </select>
+                <select class="filter-select filter-select--forever playbill-page-header__filter-select" name="education" multiple="multiple" id="education">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Образование</option>
+                  <option value="all">все</option>
+                  <option value="Education1">Образование</option>
+                  <option value="Education2">Образование</option>
+                </select>
+                <select class="filter-select filter-select--forever playbill-page-header__filter-select" name="place" multiple="multiple" id="place">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Площадка</option>
+                  <option value="all">все</option>
+                  <option value="St. Petersburg Theater «Music Hall»">Санкт-Петербургский Театр «Мюзик-Холл»</option>
+                  <option value="Alexandrinsky Theater. Main stage">Александринский театр. Основная сцена</option>
+                  <option value="Khabarovsk Regional Drama Theater, Khabarovsk">Хабаровский краевой театр драмы, Хабаровск</option>
+                </select>
+                <select class="filter-select filter-select--forever playbill-page-header__filter-select" name="age" multiple="multiple" id="age">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Возрастное ограничение</option>
+                  <option value="all">все</option>
+                  <option value="6+">6+</option>
+                  <option value="12+">12+</option>
+                  <option value="14+">14+</option>
+                  <option value="18+">18+</option>
+                </select>
+              </form>
+            </div>
+            <div class="playbill-page-header__bottom-inner">
+              <div class="filter-results playbill-page-header__filter-results"></div>
+              <div class="playbill-page-header__links"><a class="playbill-page-header__link" href="#">добавить&nbsp;в&nbsp;календарь</a><a class="playbill-page-header__link" href="#">скачать&nbsp;программу&nbsp;(pdf)</a></div>
+              <div class="playbill-page-header__view-switch"><a class="playbill-page-header__switch-button playbill-page-header__switch-button--tile playbill-page-header__switch-button--active" aria-label="отобразить плиткой">
+                  <svg>
+                    <use xlink:href="img/sprite/sprite.svg#icon-tile"></use>
+                  </svg></a><a class="playbill-page-header__switch-button playbill-page-header__switch-button--list" href="playbill-list.html" aria-label="отобразить списком">
+                  <svg>
+                    <use xlink:href="img/sprite/sprite.svg#icon-grid"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="playbill__content container">
+          <div class="playbill__date-filter">
+            <form class="playbill__month-form month-form">
+              <select class="filter-select playbill__month-select month-select" name="playbill-month-select" id="playbill-month-select">
+                <option value="Месяц" disabled>Месяц</option>
+                <option value="0">Январь</option>
+                <option value="1">Февраль</option>
+                <option value="2">Март</option>
+                <option value="3">Апрель</option>
+                <option value="4">Май</option>
+                <option value="5" selected>Июнь</option>
+                <option value="5">Июнь</option>
+                <option value="6">Июль</option>
+                <option value="7">Август</option>
+                <option value="8">Сентябрь</option>
+                <option value="9">Октябрь</option>
+                <option value="10">Ноябрь</option>
+                <option value="11">Декабрь</option>
+              </select>
+            </form>
+                  <div class="character-filter">
+                    <form class="character-filter__form playbill__character-filter symbols">
+                      <ul class="character-filter__list">
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="1" id="day1">
+                          <label class="character-filter__label character-filter__label--past" for="day1">1</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="2" id="day2">
+                          <label class="character-filter__label character-filter__label--past" for="day2">2</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="3" id="day3">
+                          <label class="character-filter__label character-filter__label--past" for="day3">3</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="4" id="day4">
+                          <label class="character-filter__label character-filter__label--past" for="day4">4</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="5" id="day5">
+                          <label class="character-filter__label character-filter__label--past" for="day5">5</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="6" id="day6">
+                          <label class="character-filter__label character-filter__label--past" for="day6">6</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="7" id="day7">
+                          <label class="character-filter__label character-filter__label--past" for="day7">7</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="8" id="day8">
+                          <label class="character-filter__label character-filter__label--past" for="day8">8</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="9" id="day9">
+                          <label class="character-filter__label character-filter__label--past" for="day9">9</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="10" id="day10">
+                          <label class="character-filter__label character-filter__label--past" for="day10">10</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="11" id="day11">
+                          <label class="character-filter__label character-filter__label--past" for="day11">11</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="12" id="day12">
+                          <label class="character-filter__label character-filter__label--past" for="day12">12</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="13" id="day13">
+                          <label class="character-filter__label character-filter__label--today" for="day13">13</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="14" id="day14">
+                          <label class="character-filter__label" for="day14">14</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="15" id="day15">
+                          <label class="character-filter__label" for="day15">15</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="16" id="day16">
+                          <label class="character-filter__label" for="day16">16</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="17" id="day17">
+                          <label class="character-filter__label" for="day17">17</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="18" id="day18">
+                          <label class="character-filter__label" for="day18">18</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="19" id="day19">
+                          <label class="character-filter__label" for="day19">19</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="20" id="day20">
+                          <label class="character-filter__label" for="day20">20</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="21" id="day21">
+                          <label class="character-filter__label" for="day21">21</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="22" id="day22">
+                          <label class="character-filter__label" for="day22">22</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="23" id="day23">
+                          <label class="character-filter__label" for="day23">23</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="24" id="day24">
+                          <label class="character-filter__label" for="day24">24</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="25" id="day25">
+                          <label class="character-filter__label" for="day25">25</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="26" id="day26">
+                          <label class="character-filter__label" for="day26">26</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="27" id="day27">
+                          <label class="character-filter__label" for="day27">27</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="28" id="day28">
+                          <label class="character-filter__label" for="day28">28</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="29" id="day29">
+                          <label class="character-filter__label" for="day29">29</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="30" id="day30">
+                          <label class="character-filter__label" for="day30">30</label>
+                        </li>
+                        <li class="character-filter__item">
+                          <input class="character-filter__input" type="checkbox" name="day" value="31" id="day31">
+                          <label class="character-filter__label" for="day31">31</label>
+                        </li>
+                      </ul>
+                    </form>
+                  </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="container">
+            <ul class="playbill__card-list fill-content">
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-1.jpg" srcset="img/afisha/afisha-1@2x.jpg 2x" alt="Мать" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">9 — 06</p><span class="card-tile__time-week">17:00, пн</span>
+                                </div>
+                                <p class="card-tile__type">Cпектакль</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__regalia"><span>золотая маска</span></p>
+                                <p class="card-tile__age-restrictions">14+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Мать</span></h2></a>
+                        <p class="card-tile__producer">Габриэла Карризо</p>
+                        <p class="card-tile__country">Брюссель, Бельгия</p><a class="card-tile__place link" href="#">Новая сцена Александринского театра</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star button-star--full" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">в избранном</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-2.jpg" srcset="img/afisha/afisha-2@2x.jpg 2x" alt="Все, что произошло и могло произойти" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">10 — 06</p><span class="card-tile__time-week">17:00, пн</span>
+                                </div>
+                                <p class="card-tile__type">Балет</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__regalia"><span>Программа Международного комитета Театральной олимпиады-2019</span></p>
+                                <p class="card-tile__age-restrictions">12+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Все, что произошло и могло произойти</span></h2></a>
+                        <p class="card-tile__producer">Хайнер Гёббельсо</p>
+                        <p class="card-tile__country">Манчестер, UK</p><a class="card-tile__place link" href="#">Artplay</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-6.jpg" srcset="img/afisha/afisha-6@2x.jpg 2x" alt="Трагедия мщения" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">11 — 06</p><span class="card-tile__time-week">17:00, пн</span>
+                                </div>
+                                <p class="card-tile__type">Спектакль</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__regalia"><span>NET</span></p>
+                                <p class="card-tile__age-restrictions">18+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Трагедия мщения</span></h2></a>
+                        <p class="card-tile__producer">Деклан Доннелан</p>
+                        <p class="card-tile__country">Театр Пикколо, Милан, Италия</p><a class="card-tile__place link" href="#">Александринский театр. Основная сцена</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-3.jpg" srcset="img/afisha/afisha-3@2x.jpg 2x" alt="Карусель" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">12 — 06</p><span class="card-tile__time-week">17:00, пн</span>
+                                </div>
+                                <p class="card-tile__type">Лекция</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">18+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Карусель</span></h2></a>
+                        <p class="card-tile__producer">Деклан Доннелан</p>
+                        <p class="card-tile__country">Андрей Щербан</p><a class="card-tile__place link" href="#">Театр Буландра, Бухарест, Румыния</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-4.jpg" srcset="img/afisha/afisha-4@2x.jpg 2x" alt="Песочный человек" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">12 — 06</p><span class="card-tile__time-week">17:00, undefined</span>
+                                </div>
+                                <p class="card-tile__type">Опера</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">14+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Песочный человек</span></h2></a>
+                        <p class="card-tile__producer">Роберт Уилсон</p>
+                        <p class="card-tile__country">Андрей Щербан</p><a class="card-tile__place link" href="#">Театр Шаушпильхаус, Дюссельдорф, Германия</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-5.jpg" srcset="img/afisha/afisha-5@2x.jpg 2x" alt="Опасная жалость" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">14 — 06</p><span class="card-tile__time-week">17:00, пн</span>
+                                </div>
+                                <p class="card-tile__type">Балет</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">14+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Опасная жалость</span></h2></a>
+                        <p class="card-tile__producer">Саймон Макберни</p>
+                        <p class="card-tile__country">Шаубюне, Берлин, Германия</p><a class="card-tile__place link" href="#">Новая сцена Александринского театра </a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star button-star--full" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">в избранном</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-7.jpg" srcset="img/afisha/afisha-7@2x.jpg 2x" alt="Love Circle" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">14 — 06</p><span class="card-tile__time-week">17:00, сб</span>
+                                </div>
+                                <p class="card-tile__type">Балет</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">14+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Love Circle</span></h2></a>
+                        <p class="card-tile__producer">Шарон Эйяль</p>
+                        <p class="card-tile__country">L-E-V, Израиль</p><a class="card-tile__place link" href="#">Молодёжный театр на Фонтанке</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-8.jpg" srcset="img/afisha/afisha-8@2x.jpg 2x" alt="Восьмая жизнь" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">16 — 06</p><span class="card-tile__time-week">17:00, пн</span>
+                                </div>
+                                <p class="card-tile__type">Спектакль</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">12+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Восьмая жизнь</span></h2></a>
+                        <p class="card-tile__producer">Йетте Штекель</p>
+                        <p class="card-tile__country">Театр Талия, Гамбург, Германия </p><a class="card-tile__place link" href="#">Театр-фестиваль «Балтийский дом»</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-9.jpg" srcset="img/afisha/afisha-9@2x.jpg 2x" alt="Женщины в беде" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">17 — 06</p><span class="card-tile__time-week">17:00, вт</span>
+                                </div>
+                                <p class="card-tile__type">выставка</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">14+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Женщины в беде</span></h2></a>
+                        <p class="card-tile__producer">Сьюзен Кеннеди</p>
+                        <p class="card-tile__country">Фольксбюне, Берлин, Германия</p><a class="card-tile__place link" href="#">Александринский театр. Основная сцена</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star button-star--full" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">в избранном</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-2.jpg" srcset="img/afisha/afisha-2@2x.jpg 2x" alt="Все, что произошло и могло произойти" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">19 — 06</p><span class="card-tile__time-week">17:00, вт</span>
+                                </div>
+                                <p class="card-tile__type">Балет</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">12+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Все, что произошло и могло произойти</span></h2></a>
+                        <p class="card-tile__producer">Хайнер Гёббельс</p>
+                        <p class="card-tile__country">Манчестер, UK</p><a class="card-tile__place link" href="#">Artplay</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-6.jpg" srcset="img/afisha/afisha-6@2x.jpg 2x" alt="Трагедия мщения" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">21 — 06</p><span class="card-tile__time-week">17:00, вс</span>
+                                </div>
+                                <p class="card-tile__type">Спектакль</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__regalia"><span>NET</span></p>
+                                <p class="card-tile__age-restrictions">18+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Трагедия мщения</span></h2></a>
+                        <p class="card-tile__producer">Деклан Доннелан</p>
+                        <p class="card-tile__country">Театр Пикколо, Милан, Италия </p><a class="card-tile__place link" href="#">Александринский театр. Основная сцена</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-10.jpg" srcset="img/afisha/afisha-10@2x.jpg 2x" alt="Процесс" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">23 — 06</p><span class="card-tile__time-week">17:00, вт</span>
+                                </div>
+                                <p class="card-tile__type">опера</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">14+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Процесс</span></h2></a>
+                        <p class="card-tile__producer">Кристиан Люпа</p>
+                        <p class="card-tile__country">Новый театр, Варшава, Польша</p><a class="card-tile__place link" href="#">Александринский театр. Основная сцена</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-11.jpg" srcset="img/afisha/afisha-11@2x.jpg 2x" alt="Сайгон" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">27 — 06</p><span class="card-tile__time-week">17:00, сб</span>
+                                </div>
+                                <p class="card-tile__type">спектакль</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">14+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Сайгон</span></h2></a>
+                        <p class="card-tile__producer">Каролин Ньен</p>
+                        <p class="card-tile__country">Les Hommes Approximatifs, Франция-Вьетнам</p><a class="card-tile__place link" href="#">Новая сцена Александринского театра</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-12.jpg" srcset="img/afisha/afisha-12@2x.jpg 2x" alt="Формоза" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">27 — 06</p><span class="card-tile__time-week">17:00, сб</span>
+                                </div>
+                                <p class="card-tile__type">балет</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">6+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Формоза</span></h2></a>
+                        <p class="card-tile__producer">Лин Хвай-Мин</p>
+                        <p class="card-tile__country">Театр танца Тайваня «Клауд Гейт» </p><a class="card-tile__place link" href="#">Александринский театр. Основная сцена</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-13.jpg" srcset="img/afisha/afisha-13@2x.jpg 2x" alt="Тихий танцевальный вечер" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">27 — 06</p><span class="card-tile__time-week">17:00, сб</span>
+                                </div>
+                                <p class="card-tile__type">балет</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">8+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Тихий танцевальный вечер</span></h2></a>
+                        <p class="card-tile__producer">Уильям Форсайт</p>
+                        <p class="card-tile__country">Sadlers Wells, Лондон, Великобритания</p><a class="card-tile__place link" href="#">Михайловский театр</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-13.jpg" srcset="img/afisha/afisha-13@2x.jpg 2x" alt="Тихий танцевальный вечер" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">28 — 06</p><span class="card-tile__time-week">17:00, сб</span>
+                                </div>
+                                <p class="card-tile__type">балет</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">14+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Тихий танцевальный вечер</span></h2></a>
+                        <p class="card-tile__producer">Уильям Форсайт</p>
+                        <p class="card-tile__country">Sadlers Wells, Лондон, Великобритания</p><a class="card-tile__place link" href="#">Михайловский театр</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-1.jpg" srcset="img/afisha/afisha-1@2x.jpg 2x" alt="Мать" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">28 — 06</p><span class="card-tile__time-week">17:00, сб</span>
+                                </div>
+                                <p class="card-tile__type">спектакль</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions">14+</p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Мать</span></h2></a>
+                        <p class="card-tile__producer">Габриэла Карризо</p>
+                        <p class="card-tile__country">Брюссель, Бельгия</p><a class="card-tile__place link" href="#">Михайловский театр</a>
+                      </article>
+              </li>
+              <li class="playbill__card-item">
+                      <article class="card-tile playbill__card">
+                        <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                          <svg>
+                            <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                          </svg><span class="button-star__hint">добавить в избранное</span>
+                        </button><a class="card-tile__interactive-block" href="#">
+                          <div class="card-tile__link playbill__card-image-link">
+                            <div class="card-tile__wrap"><img src="img/afisha/afisha-2.jpg" srcset="img/afisha/afisha-2@2x.jpg 2x" alt="Все, что произошло и могло произойти" width="388" height="232">
+                              <div class="card-tile__top-inner">
+                                <div class="card-tile__date-info">
+                                  <p class="card-tile__day">30 — 06</p><span class="card-tile__time-week">17:00, вт</span>
+                                </div>
+                                <p class="card-tile__type">Спектакль</p>
+                              </div>
+                              <div class="card-tile__bottom-inner">
+                                <p class="card-tile__age-restrictions"></p>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="card-tile__title"><span class="link">Все, что произошло и могло произойти</span></h2></a>
+                        <p class="card-tile__producer">Хайнер Гёббельс</p>
+                        <p class="card-tile__country">Манчестер, UK</p><a class="card-tile__place link" href="#">Artplay</a>
+                      </article>
+              </li>
+            </ul>
+          </div>
+        </div><span class="playbill__warning">в программе возможны изменения</span>
+        <div class="template playbill-page-header" id="filter-result-template">
+          <div class="filter-result playbill-page-header__filter-result">
+            <p class="filter-result__text"></p>
+            <button class="filter-result__button" type="button" aria-label="удалить фильтр">
+              <svg>
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+              <div class="template" id="card-template">
+                <article class="card-tile playbill__card">
+                  <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                    <svg>
+                      <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                    </svg>
+                  </button><a class="card-tile__interactive-block">
+                    <div class="card-tile__link playbill__card-image-link">
+                      <div class="card-tile__wrap"><img>
+                        <div class="card-tile__top-inner">
+                          <div class="card-tile__date-info">
+                            <p class="card-tile__day"></p><span class="card-tile__time-week"></span>
+                          </div>
+                          <p class="card-tile__type"></p>
+                        </div>
+                        <div class="card-tile__bottom-inner">
+                          <p class="card-tile__regalia"><span></span></p>
+                          <p class="card-tile__age-restrictions"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <h2 class="card-tile__title"><span class="link"></span></h2></a>
+                  <p class="card-tile__producer"></p>
+                  <p class="card-tile__country"></p><a class="card-tile__place link" href="#"></a>
+                </article>
+              </div>
+        <div class="template" id="mailing-template">
+                <form class="mailing playbill__mailing" method="post" action="#">
+                  <div class="container mailing__container">
+                    <h3 class="mailing__title">Рассылка</h3>
+                    <fieldset class="mailing__field">
+                      <label class="mailing__label" for="mailing-email">Введите ваш адрес, чтобы получать самые актуальные новости</label>
+                      <input class="mailing__input" type="email" id="mailing-email" name="email" aria-label="Введите адрес вашей электронной почты" placeholder="e-mail">
+                      <button class="mailing__submit" type="submit">подписаться</button>
+                      <div class="mailing__strip"></div>
+                    </fieldset>
+                  </div>
+                </form>
+        </div>
+      </main>
+      <footer class="footer"><span class="footer__rights">ⓒ All rights reserved.</span><a class="footer__link" href="#">Политика конфиденциальности</a><span class="footer__credits">разработка<a href="#">
+            <svg width="70" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#greenlabs"></use>
+            </svg><span class="visually-hidden">Greenlabs</span></a></span></footer>
+    </div>
+    <script src="https://unpkg.com/weakmap-polyfill/weakmap-polyfill.min.js"></script>
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/formdata.min.js"></script>
+    <script src="libs/ofi.min.js"></script>
+    <script src="libs/nice-select/nice-select.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

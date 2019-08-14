@@ -1,0 +1,26 @@
+extends layouts/_layout
+include components/_header
+//- include components/_event-info
+//- include components/_request-info
+//- include components/_person
+//- include components/_gallery-slider
+//- include components/_social
+//- include components/_party-card-list
+//- include components/_reviews
+//- include components/_card
+//- include components/_card-tile
+//- include components/_collection-card
+//- include components/_date-link
+include components/_event
+
+block title
+  | Театральная олимпиада 2019 Выставка
+
+block header
+  +header('Афиша')(className=data.exhibitionInfo.image ? 'header--black' : '')
+
+block main
+  +event(data.exhibitionInfo, className=!data.exhibitionInfo.image ? 'event--no-image' : '')
+
+block footer
+  include components/_footer

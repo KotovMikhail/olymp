@@ -1,0 +1,77 @@
+.footer {
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+  padding: 20px 59px;
+  margin: 0 auto;
+  margin-top: auto;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  color: $putty-color;
+
+  @media (max-width: $media-md) {
+    padding: 20px 30px;
+  }
+
+  @media (max-width: $media-tb) {
+    padding: 10px 19px;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  @media (max-width: $media-s) {
+    font-size: 11px;
+  }
+
+  &__rights {
+    padding-top: 2px;
+    margin-right: 4px;
+  }
+
+  &__link {
+    text-decoration: underline;
+
+    color: $putty-color;
+
+    &:hover,
+    &:focus {
+      color: $dark-blue-color;
+    }
+  }
+
+  &__credits {
+    display: flex;
+    margin-left: auto;
+    align-items: baseline;
+    font-size: 12px;
+    line-height: 26px;
+
+    a {
+      margin-left: 6px;
+
+      svg {
+        fill: $putty-color;
+        transition: 0.2s;
+        transition-property: fill;
+      }
+    }
+
+    a:hover,
+    a:focus {
+      svg {
+        fill: $dark-blue-color;
+      }
+    }
+
+    @media (max-width: $media-tb) {
+      margin: 0;
+      margin-top: 14px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.page-title {
+  margin: 0;
+  padding: 0;
+  background-color: $pampas-color;
+  color: $dark-blue-color;
+
+  &__wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: right;
+    padding: 141px 55px 24px;
+
+    @media (max-width: $media-md) {
+      padding: 141px 30px 24px;
+    }
+
+    @media (max-width: $media-tb) {
+      font-size: 18px;
+      padding: 100px 19px 20px 109px;
+
+    }
+  }
+
+  &--one-news {
+    font-size: 0;
+  }
+}

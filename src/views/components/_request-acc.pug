@@ -1,0 +1,12 @@
+mixin request-acc(className)
+  div.request-info__hint.request-info__hint--open.request-info__hint--acc
+    p.request-info__text Вы действительно хотите удалить свою учетную запись?
+
+    p.request-info__text Ваш список избранного так же будет удален и вы не сможете отслеживать и менять статус ваших заявок на мероприятия
+
+    button.request-info__btn.request-info__btn--delete(type="button") удалить
+    button.request-info__btn.request-info__btn--cancel(type="button") отмена
+    button.request-info__hint-button-close(type="button")
+      svg(width=40 height=40)
+        use(xlink:href='img/sprite/sprite.svg#thin-icon-close')
+

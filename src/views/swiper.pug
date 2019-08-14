@@ -1,0 +1,6 @@
+extends layouts/_layout
+include components/_gallery-slider
+
+block main
+  .container
+    +gallery-slider(data.eventGallerySliderData)

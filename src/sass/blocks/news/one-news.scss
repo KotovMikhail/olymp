@@ -1,0 +1,16 @@
+.one-news {
+  margin-bottom: 268px;
+
+  &__top-wrap {
+    height: 194px;
+    background: $pampas-color;
+
+    @media (max-width: $media-tb) {
+      height: 140px;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
+}

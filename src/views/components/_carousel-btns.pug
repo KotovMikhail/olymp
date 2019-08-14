@@ -1,0 +1,6 @@
+mixin carousel-btns
+  ul.carousel-btns(class!=attributes.className aria-hidden='true')
+    li.carousel-btns__item
+      button.carousel-btns__btn.carousel-btns__btn--prev.carousel-btns__btn--disabled(type='button' title='Предыдущее')
+    li.carousel-btns__item
+      button.carousel-btns__btn.carousel-btns__btn--next(type='button' title='Следующее')

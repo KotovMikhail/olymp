@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>О нас
+    </title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/svgxuse.min.js" async defer></script>
+  </head>
+  <body>
+    <div class="overflowWrap">
+      <header class="header">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Театральная олимпиада 2019">
+            <svg width="120" height="143" aria-hidden="true">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg></a><a class="header__monogram" href="#" aria-label="Год театра в России">
+            <svg class="header__monogram-color" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram.svg#monogram"></use>
+            </svg>
+            <svg class="header__monogram-white" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram-white.svg#monogram"></use>
+            </svg></a>
+          <div class="header__content">
+            <button class="header__close" type="button" aria-label="Закрыть меню">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav__pages">
+                <li class="nav__pages-item nav__pages-item--with-sub">
+                  <input class="nav__pages-checkbox visually-hidden" type="checkbox" id="0" tabindex="0"/>
+                  <label class="nav__pages-link nav__pages-link--with-sub nav__pages-link--active" for="0">Олимпиада</label>
+                  <ul class="nav__sub-pages">
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="about.html">О проекте</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="comitet.html">Международный комитет</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="platforms.html">Площадки</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="#">Пресс-центр</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="gallery.html">Галерея</a></li>
+                  </ul>
+                </li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="news.html">Новости</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="playbill.html">Афиша</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="people.html">Участники</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="partners.html">Партнеры</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="contacts.html">Контакты</a></li>
+              </ul><a class="nav__search-btn search-btn" href="#" aria-label="Открыть поиск">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                </svg></a>
+              <div class="nav__user"><a class="nav__user-btn nav__user-btn--login" href="#"><span class="nav__user-text">регистрация</span></a>
+              </div>
+              <form class="user-form login" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="login-email" name="login-email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="login-password" name="login-password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Войти</button><a class="user-form__recovery" href="lk-reset-password.html">Забыли пароль?</a><a class="user-form__register" href="#">Зарегистрироваться</a>
+              </form>
+              <form class="user-form registration" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="name" name="name" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="name">Имя</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="surname" name="surname" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="surname">Фамилия</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="password" name="password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__consent-input" type="checkbox" id="consent" name="consent" required="required"/>
+                  <label class="user-form__consent-label" for="consent">
+                    Согласие на обработку персональных данных в соответствии с
+                    <a class="user-form__consent-link" href="#">пользовательским соглашением</a>
+                  </label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Зарегистрироваться</button><a class="user-form__login" href="#">Уже зарегистрированы</a>
+              </form>
+              <form class="user-form recovery" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="recovery-email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="recovery-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__recover-text">На данную почту вам придет письмо со ссылкой для восстановления пароля</p>
+                <button class="user-form__btn" type="submit">восстановить пароль</button>
+              </form>
+              <div class="nav__sub">
+                <ul class="nav__social">
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Instagram">
+                      <svg class="nav__social-icon" width="19" height="19" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Facebook">
+                      <svg class="nav__social-icon" width="8" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на VK">
+                      <svg class="nav__social-icon" width="20" height="11" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Youtube">
+                      <svg class="nav__social-icon" width="23" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-youtube"></use>
+                      </svg></a></li>
+                </ul><a class="nav__lang" href="#" aria-label="Read in English">eng</a>
+              </div>
+            </nav>
+          </div>
+          <form class="search" method="get" action="#">
+            <button class="search__close" type="button" aria-label="Закрыть поиск">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search__wrapper">
+              <svg class="search__icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+              </svg>
+              <input class="search__input" type="search" id="search" name="search" aria-label="Поиск по сайту"/>
+            </div>
+          </form><a class="header__search-btn search-btn" href="#" aria-label="Открыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+            </svg></a>
+          <button class="header__burger" type="button" aria-label="Открыть меню">
+            <svg width="30" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="about">
+        <div class="page-title about__title">
+          <h1 class="page-title__wrapper about__title-wrapper">История</h1>
+        </div>
+        <section class="history">
+          <h2 class="history__title">Международная Театральная Олимпиада 2019 — масштабный  фестиваль, площадка для развития глобальной театральной интеграции и диалога театральных деятелей разных стран.</h2>
+          <div class="history__content"><p>Театральная Олимпиада была основана в 1993 году по инициативе известного театрального режиссера Теодороса Терзопулоса и впервые проведена в 1994 году на родине театра, в Греции, в городе Дельфы.</p>
+            <div class="gallery-slider history__gallery-slider">
+              <button class="gallery-slider__miniature-button gallery-slider__miniature-button--prev" type="button"></button>
+              <div class="swiper-container gallery-slider__container">
+                <div class="swiper-wrapper gallery-slider__wrapper">
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/news/news-7.jpg" srcset="img/news/news-7@2x.jpg 2x" alt="Песочный человек"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Песочный человек</p>
+                  </div>
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/news/news-5.jpg" srcset="img/news/news-5@2x.jpg 2x" alt="Песочный человек"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Песочный человек</p>
+                  </div>
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/news/news-19.jpg" srcset="img/news/news-19@2x.jpg 2x" alt="Песочный человек"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Песочный человек</p>
+                  </div>
+                </div>
+                <div class="gallery-slider__pagination"></div>
+              </div>
+              <div class="gallery-slider__buttons-wrap">
+                <button class="gallery-slider__miniature-button gallery-slider__miniature-button--next" type="button"><img class="gallery-slider__img" src="img/news/news-5.jpg" srcset="img/news/news-5@2x.jpg 2x" alt="Песочный человек"/></button>
+                <div class="gallery-slider__slider-buttons-inner">
+                  <button class="gallery-slider__button-arrow gallery-slider__button-arrow--prev button-arrow button-arrow--prev" type="button"></button>
+                  <button class="gallery-slider__button-arrow gallery-slider__button-arrow--next button-arrow button-arrow--next" type="button"></button>
+                </div>
+              </div>
+            </div><p>В разные годы Олимпиада проводилась в Греции, Японии, Турции, Южной Корее, Польше, Китае. В России Театральная Олимпиада проходит во второй раз, в 2001 году она состоялась в Москве.</p><h3>Политика упоминаний</h3><p>Любая информация, полученная на территории проведения Форума или в рамках работы Форума должна содержать упоминание о Санкт-Петербургском международном культурном форуме.</p><h3>Правила</h3>
+            <ol class="history__numbered-list">
+              <li class="history__numbered-item">Общие положения
+                <ol class="history__numbered-sublist">
+                  <li class="history__numbered-subitem">Аккредитация представителей средств массовой информации (далее — СМИ) на Санкт-Петербургский международный культурный форум (далее — Форум) проводится в целях обеспечения необходимых условий для профессиональной деятельности по подготовке и распространению полной и достоверной информации о мероприятиях Форума.</li>
+                  <li class="history__numbered-subitem">Аккредитация представителей СМИ обязательна для работы на всех мероприятиях Форума.</li>
+                  <li class="history__numbered-subitem">При осуществлении профессиональной деятельности представители СМИ обязаны уважать права и законные интересы участников и персонала Форума и соблюдать общепризнанные нормы этики.</li>
+                  <li class="history__numbered-subitem">Число представителей СМИ, которые могут принять участие в Форуме, ограничено ввиду стремления организаторов обеспечить представителям СМИ максимально комфортный режим работы и быстрый доступ ко всем необходимым ресурсам в условиях значительного интереса к мероприятию со стороны СМИ и с учетом ограниченности инфраструктурных возможностей площадок мероприятия.</li>
+                </ol>
+              </li>
+              <li class="history__numbered-item">Аккредитация представителей СМИ
+                <ol class="history__numbered-sublist">
+                  <li class="history__numbered-subitem">Порядок аккредитации. Регистрационную заявку на сайте Форума (http://culturalforum.ru) могут подать как российские, так и иностранные представители СМИ, при этом:
+                    <ul class="history__nested-list">
+                      <li class="history__nested-item">российские организации СМИ должны быть зарегистрированы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций (далее — Роскомнадзор);</li>
+                      <li class="history__nested-item">иностранные представители СМИ:</li>
+                      <li class="history__nested-item">в случае постоянной работы на территории Российской Федерации должны быть аккредитованы при МИД России;</li>
+                      <li class="history__nested-item">в случае если представитель иностранного СМИ не имеет аккредитации МИД России, помимо заполнения заявки на официальном сайте необходимо направить письмо в адрес Пресс-центра Форума с просьбой предоставить аккредитацию на Форум на официальном бланке организации за подписью руководителя и заверенное печатью организации.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </li>
+            </ol><h3>Аккредитация СМИ</h3>
+            <ul class="history__list">
+              <li class="history__item"><a class="history__list-link" href="#">Фотобанк 2018</a></li>
+              <li class="history__item"><a class="history__list-link" href="#">Фотобанк 2017 </a></li>
+              <li class="history__item"><a class="history__list-link" href="#">Фотобанк 2016</a></li>
+            </ul>
+            <div class="history__male"> Контакты для СМИ: <a href="media@culturalforum.ru">media@culturalforum.ru</a></div>
+          </div>
+          <div class="rambler-share"></div>
+        </section>
+        <div class="container">
+          <h1 class="playbill-page-header__title">Карточка "большая"</h1>
+          <ul class="carousel__wrapper">
+            <li class="main-section__item carousel__item">
+              <article class="card main-section__events-card card--events"><a class="card__link" href="event.html">
+                  <h3 class="card__title"><span>Мать</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-1.jpg" srcset="img/afisha/afisha-1@2x.jpg 2x" alt="Мать" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when"><span class="card__date">11 — 06</span><span class="card__time">17:00</span>
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                        <div class="card__program"><span>золотая маска</span></div><span class="card__age">14+</span>
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star"><span class="card__type">Cпектакль</span>
+                  <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                    <svg>
+                      <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                    </svg>
+                  </button>
+                </div><span class="card__author">Габриэла Карризо</span><span class="card__from">Брюссель, Бельгия</span><a class="card__place" href="one-place.html">Новая сцена Александринского театра</a>
+              </article>
+            </li>
+          </ul>
+          <h1 class="playbill-page-header__title">Карточка "средняя"</h1>
+          <ul class="playbill__card-list fill-content">
+            <li class="playbill__card-item">
+              <article class="card-tile playbill__card">
+                <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                  <svg>
+                    <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                  </svg><span class="button-star__hint">добавить в избранное</span>
+                </button><a class="card-tile__interactive-block" href="#">
+                  <div class="card-tile__link playbill__card-image-link">
+                    <div class="card-tile__wrap"><img src="img/afisha/afisha-1.jpg" srcset="img/afisha/afisha-1@2x.jpg 2x" alt="Мать" width="388" height="232"/>
+                      <div class="card-tile__top-inner">
+                        <div class="card-tile__date-info">
+                          <p class="card-tile__day">9 — 06</p><span class="card-tile__time-week">17:00, пн</span>
+                        </div>
+                        <p class="card-tile__type">Cпектакль</p>
+                      </div>
+                      <div class="card-tile__bottom-inner">
+                        <p class="card-tile__regalia"><span>золотая маска</span></p>
+                        <p class="card-tile__age-restrictions">14+</p>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="card-tile__title"><span class="link">Мать</span></h2></a>
+                <p class="card-tile__producer">Габриэла Карризо</p>
+                <p class="card-tile__country">Брюссель, Бельгия</p><a class="card-tile__place link" href="#">Новая сцена Александринского театра</a>
+              </article>
+            </li>
+          </ul>
+          <h1 class="playbill-page-header__title">Участники</h1>
+          <div class="about__persons">
+            <div class="person person--blue"><a class="person__interactive-block" href="#">
+                <div class="person__image-wrap"><img src="img/event/8.jpg" srcset="img/event/8@2x.jpg 2x" alt="Роберт Уилсон" width="164" height="210"/></div>
+                <p class="person__name"><span>Роберт</span><span>Уилсон</span></p>
+                <p class="person__info">Франция</p></a></div>
+            <div class="person"><a class="person__interactive-block" href="#">
+                <div class="person__image-wrap"><img src="img/event/8.jpg" srcset="img/event/8@2x.jpg 2x" alt="Роберт Уилсон" width="164" height="210"/></div>
+                <p class="person__name"><span>Роберт</span><span>Уилсон</span></p>
+                <p class="person__info">Франция</p></a></div>
+            <article class="carg comitet__card"><a class="people__link" href="#">
+                <div class="people__image"><img width="164" height="210" src="img/people/people-1.jpg" srcset="img/people/people-1@2x.jpg 2x" alt="Теодорос Терзопулос"></div>
+                <h3 class="people__name">Кристиан Фридель</h3></a><span class="people__profesion">Режиссер, АТТИС</span><span class="people__from">Греция</span></article>
+          </div>
+          <h1 class="playbill-page-header__title">Список "термин: описание"</h1>
+          <div class="event-info event__info">
+            <dl class="event-info__list">
+              <div class="event-info__item">
+                <dt class="event-info__termin">Постановка:</dt>
+                <dd class="event-info__description">Максима Диденко по роману самого загадочного автора новой российской литературы</dd>
+              </div>
+              <div class="event-info__item">
+                <dt class="event-info__termin">Театр:</dt>
+                <dd class="event-info__description">Компания Аурелии Тьере, Париж, Франция</dd>
+              </div>
+              <div class="event-info__item">
+                <dt class="event-info__termin">Премьера:</dt>
+                <dd class="event-info__description">23 декабря 2016</dd>
+              </div>
+              <div class="event-info__item">
+                <dt class="event-info__termin">Продолжительность:</dt>
+                <dd class="event-info__description">2 ч. 50 мин. Спектакль идет с 1 антрактом</dd>
+              </div>
+              <div class="event-info__item">
+                <dt class="event-info__termin">Языки исполнения:</dt>
+                <dd class="event-info__description">без слов</dd>
+              </div>
+              <div class="event-info__item">
+                <dt class="event-info__termin">Премия:</dt>
+                <dd class="event-info__description">«Золотая Маска» 2018 г. – «Лучший спектакль в драме, большая форма». Номинации на Премию «Золотая Маска» 2018 г. – «Лучшая работа режиссера», «Лучшая работа художника», «Лучшая женская роль» (Ирина Тычинина)</dd>
+              </div>
+            </dl>
+          </div>
+          <h1 class="playbill-page-header__title">Текст отзыва</h1>
+          <p class="reviews__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis asperiores, ad, obcaecati quasi voluptates minus quos perferendis fugiat quisquam cum repudiandae magni blanditiis assumenda laborum exercitationem. Eaque quod fugit ipsa.</p>
+          <div class="rambler-share" data-id="1"></div>
+          <h1 class="playbill-page-header__title">Текст на странице события</h1>
+          <div class="event__about-author">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam officia animi, nostrum mollitia provident nam, ut eius enim eaque cum similique facilis? Ipsam eligendi eius animi ratione dolores ab corrupti.</p><a class="event__additional-link link">И ссылка!</a>
+          </div>
+          <h1 class="playbill-page-header__title">Системное сообщение</h1>
+          <div class="subscription__popup"><span class="subscription__popup-text">Новый пароль успешно отправлен на Ваш адрес электронной почты</span>
+            <button class="subscription__popup-close"></button>
+          </div>
+          <h1 class="playbill-page-header__title">Кнопка-ссылка</h1>
+          <div class="about__link-inner"><a class="request-info__link dark-link request-info__link--request">Заявка</a><p class="request-info__desc">Вы можете купить билеты в кассе театра или забронировать<br><span>по тел.:</span><a href="tel:8 (567) 45-90-5">8 (567) 45-90-5</a></p></div>
+          <h2 class="related-events__title">Я заголовок на странице событий</h2><a class="footer__link">Я - ссылка из подвала</a>
+          <h1></h1><a class="link">Я - просто ссылка</a>
+          <div class="about__title-inner">
+            <h1 class="event-page-header__title">Я большой заголовок всяких событий</h1>
+            <h1 class="event-page-header__title event-page-header__title--mid">А я средний заголовок всяких событий</h1>
+          </div>
+          <h1 class="playbill-page-header__title">Контакты</h1>
+          <ul><li class="addresses__item">
+<div class="addresses__item-wrap"><a class="addresses__title" href="#">Офис фестиваля</a><span class="addresses__name">пл. Островского, 6, Санкт-Петербург</span></div>
+<div class="addresses__item-wrap"><a class="addresses__phone">8 812 567-90-84</a><a class="addresses__mail">info@theatreolympics2019.com</a></div>
+</li>
+          </ul>
+          <h1 class="playbill-page-header__title">Резульат поиска</h1>
+          <ul class="search-results__list"><li class="search-results__item">
+<div class="search-results__result search-result container"><a class="search-result__title" href="#"><span>Театр «великих слез и великого смеха»: БДТ отмечает вековой юбилей</span></a>
+<p class="search-result__type" data-name="photo">фото</p>
+<div class="search-result__text">
+<p class="search-result__date">19—06—2019</p>
+</div>
+</div>
+</li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer"><span class="footer__rights">ⓒ All rights reserved.</span><a class="footer__link" href="#">Политика конфиденциальности</a><span class="footer__credits">разработка<a href="#">
+            <svg width="70" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#greenlabs"></use>
+            </svg><span class="visually-hidden">Greenlabs</span></a></span></footer>
+    </div>
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/formdata.min.js"></script>
+    <script src="libs/ofi.min.js"></script>
+    <script src="libs/nice-select/nice-select.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

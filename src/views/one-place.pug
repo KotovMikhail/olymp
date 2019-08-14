@@ -1,0 +1,75 @@
+extends layouts/_layout
+include components/_header
+include components/_event
+
+block title
+  | Театральная олимпиада 2019 Площадка
+
+block header
+  +header('Олимпиада')(className=data.collectionInfo.image ? 'header--black' : '')
+
+block main
+  main.place.event
+    div.place__place-page-header(class='place-page-header event-page-header' style=data.placeInfo.image ? 'background: none;' : '')
+      div.image-container.image-container--mid
+        if (data.placeInfo.image)
+          img.event-page-header__image(src=data.placeInfo.image srcset=data.placeInfo.image2x alt = data.placeInfo.title width='1400' height='600')
+      div.place-page-header__container(class="container")
+        div.event-page-header__top-group
+          a.event-page-header__back-link(href=data.placeInfo.backLink ? data.placeInfo.backLink : '#')
+            | вернуться
+            svg(width=24 height=15)
+              use(xlink:href='img/sprite/sprite.svg#arrow-back')
+        h1.place-page-header__title= data.placeInfo.title
+
+    .container
+      div.place__info-wrap
+        div.place__info(class='text-container')
+          each paragraph in data.placeInfo.info.about
+            p= paragraph
+          p.place__address= data.placeInfo.info.address
+            a.place__map-link(href=data.placeInfo.info.mapLink ? data.placeInfo.info.mapLink : '#')
+              svg
+                use(xlink:href='img/sprite/sprite.svg#shape')
+              span на карте
+          a.place__link(href=data.placeInfo.info.link ? data.placeInfo.info.link : '#')= data.placeInfo.info.link
+          div.place__social
+            +social
+        div.place__person.event__person
+          p.event__person-position= data.placeInfo.info.specialty
+          +person(data.placeInfo.info, '--blue')
+
+      if data.placeInfo.gallerySliderData
+        div.event__gallery-slider-wrap
+          h2.event__subtitle Галерея
+          +gallery-slider(data.placeInfo.gallerySliderData, 'place')
+
+      if (data.placeInfo.partyCards || data.placeInfo.partySchedule)
+        div.event__party.place__party
+          h2.event__subtitle Участники
+          if data.placeInfo.partyCards
+            +party-card-list(data.placeInfo.partyCards, 'place', '', 5)
+          a.place__show-all-link.place__show-all-link--party(href=data.placeInfo.showAllParty ? data.placeInfo.showAllParty : '#') показать все
+
+
+      div.event__related-events.place__related-events(class='related-events')
+        h2.related-events__title= `${data.placeInfo.relatedEvents.length} событий`
+        ul.related-events__list
+          each item, index in data.placeInfo.relatedEvents
+            if (index < 3)
+              li.related-events__item
+                +card-tile(item, 'related-events')
+        a.place__show-all-link.place__show-all-link--events(href=data.placeInfo.showAllEvents ? data.placeInfo.showAllEvents : '#') показать все
+
+
+      div.event__most-interesting.place__most-interesting(class='most-interesting')
+        h2.most-interesting__title Вам может быть интересно
+        ul.most-interesting__list
+          each item in data.placeInfo.mostInteresting
+            li.most-interesting__item
+              if (item.type === 'видео')
+                +card(item)(className = 'most-interesting__card most-interesting__card--video')
+              else
+                +card(item)(className = 'most-interesting__card')
+block footer
+  include components/_footer

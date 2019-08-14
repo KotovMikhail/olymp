@@ -1,0 +1,29 @@
+include ../components/_filter-select
+include ../components/_filter-results
+include ../components/__filter
+
+mixin playbill-page-header(isList)
+  div.playbill-page-header
+    div.container
+      h1.playbill-page-header__title Афиша
+      +filter(data.playbillFilterData, 'playbill-page-header')
+      div.playbill-page-header__bottom-inner
+        +filter-results('playbill-page-header')
+        div.playbill-page-header__links
+          a.playbill-page-header__link(href='#') добавить&nbsp;в&nbsp;календарь
+          a.playbill-page-header__link(href='#') скачать&nbsp;программу&nbsp;(pdf)
+        div.playbill-page-header__view-switch
+          if isList
+            a(class='playbill-page-header__switch-button playbill-page-header__switch-button--tile' href='playbill.html' aria-label='отобразить плиткой')
+              svg()
+                use(xlink:href='img/sprite/sprite.svg#icon-tile')
+            a(class='playbill-page-header__switch-button playbill-page-header__switch-button--list playbill-page-header__switch-button--active' aria-label='отобразить списком')
+              svg()
+                use(xlink:href='img/sprite/sprite.svg#icon-grid')
+          else
+            a(class='playbill-page-header__switch-button playbill-page-header__switch-button--tile playbill-page-header__switch-button--active' aria-label='отобразить плиткой')
+              svg()
+                use(xlink:href='img/sprite/sprite.svg#icon-tile')
+            a(class='playbill-page-header__switch-button playbill-page-header__switch-button--list' href='playbill-list.html' aria-label='отобразить списком')
+              svg()
+                use(xlink:href='img/sprite/sprite.svg#icon-grid')

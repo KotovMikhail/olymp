@@ -1,0 +1,49 @@
+extends layouts/_layout
+include components/_header
+include components/_event
+
+block title
+  | Театральная олимпиада 2019 Коллекция
+
+block header
+  +header('Афиша')(className=data.collectionInfo.image ? 'header--black' : '')
+
+block main
+  main.collection.event
+    div.collection__collection-page-header(class='collection-page-header event-page-header' style=data.collectionInfo.image ? 'background: none;' : '')
+      div.image-container.image-container--mid
+        if (data.collectionInfo.image)
+          img.event-page-header__image(src=data.collectionInfo.image srcset=data.collectionInfo.image2x alt = data.collectionInfo.title width='1400' height='750')
+      div.collection-page-header__container(class="container")
+        div.event-page-header__top-group
+          a.event-page-header__back-link(href=data.collectionInfo.backLink ? data.collectionInfo.backLink : '#')
+            | вернуться
+            svg(width=24 height=15)
+              use(xlink:href='img/sprite/sprite.svg#arrow-back')
+          button.button-star(class=data.collectionInfo.fullStar ? 'event-page-header__button-star button-star--full' : 'event-page-header__button-star' type='button' aria-label='Добавить в избранное' title='Добавить в избранное')
+            svg(width='24' height='22')
+              use(xlink:href='img/sprite/sprite.svg#icon-star')
+            if data.collectionInfo.fullStar
+              span.button-star__hint в избранном
+            else
+              span.button-star__hint добавить в избранное
+        h1.collection-page-header__title= data.collectionInfo.title
+        time.collection-page-header__publish-data(datetime=data.collectionInfo.systemData)= data.collectionInfo.publishData
+
+    .container
+      div.collection__info
+        div.collection__info-text(class='text-container')
+          each paragraph in data.collectionInfo.info
+            p= paragraph
+
+        div.collection__social
+          +social
+
+      div.cards.playbill.collection__cards
+        ul.playbill__card-list
+          each event in data.collectionInfo.events
+            li.playbill__card-item
+              +card-tile(event, 'playbill')
+
+block footer
+  include components/_footer

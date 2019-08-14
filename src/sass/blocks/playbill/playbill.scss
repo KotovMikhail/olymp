@@ -1,0 +1,244 @@
+.playbill {
+  &--list {
+    .playbill__card-list {
+      margin-top: -27px;
+      margin-bottom: 80px;
+      margin-left: 0;
+    }
+  }
+
+  @include mobile {
+    &--list {
+      .playbill__card-list {
+        margin-bottom: 90px;
+        margin-top: -6px;
+      }
+
+      .card-tile__title,
+      .card-tile__producer,
+      .card-tile__country,
+      .card-list__place {
+        padding: 0;
+      }
+
+      .playbill__date-filter {
+        margin-bottom: 36px;
+      }
+
+      .card-tile__country {
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+
+.playbill__warning {
+  display: block;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 26px;
+  padding: 0 58px;
+  font-size: 13px;
+  font-weight: 300;
+  text-align: left;
+  color: $dark-blue-color;
+
+  @media (max-width: $media-md) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: $media-tb) {
+    padding: 0 20px;
+  }
+}
+
+.playbill__month-select {
+  width: 100%;
+
+  font-size: 20px;
+  line-height: 40px;
+
+  &::after {
+    right: 1px;
+
+    margin-top: -0.3em;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $putty-color;
+  }
+
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    padding-top: 7px;
+    padding-left: 0;
+    padding-bottom: 4px;
+    text-transform: lowercase;
+
+    &::after {
+      width: 5px;
+      height: 5px;
+      transform: rotate(45deg);
+      right: 4px;
+      margin-top: -0.1em;
+    }
+  }
+}
+
+.playbill__date-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 52px;
+  padding-top: 15px;
+
+  @include desktop {
+    display: block;
+    padding-top: 0;
+    margin-bottom: 30px;
+  }
+
+  @include mobile {
+    margin-bottom: 32px;
+  }
+}
+
+.playbill__month-form {
+  flex-grow: 1;
+
+  .nice-select .list {
+    margin-top: -8px;
+  }
+
+  @include desktop {
+    display: inline-block;
+    width: 155px;
+    margin-bottom: 8px;
+  }
+}
+
+.playbill__character-filter {
+  margin-left: 4px;
+  margin-top: -9px;
+  margin-right: -5px;
+
+  @include desktop {
+    margin-left: 0;
+  }
+}
+
+.playbill__card-list {
+  @include reset-list;
+
+  display: flex;
+  margin-right: -40px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @include desktop {
+    margin-right: -29px;
+  }
+
+  @include tablet {
+    margin-right: -16px;
+  }
+
+  @include mobile {
+    margin-left: 0px;
+    margin-right: 0;
+  }
+
+  @media (max-width: 375px) {
+    width: 100vw;
+    margin-left: -20px;
+  }
+}
+
+.playbill__card-item {
+  width: calc((100% - 120px) / 3);
+  margin-right: 40px;
+
+  &--list {
+    position: relative;
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  @include desktop {
+    width: calc((100% - 88px) / 3);
+    margin-right: 29px;
+
+    &--list {
+      width: 100%;
+    }
+  }
+
+  @include tablet {
+    width: calc((100% - 33px) / 2);
+    margin-right: 16px;
+
+    &--list {
+      width: 100%;
+    }
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.playbill__card {
+  margin-bottom: 94px;
+  width: 100%;
+
+  @include mobile {
+    margin-bottom: 53px;
+  }
+
+  @include mobile-s {
+    width: 100vw;
+  }
+}
+
+.playbill__card-image-link {
+}
+
+.playbill__mailing {
+  margin-bottom: 100px;
+}
+
+.playbill__reset-month {
+  display: inline-block;
+  margin-bottom: 260px;
+
+  font-size: 30px;
+  color: $putty-color;
+
+  &:hover,
+  &:focus {
+    color: $dark-blue-color;
+  }
+
+  &:active {
+    color: $dark-blue-color
+  }
+
+  @include mobile {
+    display: none;
+  }
+}

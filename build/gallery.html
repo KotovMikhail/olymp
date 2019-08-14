@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="libs/nice-select/nice-select.css" rel="stylesheet">
+    <title>Театральная олимпиада 2019 | Площадки
+    </title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/svgxuse.min.js" async defer></script>
+  </head>
+  <body>
+    <div class="overflowWrap">
+      <header class="header">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Театральная олимпиада 2019">
+            <svg width="120" height="143" aria-hidden="true">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg></a><a class="header__monogram" href="#" aria-label="Год театра в России">
+            <svg class="header__monogram-color" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram.svg#monogram"></use>
+            </svg>
+            <svg class="header__monogram-white" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram-white.svg#monogram"></use>
+            </svg></a>
+          <div class="header__content">
+            <button class="header__close" type="button" aria-label="Закрыть меню">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav__pages">
+                <li class="nav__pages-item nav__pages-item--with-sub">
+                  <input class="nav__pages-checkbox visually-hidden" type="checkbox" id="0" tabindex="0"/>
+                  <label class="nav__pages-link nav__pages-link--with-sub nav__pages-link--active" for="0">Олимпиада</label>
+                  <ul class="nav__sub-pages">
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="about.html">О проекте</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="comitet.html">Международный комитет</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="platforms.html">Площадки</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="#">Пресс-центр</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="gallery.html">Галерея</a></li>
+                  </ul>
+                </li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="news.html">Новости</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="playbill.html">Афиша</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="people.html">Участники</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="partners.html">Партнеры</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="contacts.html">Контакты</a></li>
+              </ul><a class="nav__search-btn search-btn" href="#" aria-label="Открыть поиск">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                </svg></a>
+              <div class="nav__user"><a class="nav__user-btn nav__user-btn--login" href="#"><span class="nav__user-text">регистрация</span></a>
+              </div>
+              <form class="user-form login" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="login-email" name="login-email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="login-password" name="login-password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Войти</button><a class="user-form__recovery" href="lk-reset-password.html">Забыли пароль?</a><a class="user-form__register" href="#">Зарегистрироваться</a>
+              </form>
+              <form class="user-form registration" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="name" name="name" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="name">Имя</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="surname" name="surname" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="surname">Фамилия</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="password" name="password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__consent-input" type="checkbox" id="consent" name="consent" required="required"/>
+                  <label class="user-form__consent-label" for="consent">
+                    Согласие на обработку персональных данных в соответствии с
+                    <a class="user-form__consent-link" href="#">пользовательским соглашением</a>
+                  </label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Зарегистрироваться</button><a class="user-form__login" href="#">Уже зарегистрированы</a>
+              </form>
+              <form class="user-form recovery" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="recovery-email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="recovery-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__recover-text">На данную почту вам придет письмо со ссылкой для восстановления пароля</p>
+                <button class="user-form__btn" type="submit">восстановить пароль</button>
+              </form>
+              <div class="nav__sub">
+                <ul class="nav__social">
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Instagram">
+                      <svg class="nav__social-icon" width="19" height="19" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Facebook">
+                      <svg class="nav__social-icon" width="8" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на VK">
+                      <svg class="nav__social-icon" width="20" height="11" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Youtube">
+                      <svg class="nav__social-icon" width="23" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-youtube"></use>
+                      </svg></a></li>
+                </ul><a class="nav__lang" href="#" aria-label="Read in English">eng</a>
+              </div>
+            </nav>
+          </div>
+          <form class="search" method="get" action="#">
+            <button class="search__close" type="button" aria-label="Закрыть поиск">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search__wrapper">
+              <svg class="search__icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+              </svg>
+              <input class="search__input" type="search" id="search" name="search" aria-label="Поиск по сайту"/>
+            </div>
+          </form><a class="header__search-btn search-btn" href="#" aria-label="Открыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+            </svg></a>
+          <button class="header__burger" type="button" aria-label="Открыть меню">
+            <svg width="30" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="gallery">
+        <div class="page-title">
+          <h1 class="page-title__wrapper">Галерея</h1>
+        </div>
+        <aside class="gallery__aside">
+          <div class="container">
+            <button class="filter-button gallery__filter-button-open" type="button">Фильтр</button>
+            <div class="filter gallery__filter">
+              <button class="filter__button-close gallery__filter-button-close" type="button"></button>
+              <form class="filter__form gallery__filter-form" action="#">
+                <select class="filter-select filter-select--forever gallery__filter-select" name="city" multiple="multiple" id="city">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Город</option>
+                  <option value="all">все</option>
+                  <option value="Barcelona">Барселона</option>
+                  <option value="Paris">Париж</option>
+                  <option value="Toga">Тога</option>
+                  <option value="St.Petersburg">Санкт-Петербург</option>
+                  <option value="Manchester">Манчестер</option>
+                  <option value="Milan">Милан</option>
+                </select>
+                <select class="filter-select filter-select--forever gallery__filter-select" name="month" multiple="multiple" id="month">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Месяц</option>
+                  <option value="0">Январь</option>
+                  <option value="1">Февраль</option>
+                  <option value="2">Март</option>
+                  <option value="3">Апрель</option>
+                  <option value="4">Май</option>
+                  <option value="5">Июнь</option>
+                  <option value="6">Июль</option>
+                  <option value="7">Август</option>
+                  <option value="8">Сентябрь</option>
+                  <option value="9">Октябрь</option>
+                  <option value="10">Ноябрь</option>
+                  <option value="11">Декабрь</option>
+                </select>
+                <select class="filter-select filter-select--forever gallery__filter-select" name="place" multiple="multiple" id="place">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Площадка</option>
+                  <option value="all">все</option>
+                  <option value="St. Petersburg Theater «Music Hall»">Санкт-Петербургский Театр «Мюзик-Холл»</option>
+                  <option value="Alexandrinsky Theater. Main stage">Александринский театр. Основная сцена</option>
+                  <option value="Khabarovsk Regional Drama Theater, Khabarovsk">Хабаровский краевой театр драмы, Хабаровск</option>
+                </select>
+                <fieldset class="filter__field gallery__filter-field">
+                  <ul class="filter__list gallery__filter-list">
+                    <li class="filter__item gallery__filter-item">
+                      <label class="filter__label gallery__filter-label">
+                        <input class="filter__input visually-hidden gallery__filter-input" type="checkbox" name="photo"/><span class="filter__checkbox gallery__filter-checkbox"></span><span class="filter__text gallery__filter-text">фото</span>
+                      </label>
+                    </li>
+                    <li class="filter__item gallery__filter-item">
+                      <label class="filter__label gallery__filter-label">
+                        <input class="filter__input visually-hidden gallery__filter-input" type="checkbox" name="video"/><span class="filter__checkbox gallery__filter-checkbox"></span><span class="filter__text gallery__filter-text">видео</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </form>
+            </div>
+            <div class="filter-results gallery__filter-results"></div>
+          </div>
+        </aside>
+        <section>
+          <h2 class="visually-hidden">Список альбомов</h2>
+          <ul class="gallery__list fill-content">
+            <li class="gallery__item" data-title="Remote X" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Remote X</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-1.jpg" srcset="img/gallery/gallery-1@2x.jpg 2x" alt="Remote X" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Песочный человек" data-id data-url>
+              <article class="card gallery__card gallery__card--video"><a class="card__link">
+                  <h3 class="card__title"><span>Песочный человек</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-2.jpg" srcset="img/gallery/gallery-2@2x.jpg 2x" alt="Песочный человек" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Все, что произошло и могло произойти" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Все, что произошло и могло произойти</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-3.jpg" srcset="img/gallery/gallery-3@2x.jpg 2x" alt="Все, что произошло и могло произойти" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Театр классического балета дебютирует на лучших сценах Москвы" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Театр классического балета дебютирует на лучших сценах Москвы</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-4.jpg" srcset="img/gallery/gallery-4@2x.jpg 2x" alt="Театр классического балета дебютирует на лучших сценах Москвы" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="22 главных премьеры, концерта, спектакля и выставки" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>22 главных премьеры, концерта, спектакля и выставки</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-5.jpg" srcset="img/gallery/gallery-5@2x.jpg 2x" alt="22 главных премьеры, концерта, спектакля и выставки" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Культурная эстафета. Символ Года театра продолжает путешествие по стране" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Культурная эстафета. Символ Года театра продолжает путешествие по стране</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-6.jpg" srcset="img/gallery/gallery-6@2x.jpg 2x" alt="Культурная эстафета. Символ Года театра продолжает путешествие по стране" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item gallery__item--big" data-title="22 главных премьеры, концерта, спектакля и выставки" data-id data-url>
+              <article class="card gallery__card gallery__card--video"><a class="card__link">
+                  <h3 class="card__title"><span>22 главных премьеры, концерта, спектакля и выставки</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-7.jpg" srcset="img/gallery/gallery-7@2x.jpg 2x" alt="22 главных премьеры, концерта, спектакля и выставки" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item gallery__item--big" data-title="Культурная эстафета. Символ Года театра продолжает путешествие по стране" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Культурная эстафета. Символ Года театра продолжает путешествие по стране</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-8.jpg" srcset="img/gallery/gallery-8@2x.jpg 2x" alt="Культурная эстафета. Символ Года театра продолжает путешествие по стране" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Процесс" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Процесс</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-9.jpg" srcset="img/gallery/gallery-9@2x.jpg 2x" alt="Процесс" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Love Circle" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Love Circle</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-10.jpg" srcset="img/gallery/gallery-10@2x.jpg 2x" alt="Love Circle" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Все, что произошло и могло произойти" data-id data-url>
+              <article class="card gallery__card gallery__card--video"><a class="card__link">
+                  <h3 class="card__title"><span>Все, что произошло и могло произойти</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-11.jpg" srcset="img/gallery/gallery-11@2x.jpg 2x" alt="Все, что произошло и могло произойти" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Процесс" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Процесс</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-12.jpg" srcset="img/gallery/gallery-12@2x.jpg 2x" alt="Процесс" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Love Circle" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Love Circle</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-13.jpg" srcset="img/gallery/gallery-13@2x.jpg 2x" alt="Love Circle" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Все, что произошло и могло произойти" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Все, что произошло и могло произойти</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-14.jpg" srcset="img/gallery/gallery-14@2x.jpg 2x" alt="Все, что произошло и могло произойти" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item gallery__item--big" data-title="Театр «великих слез и великого смеха»: БДТ отмечает вековой юбилей" data-id data-url>
+              <article class="card gallery__card gallery__card--video"><a class="card__link">
+                  <h3 class="card__title"><span>Театр «великих слез и великого смеха»: БДТ отмечает вековой юбилей</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-15.jpg" srcset="img/gallery/gallery-15@2x.jpg 2x" alt="Театр «великих слез и великого смеха»: БДТ отмечает вековой юбилей" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item gallery__item--big" data-title="Начался монтаж уникальной выставки-инсталляции по мотивам произведений Шекспира" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Начался монтаж уникальной выставки-инсталляции по мотивам произведений Шекспира</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-16.jpg" srcset="img/gallery/gallery-16@2x.jpg 2x" alt="Начался монтаж уникальной выставки-инсталляции по мотивам произведений Шекспира" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="В рамках программы VK Talents художники и фотографы ВКонтакте представили на Форуме свои работы" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>В рамках программы VK Talents художники и фотографы ВКонтакте представили на Форуме свои работы</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-17.jpg" srcset="img/gallery/gallery-17@2x.jpg 2x" alt="В рамках программы VK Talents художники и фотографы ВКонтакте представили на Форуме свои работы" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Санкт-Петербург в седьмой раз принимал центральное событие культурной жизни России" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Санкт-Петербург в седьмой раз принимал центральное событие культурной жизни России</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-18.jpg" srcset="img/gallery/gallery-18@2x.jpg 2x" alt="Санкт-Петербург в седьмой раз принимал центральное событие культурной жизни России" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Подводим итоги работы секции «Театр»" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Подводим итоги работы секции «Театр»</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-19.jpg" srcset="img/gallery/gallery-19@2x.jpg 2x" alt="Подводим итоги работы секции «Театр»" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Современное изобразительное искусство стало одной из тем многочисленных дискуссий на Форуме" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Современное изобразительное искусство стало одной из тем многочисленных дискуссий на Форуме</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-20.jpg" srcset="img/gallery/gallery-20@2x.jpg 2x" alt="Современное изобразительное искусство стало одной из тем многочисленных дискуссий на Форуме" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Культурные планы" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Культурные планы</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-21.jpg" srcset="img/gallery/gallery-21@2x.jpg 2x" alt="Культурные планы" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+            <li class="gallery__item" data-title="Определены даты Санкт-Петербургского международного культурного форума на ближайшие три года" data-id data-url>
+              <article class="card gallery__card"><a class="card__link">
+                  <h3 class="card__title"><span>Определены даты Санкт-Петербургского международного культурного форума на ближайшие три года</span></h3>
+                  <div class="card__wrapper"><img class="card__image" src="img/gallery/gallery-22.jpg" srcset="img/gallery/gallery-22@2x.jpg 2x" alt="Определены даты Санкт-Петербургского международного культурного форума на ближайшие три года" rel="nofollow"/>
+                    <div class="card__overlay">
+                      <div class="card__overlay-top">
+                        <div class="card__when">
+                        </div>
+                      </div>
+                      <div class="card__overlay-bottom">
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="card__star">
+                </div><span class="card__author">фотограф André Kaczmarczyk</span><span class="card__from">Театр Пикколо, Милан, Италия </span>
+                <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <div class="template playbill-page-header" id="filter-result-template">
+          <div class="filter-result playbill-page-header__filter-result">
+            <p class="filter-result__text"></p>
+            <button class="filter-result__button" type="button" aria-label="удалить фильтр">
+              <svg>
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"><span class="footer__rights">ⓒ All rights reserved.</span><a class="footer__link" href="#">Политика конфиденциальности</a><span class="footer__credits">разработка<a href="#">
+            <svg width="70" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#greenlabs"></use>
+            </svg><span class="visually-hidden">Greenlabs</span></a></span></footer>
+    </div>
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/formdata.min.js"></script>
+    <script src="libs/ofi.min.js"></script>
+    <script src="libs/nice-select/nice-select.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

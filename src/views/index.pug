@@ -1,0 +1,130 @@
+extends layouts/_layout
+
+block title
+  | Театральная олимпиада 2019
+
+block main
+  -
+    var pages = [
+      {
+        src: 'main.html',
+        name: 'Главная'
+      },
+      {
+        src: 'platforms.html',
+        name: 'Площадки'
+      },
+      {
+        src: 'playbill.html',
+        name: 'Афиша'
+      },
+      {
+        src: 'playbill-list.html',
+        name: 'Афиша списком'
+      },
+      {
+        src: 'news.html',
+        name: 'Новости'
+      },
+      {
+        src: 'one-news-one-image.html',
+        name: 'Одна новость'
+      },
+      {
+        src: 'one-news.html',
+        name: 'Одна новость со слайдером'
+      },
+      {
+        src: 'people.html',
+        name: 'Участники'
+      },
+      {
+        src: 'about.html',
+        name: 'О нас'
+      },
+      {
+        src: 'comitet.html',
+        name: 'Международный комитет'
+      },
+      {
+        src: 'gallery.html',
+        name: 'Галерея'
+      },
+      {
+        src: 'swiper.html',
+        name: 'Свипер'
+      },
+      {
+        src: 'event.html',
+        name: 'Одно событие'
+      },
+      {
+        src: 'one-exhibition.html',
+        name: 'Одна выставка'
+      },
+      {
+        src: 'one-lecture.html',
+        name: 'Одна лекция'
+      },
+      {
+        src: 'one-collection.html',
+        name: 'Одна коллекция'
+      },
+      {
+        src: 'one-participant.html',
+        name: 'Один участник'
+      },
+      {
+        src: 'one-place.html',
+        name: 'Одна площадка'
+      },
+      {
+        src: 'contacts.html',
+        name: 'Контакты'
+      },
+      {
+        src: 'partners.html',
+        name: 'Партнеры'
+      },
+      {
+        src: 'search-results.html',
+        name: 'Резульат поиска'
+      },
+      {
+        src: 'lk-favorites.html',
+        name: 'Личный кабинет > Избранное'
+      },
+      {
+        src: 'lk-request.html',
+        name: 'Личный кабинет > Заявки'
+      },
+      {
+        src: 'lk-editor.html',
+        name: 'Личный кабинет > Личные данные '
+      },
+      {
+        src: 'lk-reset-password.html',
+        name: 'Личный кабинет > Востановление пароля'
+      },
+      {
+        src: '404.html',
+        name: '404 '
+      },
+      {
+        src: 'album.html',
+        name: 'один альбом '
+      },
+      {
+        src: 'album-video.html',
+        name: 'один альбом (Видео)'
+      },
+      {
+        src: 'big-list.html',
+        name: 'Вложенные списки'
+      }
+    ];
+
+  ul
+    each page in pages
+      li
+        a(href=page.src)= page.name

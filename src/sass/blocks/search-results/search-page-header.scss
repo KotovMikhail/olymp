@@ -1,0 +1,128 @@
+.search-page-header {
+  padding-top: 140px;
+  padding-bottom: 21px;
+
+  background-color: $pampas-color;
+
+  @include mobile {
+    padding-top: 97px;
+  }
+}
+
+.search-page-header__title {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-weight: normal;
+  font-size: 30px;
+  line-height: normal;
+  text-align: right;
+  color: $dark-blue-color;
+
+  @include mobile {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.search-page-header__search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 17px;
+  padding-bottom: 9px;
+
+  border-bottom: 2px solid $putty-color;
+
+  @include mobile {
+    width: auto;
+    margin: 0 20px 20px;
+  }
+}
+
+.search-page-header__search-label {
+  color: $putty-color;
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+.search-page-header__search-input {
+  display: block;
+  width: calc(100% - 39px);
+  height: 36px;
+  padding: 0 10px 0 20px;
+
+  font-size: 22px;
+  line-height: normal;
+  color: $dark-blue-color;
+
+  background: 0 0;
+  border: 0;
+  outline: 0;
+
+  &::-ms-clear {
+    display: none;
+    width : 0;
+    height: 0;
+  }
+
+  &::-ms-reveal {
+    display: none;
+    width : 0;
+    height: 0;
+  }
+
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.search-page-header__search-submit {
+  min-width: 141px;
+  height: 44px;
+  padding: 8px 6px;
+  margin-top: -5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: $white-color;
+  border: none;
+  background-color: $putty-color;
+  transition: 0.2s;
+  transition-property: color, background-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $dark-blue-color;
+  }
+}
+
+.search-page-header__filter-form {
+  border: none;
+}
+
+.search-page-header__filter-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+}
+
+.search-page-header__filter-item {
+  margin-right: 49px;
+
+  @include desktop {
+    margin-bottom: 10px;
+  }
+}

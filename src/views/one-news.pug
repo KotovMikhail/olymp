@@ -1,0 +1,20 @@
+extends layouts/_layout
+include components/_header
+include components/_page-title
+include components/_one-article
+
+block title
+  | Театральная олимпиада 2019 | Remote X
+
+block header
+  +header('Новости')
+
+block main
+  main.one-news
+    .one-news__top-wrap
+
+    +one-article(data.oneNews[0])
+
+
+block footer
+  include components/_footer

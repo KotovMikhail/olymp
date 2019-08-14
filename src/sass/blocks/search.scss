@@ -1,0 +1,99 @@
+.search {
+  position: absolute;
+  top: 0;
+  right: 220px;
+  left: 335px;
+  z-index: 20;
+  padding: 12px 0;
+  transform-origin: 100% 0%;
+  transform: scaleX(0);
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+
+  @media (max-width: $media-md) {
+    right: 30px;
+    left: 300px;
+  }
+
+  @media (max-width: $media-sd) {
+    position: fixed;
+    top: 0;
+    right: -375px;
+    left: auto;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    max-width: 375px;
+    height: 100vh;
+    padding: 20px;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 1;
+    transform: scaleX(1);
+    background: $white-color;
+    transition-property: right;
+    transition-duration: 0.2s;
+  }
+
+  &__close {
+    display: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    fill: $putty-color;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      fill: $dark-blue-color;
+    }
+
+    @media (max-width: $media-sd) {
+      display: block;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    @media (max-width: $media-sd) {
+      margin-top: 36px;
+      padding-bottom: 17px;
+      border-bottom: 2px solid $putty-color;
+    }
+  }
+
+  &--open {
+    transform: scaleX(1);
+    opacity: 1;
+
+    @media (max-width: $media-sd) {
+      right: 0;
+    }
+  }
+
+  &__icon {
+    fill: $putty-color;
+
+    @media (max-width: $media-sd) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding: 0 10px;
+    border: none;
+    background: none;
+    color: $putty-color;
+    outline: none;
+  }
+}

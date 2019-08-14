@@ -1,0 +1,18 @@
+mixin gallery-slider(opt, className)
+  div.gallery-slider(class=className ? `${className}__gallery-slider` : '')
+    button.gallery-slider__miniature-button(class='gallery-slider__miniature-button--prev' type="button" style=opt.length < 3 ? 'visibility: hidden;' : '')
+    div.swiper-container(class='gallery-slider__container')
+      div.swiper-wrapper(class='gallery-slider__wrapper')
+        each slide in opt
+          div.swiper-slide(class='gallery-slider__slide')
+            div.gallery-slider__image-wrap
+              img(src=slide.image srcset=slide.image2x alt=slide.caption)
+            p.gallery-slider__author= slide.author
+            p.gallery-slider__caption= slide.caption
+      div.gallery-slider__pagination
+    div.gallery-slider__buttons-wrap
+      button.gallery-slider__miniature-button(class='gallery-slider__miniature-button--next' type="button")
+        img.gallery-slider__img(src=opt[1].image srcset=opt[1].image2x alt=opt[1].caption)
+      div.gallery-slider__slider-buttons-inner
+        button.gallery-slider__button-arrow(class='gallery-slider__button-arrow--prev button-arrow button-arrow--prev' type="button")
+        button.gallery-slider__button-arrow(class='gallery-slider__button-arrow--next button-arrow button-arrow--next' type="button")

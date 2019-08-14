@@ -1,0 +1,15 @@
+form.user-form.login(action='#')
+  button.user-form__close(type='button' aria-label='Открыть меню')
+    svg(width='24' height='24' aria-hidden='true')
+      use(xlink:href='img/sprite/sprite.svg#icon-close')
+  p.user-form__part
+    input.user-form__input(type='email' id='login-email' name='login-email' placeholder=' ' required)
+    label.user-form__label(for='login-email') E-mail
+    span.invalid-text
+  p.user-form__part
+    input.user-form__input(type='password' id='login-password' name='login-password' placeholder=' ' required)
+    label.user-form__label(for='login-password') Пароль
+    span.invalid-text
+  button.user-form__btn(type='submit') Войти
+  a.user-form__recovery(href='lk-reset-password.html') Забыли пароль?
+  a.user-form__register(href='#') Зарегистрироваться

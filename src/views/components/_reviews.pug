@@ -1,0 +1,19 @@
+mixin reviews(opt, className)
+  div.reviews(class=className? `${className}__reviews` : '')
+    div.reviews__container(class='swiper-container')
+      div.reviews__wrapper(class='swiper-wrapper')
+        each slide in opt
+          div.reviews__slide(class='swiper-slide')
+            p.reviews__author= slide.author
+            p.reviews__text= slide.text
+            if slide.link
+              a.reviews__link.link(href=slide.link target='_blank')= slide.link
+    -
+      var extraClass;
+      if (opt.length === 2)
+        extraClass = 'reviews__slider-buttons-inner--two'
+      else if (opt.length === 1)
+        extraClass = 'reviews__slider-buttons-inner--one'
+    div.reviews__slider-buttons-inner(class=extraClass ? extraClass : '')
+      button.reviews__button-arrow(class='reviews__button-arrow--prev button-arrow button-arrow--prev' type="button")
+      button.reviews__button-arrow(class='reviews__button-arrow--next button-arrow button-arrow--next' type="button")

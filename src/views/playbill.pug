@@ -1,0 +1,55 @@
+extends layouts/_layout
+include components/_header
+include components/_playbill-page-header
+
+block meta
+  link(href="libs/nice-select/nice-select.css", rel="stylesheet")
+
+block title
+  | Театральная олимпиада 2019 Афиша
+
+block header
+  +header('Афиша')
+
+block main
+  include components/_character-filter
+  include components/_card-tile
+  include components/_card-tile-template
+  include components/_mailing
+
+  main.playbill
+    +playbill-page-header
+
+    div(class='playbill__content container')
+      div.playbill__date-filter
+        form.playbill__month-form(class='month-form')
+          select(class="filter-select playbill__month-select month-select" name='playbill-month-select' id='playbill-month-select')
+            option(value="Месяц" disabled) Месяц
+            -var months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+            -var activeMount = 'Июнь';
+            each month, index in months
+              if (month === activeMount)
+                option(value=index selected)= month
+              else
+              option(value=index)= month
+        +character-filter(31, 'playbill', 13)
+
+    div.cards
+      div.container
+        ul.playbill__card-list.fill-content
+          each event in data.playbillTileEvents
+            li.playbill__card-item
+              +card-tile(event, 'playbill')
+
+    span.playbill__warning в программе возможны изменения
+
+    include components/_filter-result-template
+    +card-tile-template('playbill')
+    div.template#mailing-template
+      +mailing('playbill')
+
+block footer
+  include components/_footer
+
+prepend scripts
+  script(src="https://unpkg.com/weakmap-polyfill/weakmap-polyfill.min.js")

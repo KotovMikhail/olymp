@@ -1,0 +1,19 @@
+include _arrow-back
+include _social
+include _gallery-slider
+
+mixin one-article(data)
+  section.one-article
+    a.event-page-header__back-link(href=data.backLink ? data.backLink : '#') вернуться
+    h1.one-article__title= data.title
+    p.one-article__date=data.date
+    .one-article__content
+      != data.firstDesc
+      if data.slider.length === 1
+        figure.one-article__image
+          img(src=data.slider[0].image srcset=data.slider[0].image2x alt=data.slider[0].caption)
+          figcaption= data.slider[0].caption
+      else
+        +gallery-slider(data.slider, 'one-article')
+      != data.secondDesc
+    +social

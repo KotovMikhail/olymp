@@ -1,0 +1,60 @@
+extends layouts/_layout
+include components/_header
+include components/_event
+
+block title
+  | Театральная олимпиада 2019 Участник
+
+block header
+  +header('Участники')
+
+block main
+  main.participant.event
+    div.participant__participant-page-header(class='participant-page-header event-page-header')
+      .container
+        div.participant-page-header__container
+          div.event-page-header__top-group.participant-page-header__top-group
+            a.event-page-header__back-link(href=data.participantInfo.backLink ? data.participantInfo.backLink : '#')
+              | вернуться
+              svg(width=24 height=15)
+                use(xlink:href='img/sprite/sprite.svg#arrow-back')
+          div.participant-page-header__image
+            img(src=data.participantInfo.image srcset=data.participantInfo.image2x alt=`${data.participantInfo.name} ${data.participantInfo.surname}` width='367' height='470')
+          div.participant-page-header__content
+            h1.participant-page-header__title
+              span=data.participantInfo.name
+              span=data.participantInfo.surname
+            ul.participant-page-header__brief-info-list
+              each item in data.participantInfo.briefInfo
+                li.participant-page-header__brief-info-item= item
+            div.participant__social
+              +social
+
+    .container
+      div.participant__info(class='text-container')
+        each paragraph in data.participantInfo.info
+          p= paragraph
+
+      div.participant__related-events(class='related-events')
+        h2.related-events__title Участвует
+        ul.related-events__list
+          each item in data.participantInfo.events
+            if (item.type === 'коллекция')
+              li.related-events__item
+                +collection-card(item, 'related-events')
+            else
+              li.related-events__item
+                +card-tile(item, 'related-events')
+
+      div.participant__most-interesting(class='most-interesting')
+        h2.most-interesting__title Вам может быть интересно
+        ul.most-interesting__list
+          each item in data.participantInfo.mostInteresting
+            li.most-interesting__item
+              if (item.type === 'видео')
+                +card(item)(className = 'most-interesting__card most-interesting__card--video')
+              else
+                +card(item)(className = 'most-interesting__card')
+
+block footer
+  include components/_footer

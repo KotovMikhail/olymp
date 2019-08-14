@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="libs/nice-select/nice-select.css" rel="stylesheet">
+    <title>Театральная олимпиада 2019 Афиша
+    </title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/svgxuse.min.js" async defer></script>
+  </head>
+  <body>
+    <div class="overflowWrap">
+      <header class="header">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Театральная олимпиада 2019">
+            <svg width="120" height="143" aria-hidden="true">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg></a><a class="header__monogram" href="#" aria-label="Год театра в России">
+            <svg class="header__monogram-color" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram.svg#monogram"></use>
+            </svg>
+            <svg class="header__monogram-white" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram-white.svg#monogram"></use>
+            </svg></a>
+          <div class="header__content">
+            <button class="header__close" type="button" aria-label="Закрыть меню">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav__pages">
+                <li class="nav__pages-item nav__pages-item--with-sub">
+                  <input class="nav__pages-checkbox visually-hidden" type="checkbox" id="0" tabindex="0"/>
+                  <label class="nav__pages-link nav__pages-link--with-sub" for="0">Олимпиада</label>
+                  <ul class="nav__sub-pages">
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="about.html">О проекте</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="comitet.html">Международный комитет</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="platforms.html">Площадки</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="#">Пресс-центр</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="gallery.html">Галерея</a></li>
+                  </ul>
+                </li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="news.html">Новости</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="playbill.html">Афиша</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="people.html">Участники</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="partners.html">Партнеры</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="contacts.html">Контакты</a></li>
+              </ul><a class="nav__search-btn search-btn" href="#" aria-label="Открыть поиск">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                </svg></a>
+              <div class="nav__user"><a class="nav__user-btn nav__user-btn--login" href="#"><span class="nav__user-text">регистрация</span></a>
+              </div>
+              <form class="user-form login" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="login-email" name="login-email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="login-password" name="login-password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Войти</button><a class="user-form__recovery" href="lk-reset-password.html">Забыли пароль?</a><a class="user-form__register" href="#">Зарегистрироваться</a>
+              </form>
+              <form class="user-form registration" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="name" name="name" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="name">Имя</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="surname" name="surname" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="surname">Фамилия</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="password" name="password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__consent-input" type="checkbox" id="consent" name="consent" required="required"/>
+                  <label class="user-form__consent-label" for="consent">
+                    Согласие на обработку персональных данных в соответствии с
+                    <a class="user-form__consent-link" href="#">пользовательским соглашением</a>
+                  </label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Зарегистрироваться</button><a class="user-form__login" href="#">Уже зарегистрированы</a>
+              </form>
+              <form class="user-form recovery" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="recovery-email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="recovery-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__recover-text">На данную почту вам придет письмо со ссылкой для восстановления пароля</p>
+                <button class="user-form__btn" type="submit">восстановить пароль</button>
+              </form>
+              <div class="nav__sub">
+                <ul class="nav__social">
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Instagram">
+                      <svg class="nav__social-icon" width="19" height="19" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Facebook">
+                      <svg class="nav__social-icon" width="8" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на VK">
+                      <svg class="nav__social-icon" width="20" height="11" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Youtube">
+                      <svg class="nav__social-icon" width="23" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-youtube"></use>
+                      </svg></a></li>
+                </ul><a class="nav__lang" href="#" aria-label="Read in English">eng</a>
+              </div>
+            </nav>
+          </div>
+          <form class="search" method="get" action="#">
+            <button class="search__close" type="button" aria-label="Закрыть поиск">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search__wrapper">
+              <svg class="search__icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+              </svg>
+              <input class="search__input" type="search" id="search" name="search" aria-label="Поиск по сайту"/>
+            </div>
+          </form><a class="header__search-btn search-btn" href="#" aria-label="Открыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+            </svg></a>
+          <button class="header__burger" type="button" aria-label="Открыть меню">
+            <svg width="30" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="search-results">
+        <div class="search-results__page-header search-page-header">
+          <div class="container">
+            <h1 class="search-page-header__title">Результаты поиска</h1>
+            <button class="filter-button search-page-header__filter-button-open" type="button">Фильтр</button>
+            <div class="filter search-page-header__filter">
+              <button class="filter__button-close search-page-header__filter-button-close" type="button"></button>
+              <form class="filter__form search-page-header__filter-form" action="#">
+                <div class="filter__search search-page-header__search">
+                  <label class="filter__search-label search-page-header__search-label" for="search-input">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                    </svg>
+                  </label>
+                  <input class="filter__search-input search-page-header__search-input" type="search" id="search-input" name="search-input" aria-label="Введите значение для поиска" value="Пр"/>
+                  <button class="filter__search-submit search-page-header__search-submit" type="submit">найти</button>
+                </div>
+                <fieldset class="filter__field search-page-header__filter-field">
+                  <ul class="filter__list search-page-header__filter-list">
+                    <li class="filter__item search-page-header__filter-item">
+                      <label class="filter__label search-page-header__filter-label">
+                        <input class="filter__input visually-hidden search-page-header__filter-input" type="checkbox" name="playbill"/><span class="filter__checkbox search-page-header__filter-checkbox"></span><span class="filter__text search-page-header__filter-text">афиша</span>
+                      </label>
+                    </li>
+                    <li class="filter__item search-page-header__filter-item">
+                      <label class="filter__label search-page-header__filter-label">
+                        <input class="filter__input visually-hidden search-page-header__filter-input" type="checkbox" name="people"/><span class="filter__checkbox search-page-header__filter-checkbox"></span><span class="filter__text search-page-header__filter-text">участники</span>
+                      </label>
+                    </li>
+                    <li class="filter__item search-page-header__filter-item">
+                      <label class="filter__label search-page-header__filter-label">
+                        <input class="filter__input visually-hidden search-page-header__filter-input" type="checkbox" name="news"/><span class="filter__checkbox search-page-header__filter-checkbox"></span><span class="filter__text search-page-header__filter-text">новости</span>
+                      </label>
+                    </li>
+                    <li class="filter__item search-page-header__filter-item">
+                      <label class="filter__label search-page-header__filter-label">
+                        <input class="filter__input visually-hidden search-page-header__filter-input" type="checkbox" name="photo"/><span class="filter__checkbox search-page-header__filter-checkbox"></span><span class="filter__text search-page-header__filter-text">фото</span>
+                      </label>
+                    </li>
+                    <li class="filter__item search-page-header__filter-item">
+                      <label class="filter__label search-page-header__filter-label">
+                        <input class="filter__input visually-hidden search-page-header__filter-input" type="checkbox" name="video"/><span class="filter__checkbox search-page-header__filter-checkbox"></span><span class="filter__text search-page-header__filter-text">видео</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+        <ul class="search-results__list fill-content">
+          <li class="search-results__item">
+            <div class="search-results__result search-result container"><a class="search-result__title" href="#"><span>Театр «великих слез и великого смеха»: БДТ отмечает вековой юбилей</span></a>
+              <p class="search-result__type" data-name="photo">фото</p>
+              <div class="search-result__text">
+                <p class="search-result__date">19—06—2019</p>
+              </div>
+            </div>
+          </li>
+          <li class="search-results__item">
+            <div class="search-results__result search-result container"><a class="search-result__title" href="#"><span>Сотрудничество между российскими и зарубежными культурными институтами обсудили в Сочи</span></a>
+              <p class="search-result__type" data-name="news">новости</p>
+              <div class="search-result__text">
+                <p>Совместно с Форумом в рамках XII Зимнего международного фестиваля искусств прошли конференция и выставка</p>
+                <p class="search-result__date">19—06—2019</p>
+              </div>
+            </div>
+          </li>
+          <li class="search-results__item">
+            <div class="search-results__result search-result container"><a class="search-result__title" href="#"><span>Начался монтаж уникальной выставки-инсталляции по мотивам произведений Шекспира</span></a>
+              <p class="search-result__type" data-name="video">видео</p>
+              <div class="search-result__text">
+                <p class="search-result__date">19—06—2019</p>
+              </div>
+            </div>
+          </li>
+          <li class="search-results__item">
+            <div class="search-results__result search-result container"><a class="search-result__title" href="#"><span>Песочный человек</span></a>
+              <p class="search-result__type" data-name="playbill">афиша</p>
+              <div class="search-result__text">
+                <p>Виктория Тьере-Чаплин</p>
+                <p>Компания Аурелии Тьере, Париж, Франция</p>
+              </div>
+            </div>
+          </li>
+          <li class="search-results__item">
+            <div class="search-results__result search-result container"><a class="search-result__title" href="#"><span>Хельгард Ким Хауг</span></a>
+              <p class="search-result__type" data-name="people">участники</p>
+              <div class="search-result__text">
+                <p>Режиссёр</p>
+                <p>Компания Аурелии Тьере</p>
+                <p>Париж, Франция</p>
+              </div>
+            </div>
+          </li>
+          <li class="search-results__item">
+            <div class="search-results__result search-result container"><a class="search-result__title" href="#"><span>Международный комитет</span></a>
+              <p class="search-result__type" data-name="section">раздел</p>
+              <div class="search-result__text">
+                <p>Театральная Олимпиада была основана в 1993 году по инициативе известного театрального режиссера Теодороса Терзопулоса и впервые проведена в 1994 году на родине театра, в Греции, в городе Дельфы.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </main>
+      <footer class="footer"><span class="footer__rights">ⓒ All rights reserved.</span><a class="footer__link" href="#">Политика конфиденциальности</a><span class="footer__credits">разработка<a href="#">
+            <svg width="70" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#greenlabs"></use>
+            </svg><span class="visually-hidden">Greenlabs</span></a></span></footer>
+    </div>
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/formdata.min.js"></script>
+    <script src="libs/ofi.min.js"></script>
+    <script src="libs/nice-select/nice-select.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

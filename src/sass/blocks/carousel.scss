@@ -1,0 +1,16 @@
+.carousel {
+  &__wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style: none;
+    transition: 0.5s;
+    will-change: transform;
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,89 @@
+.button-arrow {
+  position: relative;
+
+  display: block;
+  width: 39.63%;
+  height: 48px;
+  padding: 0;
+
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    background: $putty-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+
+    display: block;
+    width: 0;
+    height: 0;
+    transition: 0.3s;
+
+    border-right: 1px solid $putty-color;
+    border-bottom: 1px solid $putty-color;
+    opacity: 1;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+    width: 26px;
+    height: 26px;
+    border-width: 4px;
+  }
+
+  &--next::after {
+    right: 3px;
+
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &--prev::after {
+    left: 3px;
+
+    transform:  translateY(-50%) rotate(135deg);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+
+
+    &::after {
+      content: none;
+    }
+  }
+
+  @include tablet {
+    &::before {
+      height: 2px;
+    }
+
+    &::after {
+      opacity: 1;
+      width: 15px;
+      height: 15px;
+      border-width: 2px;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      width: 15px;
+      height: 15px;
+      border-width: 2px;
+    }
+  }
+}

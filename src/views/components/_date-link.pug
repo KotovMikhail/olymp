@@ -1,0 +1,7 @@
+mixin date-link(opt, className)
+  div.date-link(class=className ? `${className}__date-link` : '')
+    a.date-link__link(href=opt.link)
+      p.date-link__top-group
+        span.date-link__date= `${opt.day} — ${opt.month}`
+        span.date-link__time= `${opt.time}, ${opt.dayWeek}`
+      p.date-link__city= opt.city

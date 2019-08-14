@@ -1,0 +1,42 @@
+.filter-button {
+  @include reset-button;
+
+  display: none;
+
+  @include mobile {
+    position: relative;
+
+    display: block;
+    width: 100%;
+    padding-bottom: 14px;
+    padding-right: 10px;
+
+    font-size: 15px;
+    text-align: left;
+    color: $putty-color;
+
+    border-bottom: 2px solid $putty-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: 3px;
+
+      width: 6px;
+      height: 6px;
+
+      border-right: 1px solid $putty-color;
+      border-bottom: 1px solid $putty-color;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @include mobile {
+    font-size: 14px;
+
+    &::after {
+      top: 4px;
+    }
+  }
+}

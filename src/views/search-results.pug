@@ -1,0 +1,40 @@
+extends layouts/_layout
+include components/_header
+include components/_filter-select
+include components/__filter
+
+block meta
+  link(href="libs/nice-select/nice-select.css", rel="stylesheet")
+
+block title
+  | Театральная олимпиада 2019 Афиша
+
+block header
+  +header()
+
+block main
+  main.search-results
+    div.search-results__page-header.search-page-header
+      div.container
+        h1.search-page-header__title= data.searchResults.title
+        +filter(data.searchResults.filterData, 'search-page-header')
+
+
+    ul.search-results__list.fill-content
+      each item in data.searchResults.results
+        li.search-results__item
+          div.search-results__result.search-result.container
+            a.search-result__title(href= item.href ? item.href : '#')
+              span= item.title
+            p.search-result__type(data-name=item.name)= item.type
+            if (item.date || item.text)
+              div.search-result__text
+                if item.text
+                  each paragraph in item.text
+                    p= paragraph
+                if (item.type === 'фото' || item.type === 'новости' || item.type === 'видео')
+                  p.search-result__date= item.date ? item.date : ''
+
+
+block footer
+  include components/_footer

@@ -1,0 +1,25 @@
+include _person
+
+mixin party-card-list(opt, className, prefix, maxCount)
+  div.party-card-list.swiper-container(class=className ? `${className}__party-card-list` : '')
+    div.party-card-list__wrap.swiper-wrapper(class=className ? `${className}__wrap-party-card` : '')
+      if maxCount
+        each item, index in opt
+          if (index < maxCount)
+            if prefix
+              div.swiper-slide
+                +person(item, prefix)
+            else
+              div.swiper-slide
+                +person(item)
+      else
+        each item in opt
+          if prefix
+            div.swiper-slide
+              +person(item, prefix)
+          else
+            div.swiper-slide
+              +person(item)
+    div.party-card-list__slider-buttons-inner
+      button.party-card-list__button-arrow(class='party-card-list__button-arrow--prev button-arrow button-arrow--prev' type="button")
+      button.party-card-list__button-arrow(class='party-card-list__button-arrow--next button-arrow button-arrow--next' type="button")

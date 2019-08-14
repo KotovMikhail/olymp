@@ -1,0 +1,47 @@
+.party-card-list {
+  & .swiper-slide {
+    width: auto;
+    height: auto;
+
+  }
+
+  @include mobile {
+    height: 369px;
+  }
+}
+
+.party-card-list__slider-buttons-inner {
+  display: none;
+
+
+  @include mobile {
+    position: absolute;
+    right: 0px;
+    bottom: 84px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 104px;
+    padding-right: 4px;
+    padding-left: 4px;
+
+    transform: translateY(39%);
+    z-index: 100;
+  }
+}
+
+.party-card-list__button-arrow {
+  width: 40px;
+  height: 30px;
+
+  &.swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+
+
+    &::after {
+      content: none;
+    }
+  }
+}

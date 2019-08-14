@@ -1,0 +1,224 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  font-weight: 300;
+  color: $putty-color;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+
+    &--show {
+      display: block;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 57px;
+
+    @media (max-width: $media-md) {
+      padding: 0 30px;
+    }
+
+    @media (max-width: $media-sd) {
+      display: flex;
+      padding: 20px 30px;
+      margin: 0;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    @media (max-width: $media-tb) {
+      margin: 0 auto;
+      padding: 20px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 22px;
+    left: 59px;
+
+    svg {
+      fill: $dark-blue-color;
+    }
+
+    @media (max-width: $media-md) {
+      left: 30px;
+    }
+
+    @media (max-width: $media-sd) {
+      top: 20px;
+
+      svg {
+        width: 80px;
+        height: 95px;
+      }
+    }
+
+    @media (max-width: $media-tb) {
+      left: 20px;
+    }
+  }
+
+  &--black .header__logo {
+    svg {
+      fill: $white-color;
+    }
+  }
+
+  &__monogram {
+    position: absolute;
+    top: 22px;
+    left: 206px;
+
+    @media (max-width: $media-md) {
+      left: 177px;
+    }
+
+    @media (max-width: $media-sd) {
+      top: 20px;
+      left: 134px;
+
+      svg {
+        width: 64px;
+        height: 50px;
+      }
+    }
+
+    @media (max-width: $media-tb) {
+      left: 124px;
+    }
+  }
+
+  &__monogram-white {
+    display: none;
+  }
+
+  &--black .header__monogram-color {
+    display: none;
+  }
+
+  &--black .header__monogram-white {
+    display: block;
+    fill: $white-color;
+  }
+
+  &__content {
+    margin-left: 278px;
+
+    @media (max-width: $media-md) {
+      margin-left: 270px;
+    }
+
+    @media (max-width: $media-sd) {
+      position: fixed;
+      top: 0;
+      right: -375px;
+      display: none;
+      width: 100%;
+      max-width: 375px;
+      height: 100vh;
+      margin: 0;
+      padding-top: 34px;
+      background: $putty-color;
+      color: $white-color;
+      transition: 0.2s;
+      overflow-y: scroll;
+
+      &--open {
+        display: block;
+        right: 0;
+        z-index: 1000;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 19px;
+    right: 20px;
+    z-index: 50;
+    display: none;
+
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      fill: $white-color;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $dark-blue-color;
+      }
+    }
+
+    @media (max-width: $media-sd) {
+      display: block;
+    }
+  }
+
+  &__search-btn {
+    display: none;
+    margin-right: 23px;
+    fill: $putty-color;
+
+    &:hover,
+    &:focus {
+      fill: $dark-blue-color;
+    }
+
+    @media (max-width: $media-sd) {
+      display: block;
+    }
+  }
+
+  &--black &__search-btn {
+    &:hover,
+    &:focus {
+      fill: $white-color;
+    }
+  }
+
+  &__burger {
+    display: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    fill: $putty-color;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      fill: $dark-blue-color;
+    }
+
+    @media (max-width: $media-sd) {
+      display: block;
+    }
+  }
+
+  &--black &__burger {
+    &:hover,
+    &:focus {
+      fill: $white-color;
+    }
+  }
+}

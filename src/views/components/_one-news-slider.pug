@@ -1,0 +1,12 @@
+include _carousel-btns
+include _page-counter
+
+mixin one-news-slider(oneNews)
+  each image, index in oneNews.image
+    .one-article__slider
+      img.one-article__image(src=oneNews.image[index] + '.jpg' srcset=oneNews.image[index] + '@2x.jpg 2x' alt=oneNews.name)
+      if index === 1
+        .one-article__sign= oneNews.sign
+        +page-counter
+        span.one-article__author= oneNews.author
+  +carousel-btns(className='carousel-btns--one-news')

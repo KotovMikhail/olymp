@@ -1,0 +1,26 @@
+.search-results__page-header {
+  margin-bottom: 53px;
+
+  @include mobile {
+    margin-bottom: 27px;
+  }
+}
+
+.search-results__list {
+  @include reset-list;
+  margin-bottom: 261px;
+
+  @include mobile {
+    margin-bottom: 149px;
+  }
+}
+
+.search-results__item {
+  position: relative;
+  margin-bottom: 33px;
+  padding: 10px 0;
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
+}

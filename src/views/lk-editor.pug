@@ -1,0 +1,65 @@
+extends layouts/_layout
+include components/_header
+include components/_card
+include components/_request-acc
+
+block title
+  | Театральная олимпиада 2019 | Личный кабинет
+
+block meta
+  link(href="libs/nice-select/nice-select.css", rel="stylesheet")
+
+block header
+  +header
+
+block main
+  main.lk
+    h1.visually-hidden Личный кабинет
+    aside.lk__menu
+      .container
+        ul.lk__menu-list.lk__menu-list--alon
+          li.lk__menu-item
+            a.lk__menu-link(href='lk-favorites.html') Избранное
+          li.lk__menu-item
+            a.lk__menu-link(href='lk-request.html') Заявки
+          li.lk__menu-item
+            a.lk__menu-link.lk__menu-link--active(href='lk-editor.html') Личные данные
+    section.lk__editor
+      h2.visually-hidden Ваши данные
+      form.lk__editor-form(method='POST' action='#')
+        p.lk__editor-part
+          input.lk__editor-input(type='text' id='name-editor' name='name' value='Иван' required)
+          label.lk__editor-label(for='name-editor') Имя
+          span.invalid-text.lk__editor-invalid
+        p.lk__editor-part
+          input.lk__editor-input(type='text' id='surname-editor' name='surname' value='Иванов' required)
+          label.lk__editor-label(for='surname-editor') Фамилия
+          span.invalid-text.lk__editor-invalid
+        p.lk__editor-part
+          input.lk__editor-input(type='email' id='email-editor' name='email' value='ivanov@gmail.com' readonly required)
+          label.lk__editor-label(for='email-editor') E-mail
+          span.invalid-text.lk__editor-invalid
+        p.lk__editor-part
+          input.lk__editor-input(type='password' id='password-editor' name='password' value='qwertyuiop' required)
+          label.lk__editor-label(for='password-editor') Пароль
+          span.invalid-text.lk__editor-invalid
+        fieldset.lk__editor-field
+          h3.lk__editor-title Сменить пароль
+          p.lk__editor-part
+            input.lk__editor-input(type='password' id='new-password' name='password')
+            label.lk__editor-label(for='new-password') Новый пароль
+            span.invalid-text.lk__editor-invalid
+          p.lk__editor-part
+            input.lk__editor-input(type='password' id='repet-password' name='password')
+            label.lk__editor-label(for='repet-password') Повторите пароль
+            span.invalid-text.lk__editor-invalid
+        button.lk__editor-btn(type='submit') Сохранить
+      form.lk__editor-subscribe(method='POST' action='#')
+        h3.lk__editor-sub-title Подписка на новости
+        input.lk__editor-sub-input.visually-hidden(type="checkbox" name='subscribe' id='subscribe' checked)
+        label.lk__editor-sub-label(for='subscribe') я хочу получать самые актуальные новости на e-mail
+      .lk__editor-del
+        a.lk__editor-del-link(href='#') удалить мою учетную запись
+        +request-acc(acc)
+block footer
+  include components/_footer

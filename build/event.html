@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Театральная олимпиада 2019 Событие
+    </title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/svgxuse.min.js" async defer></script>
+  </head>
+  <body>
+    <div class="overflowWrap">
+      <header class="header header--black">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Театральная олимпиада 2019">
+            <svg width="120" height="143" aria-hidden="true">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg></a><a class="header__monogram" href="#" aria-label="Год театра в России">
+            <svg class="header__monogram-color" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram.svg#monogram"></use>
+            </svg>
+            <svg class="header__monogram-white" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram-white.svg#monogram"></use>
+            </svg></a>
+          <div class="header__content">
+            <button class="header__close" type="button" aria-label="Закрыть меню">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav__pages">
+                <li class="nav__pages-item nav__pages-item--with-sub">
+                  <input class="nav__pages-checkbox visually-hidden" type="checkbox" id="0" tabindex="0"/>
+                  <label class="nav__pages-link nav__pages-link--with-sub" for="0">Олимпиада</label>
+                  <ul class="nav__sub-pages">
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="about.html">О проекте</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="comitet.html">Международный комитет</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="platforms.html">Площадки</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="#">Пресс-центр</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="gallery.html">Галерея</a></li>
+                  </ul>
+                </li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="news.html">Новости</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link nav__pages-link--active" href="playbill.html">Афиша</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="people.html">Участники</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="partners.html">Партнеры</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="contacts.html">Контакты</a></li>
+              </ul><a class="nav__search-btn search-btn" href="#" aria-label="Открыть поиск">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                </svg></a>
+              <div class="nav__user"><a class="nav__user-btn nav__user-btn--login" href="#"><span class="nav__user-text">регистрация</span></a>
+              </div>
+              <form class="user-form login" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="login-email" name="login-email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="login-password" name="login-password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Войти</button><a class="user-form__recovery" href="lk-reset-password.html">Забыли пароль?</a><a class="user-form__register" href="#">Зарегистрироваться</a>
+              </form>
+              <form class="user-form registration" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="name" name="name" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="name">Имя</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="surname" name="surname" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="surname">Фамилия</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="password" name="password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__consent-input" type="checkbox" id="consent" name="consent" required="required"/>
+                  <label class="user-form__consent-label" for="consent">
+                    Согласие на обработку персональных данных в соответствии с
+                    <a class="user-form__consent-link" href="#">пользовательским соглашением</a>
+                  </label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Зарегистрироваться</button><a class="user-form__login" href="#">Уже зарегистрированы</a>
+              </form>
+              <form class="user-form recovery" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="recovery-email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="recovery-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__recover-text">На данную почту вам придет письмо со ссылкой для восстановления пароля</p>
+                <button class="user-form__btn" type="submit">восстановить пароль</button>
+              </form>
+              <div class="nav__sub">
+                <ul class="nav__social">
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Instagram">
+                      <svg class="nav__social-icon" width="19" height="19" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Facebook">
+                      <svg class="nav__social-icon" width="8" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на VK">
+                      <svg class="nav__social-icon" width="20" height="11" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Youtube">
+                      <svg class="nav__social-icon" width="23" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-youtube"></use>
+                      </svg></a></li>
+                </ul><a class="nav__lang" href="#" aria-label="Read in English">eng</a>
+              </div>
+            </nav>
+          </div>
+          <form class="search" method="get" action="#">
+            <button class="search__close" type="button" aria-label="Закрыть поиск">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search__wrapper">
+              <svg class="search__icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+              </svg>
+              <input class="search__input" type="search" id="search" name="search" aria-label="Поиск по сайту"/>
+            </div>
+          </form><a class="header__search-btn search-btn" href="#" aria-label="Открыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+            </svg></a>
+          <button class="header__burger" type="button" aria-label="Открыть меню">
+            <svg width="30" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="event">
+        <div class="event__event-page-header event-page-header" style="background: none;">
+          <div class="image-container"><img class="event-page-header__image" src="img/event/page-header-2.jpg" srcset="img/event/page-header-2.jpg 2x" alt="Песочный человек" width="1400" height="750"/>
+          </div>
+          <div class="event-page-header__container container">
+            <div class="event-page-header__content">
+              <div class="event-page-header__top-group"><a class="event-page-header__back-link" href="#">вернуться
+                  <svg width="24" height="15">
+                    <use xlink:href="img/sprite/sprite.svg#arrow-back"></use>
+                  </svg></a>
+                <button class="button-star event-page-header__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                  <svg width="24" height="22">
+                    <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                  </svg><span class="button-star__hint">добавить в избранное</span>
+                </button>
+              </div>
+              <div class="event-page-header__bottom-group">
+                <ul class="event-page-header__links-list">
+                  <li class="event-page-header__links-item">
+                    <div class="date-link event-page-header__date-link"><a class="date-link__link">
+                        <p class="date-link__top-group"><span class="date-link__date">12 — 06</span><span class="date-link__time">19:00, пн</span></p>
+                        <p class="date-link__city">Санкт-Петербург</p></a></div>
+                  </li>
+                  <li class="event-page-header__links-item">
+                    <div class="date-link event-page-header__date-link"><a class="date-link__link" href="#">
+                        <p class="date-link__top-group"><span class="date-link__date">17 — 06</span><span class="date-link__time">19:00, вт</span></p>
+                        <p class="date-link__city">Комсомольск-на-Амуре</p></a></div>
+                  </li>
+                  <li class="event-page-header__links-item">
+                    <div class="date-link event-page-header__date-link"><a class="date-link__link" href="#">
+                        <p class="date-link__top-group"><span class="date-link__date">17 — 06</span><span class="date-link__time">19:00, вт</span></p>
+                        <p class="date-link__city">Москва</p></a></div>
+                  </li>
+                </ul>
+                <div class="event-page-header__info"><span class="event-page-header__type">спектакль</span>
+                  <p class="event-page-header__program"><span><span class="event-page-header__program-right-indent"><span class="event-page-header__program-left-indent">Программа Международного комитета  Театральной олимпиады-2019</span></span></span></p>
+                  <h1 class="event-page-header__title">Песочный человек</h1>
+                </div>
+                <p class="event-page-header__age-restrictions">14+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="event__top-group">
+            <div class="event-info event__info">
+              <dl class="event-info__list">
+                <div class="event-info__item">
+                  <dt class="event-info__termin">Постановка:</dt>
+                  <dd class="event-info__description">Максима Диденко по роману самого загадочного автора новой российской литературы</dd>
+                </div>
+                <div class="event-info__item">
+                  <dt class="event-info__termin">Театр:</dt>
+                  <dd class="event-info__description">Компания Аурелии Тьере, Париж, Франция</dd>
+                </div>
+                <div class="event-info__item">
+                  <dt class="event-info__termin">Премьера:</dt>
+                  <dd class="event-info__description">23 декабря 2016</dd>
+                </div>
+                <div class="event-info__item">
+                  <dt class="event-info__termin">Продолжительность:</dt>
+                  <dd class="event-info__description">2 ч. 50 мин. Спектакль идет с 1 антрактом</dd>
+                </div>
+                <div class="event-info__item">
+                  <dt class="event-info__termin">Языки исполнения:</dt>
+                  <dd class="event-info__description">без слов</dd>
+                </div>
+                <div class="event-info__item">
+                  <dt class="event-info__termin">Премия:</dt>
+                  <dd class="event-info__description">«Золотая Маска» 2018 г. – «Лучший спектакль в драме, большая форма». Номинации на Премию «Золотая Маска» 2018 г. – «Лучшая работа режиссера», «Лучшая работа художника», «Лучшая женская роль» (Ирина Тычинина)</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="request-info event__request-info"><a class="request-info__link dark-link" href="#">Купить билет</a><a class="request-info__place-link" href="#"><span class="link">Александринский театр. Основная сцена</span></a><a class="request-info__map-link" href="#">
+                <svg>
+                  <use xlink:href="img/sprite/sprite.svg#shape"></use>
+                </svg><span>на карте</span></a>
+            </div>
+          </div>
+          <div class="event__author">
+            <div class="event__about-author text-container">
+              <p>Перед открытием в Schauspielhaus на Gustaf-Gründgens-Platz: режиссер Роберт Уилсон, известный во всем мире своей оригинальной эстетикой, и британская певица и автор песен Анна Кальви пробуждают Э. Т.А. Hoffmannstechychansychryshsteans Опубликованный, деликатно нарисованный рассказ 1816 года берет свое начало от ранней детской травмы: отец маленького Натанаэля, тайный алхимик, несчастный случай в исследовании. Мальчик считает, что трагическое событие должно быть связано с Песочником, мать которого часто говорят. Он разбрасывает песок в глазах детей, которые не хотят спать, пока не выскакивают из кровавых голов. Ужасная история перед сном, которую Натанаэль никогда не отпустит. Зачарованные очки, живые куклы и волшебный огонь - тонкие легкие композиции Роберта Уилсона, точные движения и дерзкий драматический рок Анны Кальвис устанавливают музыкальный контрапункт.paragraph</p>
+            </div>
+            <div class="event__additional text-container accordion">
+              <h3 class="event__additional-title link">FC Bergman</h3>
+              <p class="event__additional-text">работает в историческом здании Театра Бурла в центре Антверпена и  является  крупнейшей  театральной  компанией Фландрии.  Сегодня под эгидой Toneelhuis помимо FC Bergman работают театральное  объединение Olympique Dramatique, режиссеры Бенджамин Вердонк, Мохаллад Рассем и Ги Кассирс – с 2006 года являющийся художественным руководителем Toneelhuis.<a class="event__additional-link link" href="https://www.toneelhuis.be/en/">https://www.toneelhuis.be/en/</a>
+              </p>
+              <h3 class="event__additional-title link">Национальный театр Бельгии Toneelhuis</h3>
+              <p class="event__additional-text">работает в историческом здании Театра Бурла в центре Антверпена и  является  крупнейшей  театральной  компанией Фландрии.  Сегодня под эгидой Toneelhuis помимо FC Bergman работают театральное  объединение Olympique Dramatique, режиссеры Бенджамин Вердонк, Мохаллад Рассем и Ги Кассирс – с 2006 года являющийся художественным руководителем Toneelhuis.<a class="event__additional-link link" href="https://www.toneelhuis.be/en/">https://www.toneelhuis.be/en/</a>
+              </p>
+            </div>
+            <div class="event__person">
+              <p class="event__person-position">режиссер</p>
+              <div class="person person--blue"><a class="person__interactive-block" href="#">
+                  <div class="person__image-wrap"><img src="img/event/8.jpg" srcset="img/event/8@2x.jpg 2x" alt="Роберт Уилсон" width="164" height="210"/></div>
+                  <p class="person__name"><span>Роберт</span><span>Уилсон</span></p>
+                  <p class="person__info">Франция</p></a></div>
+            </div>
+            <div class="event__social">
+              <div class="rambler-share"></div>
+            </div>
+          </div>
+          <div class="event__gallery-slider-wrap">
+            <h2 class="event__subtitle">Галерея</h2>
+            <div class="gallery-slider event__gallery-slider">
+              <button class="gallery-slider__miniature-button gallery-slider__miniature-button--prev" type="button"></button>
+              <div class="swiper-container gallery-slider__container">
+                <div class="swiper-wrapper gallery-slider__wrapper">
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/event/event-1.jpg" srcset="img/event/event-1@2x.jpg 2x" alt="Песочный человек"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Песочный человек</p>
+                  </div>
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/event/event-6.jpg" srcset="img/event/event-6.jpg 2x" alt="Песочный человек"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Песочный человек</p>
+                  </div>
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/afisha/afisha-2.jpg" srcset="img/afisha/afisha-2@2x.jpg 2x" alt="Мать"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Мать</p>
+                  </div>
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/afisha/afisha-3.jpg" srcset="img/afisha/afisha-3@2x.jpg 2x" alt="Женитьба"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Женитьба</p>
+                  </div>
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/afisha/afisha-4.jpg" srcset="img/afisha/afisha-4@2x.jpg 2x" alt="Формоза"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Формоза</p>
+                  </div>
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/afisha/afisha-5.jpg" srcset="img/afisha/afisha-5@2x.jpg 2x" alt="Все, что произошло и могло произойти"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Все, что произошло и могло произойти</p>
+                  </div>
+                  <div class="swiper-slide gallery-slider__slide">
+                    <div class="gallery-slider__image-wrap"><img src="img/afisha/afisha-6.jpg" srcset="img/afisha/afisha-6@2x.jpg 2x" alt="Трагедия мщения"/></div>
+                    <p class="gallery-slider__author">фотограф André Kaczmarczyk</p>
+                    <p class="gallery-slider__caption">Трагедия мщения</p>
+                  </div>
+                </div>
+                <div class="gallery-slider__pagination"></div>
+              </div>
+              <div class="gallery-slider__buttons-wrap">
+                <button class="gallery-slider__miniature-button gallery-slider__miniature-button--next" type="button"><img class="gallery-slider__img" src="img/event/event-6.jpg" srcset="img/event/event-6.jpg 2x" alt="Песочный человек"/></button>
+                <div class="gallery-slider__slider-buttons-inner">
+                  <button class="gallery-slider__button-arrow gallery-slider__button-arrow--prev button-arrow button-arrow--prev" type="button"></button>
+                  <button class="gallery-slider__button-arrow gallery-slider__button-arrow--next button-arrow button-arrow--next" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event__party">
+            <h2 class="event__subtitle">Участники</h2>
+            <div class="party-card-list swiper-container event__party-card-list">
+              <div class="party-card-list__wrap swiper-wrapper event__wrap-party-card">
+                <div class="swiper-slide">
+                  <div class="person"><a class="person__interactive-block" href="#">
+                      <div class="person__image-wrap"><img src="img/event/1.jpg" srcset="img/event/1@2x.jpg" alt="Christian  Friedel" width="164" height="210"/></div>
+                      <p class="person__name"><span>Christian </span><span>Friedel</span></p>
+                      <p class="person__info">Nathanael</p></a></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="person"><a class="person__interactive-block" href="#">
+                      <div class="person__image-wrap"><img src="img/event/2.jpg" srcset="img/event/2@2x.jpg" alt="Lou Strenger" width="164" height="210"/></div>
+                      <p class="person__name"><span>Lou</span><span>Strenger</span></p>
+                      <p class="person__info">Clara</p></a></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="person"><a class="person__interactive-block" href="#">
+                      <div class="person__image-wrap"><img src="img/event/3.jpg" srcset="img/event/3@2x.jpg" alt="Jonas Friedrich Leonhardi" width="164" height="210"/></div>
+                      <p class="person__name"><span>Jonas Friedrich</span><span>Leonhardi</span></p>
+                      <p class="person__info">Lothar</p></a></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="person"><a class="person__interactive-block" href="#">
+                      <div class="person__image-wrap"><img src="img/event/4.jpg" srcset="img/event/4@2x.jpg" alt="Rainer Philippi" width="164" height="210"/></div>
+                      <p class="person__name"><span>Rainer</span><span>Philippi</span></p>
+                      <p class="person__info">Vater</p></a></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="person"><a class="person__interactive-block" href="#">
+                      <div class="person__image-wrap"><img src="img/event/5.jpg" srcset="img/event/5@2x.jpg" alt="Rosa Enskat" width="164" height="210"/></div>
+                      <p class="person__name"><span>Rosa</span><span>Enskat</span></p>
+                      <p class="person__info">Mutter</p></a></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="person"><a class="person__interactive-block" href="#">
+                      <div class="person__image-wrap"><img src="img/event/6.jpg" srcset="img/event/6@2x.jpg" alt="Andreas Grothgar" width="164" height="210"/></div>
+                      <p class="person__name"><span>Andreas</span><span>Grothgar</span></p>
+                      <p class="person__info">Coppola/Coppelius</p></a></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="person"><a class="person__interactive-block" href="#">
+                      <div class="person__image-wrap"><img src="img/event/7.jpg" srcset="img/event/7@2x.jpg" alt="André Kaczmarczyk" width="164" height="210"/></div>
+                      <p class="person__name"><span>André</span><span>Kaczmarczyk</span></p>
+                      <p class="person__info">Sandmann</p></a></div>
+                </div>
+              </div>
+              <div class="party-card-list__slider-buttons-inner">
+                <button class="party-card-list__button-arrow party-card-list__button-arrow--prev button-arrow button-arrow--prev" type="button"></button>
+                <button class="party-card-list__button-arrow party-card-list__button-arrow--next button-arrow button-arrow--next" type="button"></button>
+              </div>
+            </div>
+            <dl class="event__schedule-list">
+              <div class="event__schedule-item">
+                <dt class="event__schedule-termin">Автор романа</dt>
+                <dd class="event__schedule-description"><span class="event__schedule-name">Виктор</span><span class="event__schedule-surname">Пелевин</span></dd>
+              </div>
+              <div class="event__schedule-item">
+                <dt class="event__schedule-termin">Хореограф</dt>
+                <dd class="event__schedule-description"><span class="event__schedule-name">Галя</span><span class="event__schedule-surname">Солодовникова</span></dd>
+              </div>
+              <div class="event__schedule-item">
+                <dt class="event__schedule-termin">Композитор</dt>
+                <dd class="event__schedule-description"><span class="event__schedule-name">Иван</span><span class="event__schedule-surname">Кушнир</span></dd>
+              </div>
+              <div class="event__schedule-item">
+                <dt class="event__schedule-termin">Лектор</dt>
+                <dd class="event__schedule-description"><span class="event__schedule-name">Евгений</span><span class="event__schedule-surname">Мандельштам</span></dd>
+              </div>
+              <div class="event__schedule-item">
+                <dt class="event__schedule-termin">Композитор</dt>
+                <dd class="event__schedule-description"><span class="event__schedule-name">Иван</span><span class="event__schedule-surname">Кушнир</span></dd>
+              </div>
+              <div class="event__schedule-item">
+                <dt class="event__schedule-termin">Режиссёр</dt>
+                <dd class="event__schedule-description"><span class="event__schedule-name">Максим</span><span class="event__schedule-surname">Диденко</span></dd>
+              </div>
+              <div class="event__schedule-item">
+                <dt class="event__schedule-termin">Сценограф, художник по костюмам</dt>
+                <dd class="event__schedule-description"><span class="event__schedule-name">Сергей</span><span class="event__schedule-surname">Васильев</span></dd>
+              </div>
+              <div class="event__schedule-item">
+                <dt class="event__schedule-termin">Художник-технолог</dt>
+                <dd class="event__schedule-description"><span class="event__schedule-name">Ольга</span><span class="event__schedule-surname">Павлюк</span></dd>
+              </div>
+              <div class="event__schedule-item">
+                <dt class="event__schedule-termin">Оператор</dt>
+                <dd class="event__schedule-description"><span class="event__schedule-name">Людмила</span><span class="event__schedule-surname">Бурченкова</span></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="event__reviews-content">
+            <h2 class="event__subtitle">Отзывы</h2>
+            <div class="reviews event__reviews">
+              <div class="reviews__container swiper-container">
+                <div class="reviews__wrapper swiper-wrapper">
+                  <div class="reviews__slide swiper-slide">
+                    <p class="reviews__author">Alexandr Vonnger</p>
+                    <p class="reviews__text">Это нечто не реально крутое ! Пожалуй , так бы следовало начать этот отзыв и так я его и начну : Это нечто не реально крутое , на сцене не успеваешь уследить за фантазией режиссера , а она , знаете ли , ой какая !! Жолдак здесь абсолютно не похож на себя , эпатаж сценический здесь не каждому придется по вкусу , но уж кому понравится , тот непременно захочет посмотреть ЭТО еще раз , уже спокойным взглядом.</p><a class="reviews__link link" href="afisha.ru" target="_blank">afisha.ru</a>
+                  </div>
+                  <div class="reviews__slide swiper-slide">
+                    <p class="reviews__author">Ваня Зинченко</p>
+                    <p class="reviews__text">Космосом начинается, в космосе и оказываешься. Писать/говорить/думать про этот спектакль можно только телеграфным стилем и чувствами, но то, что приехав на Каменный остров вас в итоге выкинет в некое совсем незнакомое измерение, это точно.</p><a class="reviews__link link" href="afisha.ru" target="_blank">afisha.ru</a>
+                  </div>
+                  <div class="reviews__slide swiper-slide">
+                    <p class="reviews__author">Alexandr Vonnger</p>
+                    <p class="reviews__text">Это нечто не реально крутое ! Пожалуй , так бы следовало начать этот отзыв и так я его и начну : Это нечто не реально крутое , на сцене не успеваешь уследить за фантазией режиссера , а она , знаете ли , ой какая !! Жолдак здесь абсолютно не похож на себя , эпатаж сценический здесь не каждому придется по вкусу , но уж кому понравится , тот непременно захочет посмотреть ЭТО еще раз , уже спокойным взглядом.</p><a class="reviews__link link" href="afisha.ru" target="_blank">afisha.ru</a>
+                  </div>
+                  <div class="reviews__slide swiper-slide">
+                    <p class="reviews__author">Ваня Зинченко</p>
+                    <p class="reviews__text">Космосом начинается, в космосе и оказываешься. Писать/говорить/думать про этот спектакль можно только телеграфным стилем и чувствами, но то, что приехав на Каменный остров вас в итоге выкинет в некое совсем незнакомое измерение, это точно.</p><a class="reviews__link link" href="afisha.ru" target="_blank">afisha.ru</a>
+                  </div>
+                  <div class="reviews__slide swiper-slide">
+                    <p class="reviews__author">Alexandr Vonnger</p>
+                    <p class="reviews__text">Это нечто не реально крутое ! Пожалуй , так бы следовало начать этот отзыв и так я его и начну : Это нечто не реально крутое , на сцене не успеваешь уследить за фантазией режиссера , а она , знаете ли , ой какая !! Жолдак здесь абсолютно не похож на себя , эпатаж сценический здесь не каждому придется по вкусу , но уж кому понравится , тот непременно захочет посмотреть ЭТО еще раз , уже спокойным взглядом.</p><a class="reviews__link link" href="afisha.ru" target="_blank">afisha.ru</a>
+                  </div>
+                  <div class="reviews__slide swiper-slide">
+                    <p class="reviews__author">Ваня Зинченко</p>
+                    <p class="reviews__text">Космосом начинается, в космосе и оказываешься. Писать/говорить/думать про этот спектакль можно только телеграфным стилем и чувствами, но то, что приехав на Каменный остров вас в итоге выкинет в некое совсем незнакомое измерение, это точно.</p><a class="reviews__link link" href="afisha.ru" target="_blank">afisha.ru</a>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__slider-buttons-inner">
+                <button class="reviews__button-arrow reviews__button-arrow--prev button-arrow button-arrow--prev" type="button"></button>
+                <button class="reviews__button-arrow reviews__button-arrow--next button-arrow button-arrow--next" type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div class="event__most-interesting most-interesting">
+            <h2 class="most-interesting__title">Вам может быть интересно</h2>
+            <ul class="most-interesting__list">
+              <li class="most-interesting__item">
+                <article class="card most-interesting__card"><a class="card__link">
+                    <h3 class="card__title"><span>Интервью: «Тратить силы на борьбу с ленивым зрителем не стоит»</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/event/event-2.jpg" srcset="img/event/event-2@2x.jpg 2x" alt="Интервью: «Тратить силы на борьбу с ленивым зрителем не стоит»" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">новости</span>
+                  </div>
+                  <p class="card__desc">Участник форума и актер Евгений Миронов рассказал журналистам, что сейчас происходит со зрителем.</p>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="most-interesting__item">
+                <article class="card most-interesting__card"><a class="card__link">
+                    <h3 class="card__title"><span>Интервью: «Тратить силы на борьбу с ленивым зрителем не стоит»</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/event/event-2.jpg" srcset="img/event/event-2@2x.jpg 2x" alt="Интервью: «Тратить силы на борьбу с ленивым зрителем не стоит»" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">новости</span>
+                  </div>
+                  <p class="card__desc">Участник форума и актер Евгений Миронов рассказал журналистам, что сейчас происходит со зрителем.</p>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="most-interesting__item">
+                <article class="card most-interesting__card"><a class="card__link">
+                    <h3 class="card__title"><span>Интервью: «Тратить силы на борьбу с ленивым зрителем не стоит»</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/event/event-2.jpg" srcset="img/event/event-2@2x.jpg 2x" alt="Интервью: «Тратить силы на борьбу с ленивым зрителем не стоит»" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">новости</span>
+                  </div>
+                  <p class="card__desc">Участник форума и актер Евгений Миронов рассказал журналистам, что сейчас происходит со зрителем.</p>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="most-interesting__item">
+                <article class="card most-interesting__card"><a class="card__link">
+                    <h3 class="card__title"><span>Интервью: «Культура — замечательный повод для сближения»</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/event/event-3.jpg" srcset="img/event/event-3@2x.jpg 2x" alt="Интервью: «Культура — замечательный повод для сближения»" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">новости</span>
+                  </div>
+                  <p class="card__desc">Участник форума Маурицио Чекконе, глава центра «Эрмитаж-Италия», рассказал об успешно реализованных проектах и планах на будущее</p>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="most-interesting__item">
+                <article class="card most-interesting__card most-interesting__card--video"><a class="card__link">
+                    <h3 class="card__title"><span>Песочный человек</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/event/event-4.jpg" srcset="img/event/event-4@2x.jpg 2x" alt="Песочный человек" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">видео</span>
+                  </div>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="most-interesting__item">
+                <article class="card most-interesting__card"><a class="card__link">
+                    <h3 class="card__title"><span>Все, что произошло и могло произойти</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/event/event-5.jpg" srcset="img/event/event-5@2x.jpg 2x" alt="Все, что произошло и могло произойти" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">фото</span>
+                  </div>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <div class="event__related-events related-events">
+            <h2 class="related-events__title">Похожие события</h2>
+            <ul class="related-events__list">
+              <li class="related-events__item">
+                <article class="collection-card related-events__collection-card"><a class="collection-card__link related-events__collection-card-link" href="#"><img src="img/news/news-2.jpg" srcset="img/news/news-2@2x.jpg 2x" alt="5 современных хореографических постановок"/>
+                    <div class="collection-card__content">
+                      <p class="collection-card__type">коллекция</p>
+                      <h2 class="collection-card__title">5 современных хореографических постановок</h2>
+                    </div></a>
+                  <button class="button-star collection-card__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                    <svg>
+                      <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                    </svg><span class="button-star__hint">добавить в избранное</span>
+                  </button>
+                </article>
+              </li>
+              <li class="related-events__item">
+                <article class="card-tile related-events__card">
+                  <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                    <svg>
+                      <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                    </svg><span class="button-star__hint">добавить в избранное</span>
+                  </button><a class="card-tile__interactive-block" href="#">
+                    <div class="card-tile__link related-events__card-image-link">
+                      <div class="card-tile__wrap"><img src="img/afisha/afisha-4.jpg" srcset="img/afisha/afisha-4@2x.jpg 2x" alt="Песочный человек" width="388" height="232"/>
+                        <div class="card-tile__top-inner">
+                          <div class="card-tile__date-info">
+                            <p class="card-tile__day">12 — 06</p><span class="card-tile__time-week">17:00, вт</span>
+                          </div>
+                          <p class="card-tile__type">опера</p>
+                        </div>
+                        <div class="card-tile__bottom-inner">
+                          <p class="card-tile__regalia"><span>золотая маска</span></p>
+                          <p class="card-tile__age-restrictions">14+</p>
+                        </div>
+                      </div>
+                    </div>
+                    <h2 class="card-tile__title"><span class="link">Песочный человек</span></h2></a>
+                  <p class="card-tile__producer">Роберт Уилсон</p>
+                  <p class="card-tile__country">Театр Шаушпильхаус, Дюссельдорф, Германия </p><a class="card-tile__place link" href="#">Театр-фестиваль «Балтийский дом»</a>
+                </article>
+              </li>
+              <li class="related-events__item">
+                <article class="card-tile related-events__card">
+                  <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                    <svg>
+                      <use xlink:href="img/sprite/sprite.svg#icon-star"></use>
+                    </svg><span class="button-star__hint">добавить в избранное</span>
+                  </button><a class="card-tile__interactive-block" href="#">
+                    <div class="card-tile__link related-events__card-image-link">
+                      <div class="card-tile__wrap"><img src="img/afisha/afisha-5.jpg" srcset="img/afisha/afisha-5@2x.jpg 2x" alt="Опасная жалость" width="388" height="232"/>
+                        <div class="card-tile__top-inner">
+                          <div class="card-tile__date-info">
+                            <p class="card-tile__day">14 — 06</p><span class="card-tile__time-week">17:00, чт</span>
+                          </div>
+                          <p class="card-tile__type">Балет</p>
+                        </div>
+                        <div class="card-tile__bottom-inner">
+                          <p class="card-tile__age-restrictions">14+</p>
+                        </div>
+                      </div>
+                    </div>
+                    <h2 class="card-tile__title"><span class="link">Опасная жалость</span></h2></a>
+                  <p class="card-tile__producer">Саймон Макберни</p>
+                  <p class="card-tile__country">Шаубюне, Берлин, Германия </p><a class="card-tile__place link" href="#">Новая сцена Александринского театра</a>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"><span class="footer__rights">ⓒ All rights reserved.</span><a class="footer__link" href="#">Политика конфиденциальности</a><span class="footer__credits">разработка<a href="#">
+            <svg width="70" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#greenlabs"></use>
+            </svg><span class="visually-hidden">Greenlabs</span></a></span></footer>
+    </div>
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/formdata.min.js"></script>
+    <script src="libs/ofi.min.js"></script>
+    <script src="libs/nice-select/nice-select.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

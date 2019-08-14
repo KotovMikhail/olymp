@@ -1,0 +1,32 @@
+extends layouts/_layout
+include components/_header
+include components/_page-title
+//- include components/_filter
+include components/_card
+include components/__filter
+include components/_filter-results
+
+block title
+  | Театральная олимпиада 2019 | Площадки
+
+block meta
+  link(href="libs/nice-select/nice-select.css", rel="stylesheet")
+
+block header
+  +header('Олимпиада')
+
+block main
+  main.platforms
+    +pageTitle('Площадки')
+    aside.platforms__aside
+      .container
+        +filter(data.platformsFilterData, 'platforms')
+        +filter-results('platforms')
+    ul.platforms__list.fill-content
+      each platform in data.platforms
+        li.platforms__item
+          +card(platform)(className='card--platforms')
+    include components/_filter-result-template
+
+block footer
+  include components/_footer

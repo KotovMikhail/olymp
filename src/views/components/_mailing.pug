@@ -1,0 +1,9 @@
+mixin mailing(className)
+  form.mailing(class=`${className}__mailing` method='post' action='#')
+    div.container(class='mailing__container')
+      h3.mailing__title Рассылка
+      fieldset.mailing__field
+        label.mailing__label(for='mailing-email') Введите ваш адрес, чтобы получать самые актуальные новости
+        input.mailing__input(type='email' id='mailing-email' name='email' aria-label='Введите адрес вашей электронной почты' placeholder='e-mail')
+        button.mailing__submit(type='submit') подписаться
+        div.mailing__strip

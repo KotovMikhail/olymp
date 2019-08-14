@@ -1,0 +1,155 @@
+.gallery {
+  &__aside {
+    background: $pampas-color;
+    padding: 10px 0 24px;
+
+    @media (max-width: $media-md) {
+      padding: 10px 0 24px;
+    }
+
+    @media (max-width: $media-tb) {
+      padding: 0 0 12px;
+    }
+  }
+
+  &__filter {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__filter-form {
+    justify-content: flex-start;
+  }
+
+  &__filter-select {
+    margin-right: 124px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @media (max-width: $media-tb) {
+      margin: 0;
+    }
+  }
+
+  &__filter-field {
+    margin-left: auto;
+
+    @media (max-width: $media-tb) {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+
+  &__filter-list {
+    display: flex;
+    font-weight: 300;
+    align-items: flex-end;
+
+    @media (max-width: $media-tb) {
+      display: block;
+    }
+  }
+
+  &__filter-item {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  &__filter-results {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    max-width: 1400px;
+    margin: 70px auto 170px;
+    padding: 0 58px;
+    padding-right: 0;
+    list-style: none;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    @media (max-width: $media-md) {
+      padding: 0 30px;
+      padding-right: 0;
+    }
+
+    @include tablet {
+      padding: 0 14px 0 30px;
+    }
+
+    @media (max-width: $media-tb) {
+      margin: 50px auto 100px;
+      padding: 0;
+    }
+  }
+
+  &__item {
+    width: calc((100% - 180px) / 3);
+    margin-bottom: 90px;
+    margin-right: 60px;
+
+    @include desktop {
+      width: calc((100% - 88px) / 3);
+      margin-right: 29px;
+    }
+
+    @include tablet {
+      width: calc((100% - 33px) / 2);
+      margin-right: 16px;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &--big {
+      width: calc((100% - 120px) / 2);
+      margin-right: 60px;
+
+      @include desktop {
+        width: calc((100% - 60px) / 2);
+        margin-right: 29px;
+      }
+
+      @include tablet {
+        width: 100%;
+        margin-right: 16px;
+      }
+
+      @include mobile {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__card {
+    .card__author {
+      display: none;
+    }
+  }
+
+  &__card--video {
+    .card__wrapper {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/icon-video.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70px 71px;
+        pointer-events: none;
+      }
+    }
+  }
+}

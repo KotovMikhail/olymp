@@ -1,0 +1,29 @@
+form.user-form.registration(action='#')
+  button.user-form__close(type='button' aria-label='Открыть меню')
+    svg(width='24' height='24' aria-hidden='true')
+      use(xlink:href='img/sprite/sprite.svg#icon-close')
+  p.user-form__part
+    input.user-form__input(type='text' id='name' name='name' placeholder=' ' required)
+    label.user-form__label(for='name') Имя
+    span.invalid-text
+  p.user-form__part
+    input.user-form__input(type='text' id='surname' name='surname' placeholder=' ' required)
+    label.user-form__label(for='surname') Фамилия
+    span.invalid-text
+  p.user-form__part
+    input.user-form__input(type='email' id='email' name='email' placeholder=' ' required)
+    label.user-form__label(for='email') E-mail
+    span.invalid-text
+  p.user-form__part
+    input.user-form__input(type='password' id='password' name='password' placeholder=' ' required)
+    label.user-form__label(for='password') Пароль
+    span.invalid-text
+  p.user-form__part
+    input.user-form__consent-input(type='checkbox' id='consent' name='consent' required)
+    label.user-form__consent-label(for='consent')
+      | Согласие на обработку персональных данных в соответствии с
+      |
+      a.user-form__consent-link(href='#') пользовательским соглашением
+    span.invalid-text
+  button.user-form__btn(type='submit') Зарегистрироваться
+  a.user-form__login(href='#') Уже зарегистрированы

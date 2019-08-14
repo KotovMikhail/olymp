@@ -1,0 +1,15 @@
+include _social
+
+mixin addresses(data, className)
+  section.addresses
+    h2.addresses__title.visually-hidden Наши контакты
+    ul.addresses__list
+      each item in data
+        li.addresses__item
+          .addresses__item-wrap
+            a.addresses__title(href='#')= item.title
+            span.addresses__name= item.name
+          .addresses__item-wrap
+            a.addresses__phone= item.phone
+            a.addresses__mail= item.mail
+    +social

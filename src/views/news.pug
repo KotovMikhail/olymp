@@ -1,0 +1,32 @@
+extends layouts/_layout
+include components/_header
+include components/_page-title
+include components/__filter
+include components/_card
+include components/_filter-results
+
+block meta
+  link(href="libs/nice-select/nice-select.css", rel="stylesheet")
+
+block title
+  | Новости
+
+block header
+  +header('Новости')
+
+block main
+    main.news
+      +pageTitle('Новости')(class="news__title")
+      aside.news__filter-wrap
+        +filter(data.newsFilterData, 'news')
+        .container
+          +filter-results('news')
+      .container
+        ul.news__list.fill-content
+          each news in data.news
+            li.news__item(class = news.big ? 'news__item--big':'')
+              +card(news)(className='card--news')
+    include components/_filter-result-template
+
+block footer
+  include components/_footer

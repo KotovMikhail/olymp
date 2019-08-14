@@ -1,0 +1,83 @@
+.popup-message {
+  position: fixed;
+  right: 50%;
+  top: 50%;
+  margin: 0;
+
+  width: 612px;
+  max-width: 612px;
+  padding: 38px 90px 52px 52px;
+  font-size: 18px;
+  line-height: 1.67;
+
+  color: $white-color;
+
+  background-color: $dark-blue-color;
+
+  transform: translate(50%);
+}
+
+.popup-message__text {
+  margin: 0;
+
+  a {
+    text-decoration: underline;
+
+    transition: 0.2s;
+
+    &:hover,
+    &:focus {
+      color: $putty-color;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+.popup-message__button-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 37px;
+  height: 37px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    width: 100%;
+    height: 2px;
+    background: $white-color;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+    transition: 0.2s;
+    transition-property: background-color;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    width: 100%;
+    height: 2px;
+    background: $white-color;
+    transform-origin: 50% 50%;
+    transform: rotate(-45deg);
+    transition: 0.2s;
+    transition-property: background-color;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:hover::after,
+  &:focus::after {
+    background: $putty-color;
+  }
+}

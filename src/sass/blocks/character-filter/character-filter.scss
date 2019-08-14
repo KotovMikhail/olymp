@@ -1,0 +1,91 @@
+.character-filter {
+  @include desktop {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.character-filter__form {
+  @include desktop {
+    overflow: auto;
+    margin-top: 0;
+    padding-bottom: 10px;
+  }
+}
+
+.character-filter__list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  margin-left: 5px;
+
+  transition: 0.5s ease;
+
+  @include desktop {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 0;
+  }
+}
+
+.character-filter__item {
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.character-filter__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 28px;
+  margin-top: 5px;
+  padding-top: 3px;
+
+  font-weight: 400;
+  font-size: 18px;
+  font-family: $font;
+  color: $putty-color;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  &:hover:not(.character-filter__label--past):not(.character-filter__label--today) {
+    background-color: $pampas-color;
+    opacity: 0.8;
+  }
+
+  &--past {
+    color: $pearl-bush-color;
+  }
+
+  &--today {
+    color: $white-color;
+
+    background-color: $dark-blue-color;
+  }
+}
+
+.character-filter__input {
+  @include visually-hidden;
+
+  &:focus {
+    & + :not(.character-filter__label--today) {
+      background-color: $pampas-color;
+      opacity: 0.8;
+    }
+  }
+
+  &:checked {
+    & + .character-filter__label:not(.character-filter__label--today) {
+      color: $white-color;
+
+      background-color: $putty-color;
+    }
+  }
+}

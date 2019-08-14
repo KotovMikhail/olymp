@@ -1,0 +1,11 @@
+.partners {
+  margin-bottom: 268px;
+
+  &__title-wrapper {
+    padding-bottom: 19px;
+  }
+
+  @include desktop {
+    margin-bottom: 155px;
+  }
+}

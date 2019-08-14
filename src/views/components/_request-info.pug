@@ -1,0 +1,37 @@
+mixin request-info(opt, className)
+  div.request-info(class=className? `${className}__request-info` : '')
+    if (opt.requestType == 'link')
+      a.request-info__link(class='dark-link' href=opt.href ? opt.href : '#')= opt.requestText
+    else if (opt.requestType == 'info')
+      p.request-info__desc= opt.requestText
+        if opt.tel
+          <br>
+          span по тел.:
+          a(href=`tel:${opt.tel}`)= opt.tel
+    else if (opt.requestType == 'request')
+      a.request-info__link(class='dark-link request-info__link--request' href=opt.href ? opt.href : '#')= opt.requestText
+      p.request-info__hint.request-info__hint--success
+        | Ваша заявка на участие подана.
+        <br>
+        | Статус вашей заявки вы можете отслеживать в
+        <br>
+        a.request-info__hint-link.request-info__hint-link--private(href="/ru/profile") Личном кабинете
+        button.request-info__hint-button-close(type="button")
+          svg(width=40 height=40)
+            use(xlink:href='img/sprite/sprite.svg#thin-icon-close')
+      p.request-info__hint.request-info__hint--no-success
+        | Для того чтобы подать заявку вам необходимо
+        <br>
+        a.request-info__hint-link.request-info__hint-link--login-in(href="#") войти
+        |   под своей учетной записью или
+        <br>
+        a.request-info__hint-link.request-info__hint-link--registration(href="#") зарегистрироваться
+        button.request-info__hint-button-close(type="button")
+          svg(width=40 height=40)
+            use(xlink:href='img/sprite/sprite.svg#thin-icon-close')
+    a.request-info__place-link(href=opt.placeLink ? opt.placeLink : '#')
+      span.link= opt.place
+    a.request-info__map-link(href=opt.mapLink ? opt.mapLink : '#')
+      svg
+        use(xlink:href='img/sprite/sprite.svg#shape')
+      span на карте

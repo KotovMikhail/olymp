@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="libs/nice-select/nice-select.css" rel="stylesheet">
+    <title>Театральная олимпиада 2019 | Участники
+    </title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/svgxuse.min.js" async defer></script>
+  </head>
+  <body>
+    <div class="overflowWrap">
+      <header class="header">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Театральная олимпиада 2019">
+            <svg width="120" height="143" aria-hidden="true">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg></a><a class="header__monogram" href="#" aria-label="Год театра в России">
+            <svg class="header__monogram-color" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram.svg#monogram"></use>
+            </svg>
+            <svg class="header__monogram-white" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram-white.svg#monogram"></use>
+            </svg></a>
+          <div class="header__content">
+            <button class="header__close" type="button" aria-label="Закрыть меню">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav__pages">
+                <li class="nav__pages-item nav__pages-item--with-sub">
+                  <input class="nav__pages-checkbox visually-hidden" type="checkbox" id="0" tabindex="0"/>
+                  <label class="nav__pages-link nav__pages-link--with-sub" for="0">Олимпиада</label>
+                  <ul class="nav__sub-pages">
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="about.html">О проекте</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="comitet.html">Международный комитет</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="platforms.html">Площадки</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="#">Пресс-центр</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="gallery.html">Галерея</a></li>
+                  </ul>
+                </li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="news.html">Новости</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="playbill.html">Афиша</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link nav__pages-link--active" href="people.html">Участники</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="partners.html">Партнеры</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="contacts.html">Контакты</a></li>
+              </ul><a class="nav__search-btn search-btn" href="#" aria-label="Открыть поиск">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                </svg></a>
+              <div class="nav__user"><a class="nav__user-btn nav__user-btn--login" href="#"><span class="nav__user-text">регистрация</span></a>
+              </div>
+              <form class="user-form login" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="login-email" name="login-email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="login-password" name="login-password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Войти</button><a class="user-form__recovery" href="lk-reset-password.html">Забыли пароль?</a><a class="user-form__register" href="#">Зарегистрироваться</a>
+              </form>
+              <form class="user-form registration" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="name" name="name" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="name">Имя</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="surname" name="surname" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="surname">Фамилия</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="password" name="password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__consent-input" type="checkbox" id="consent" name="consent" required="required"/>
+                  <label class="user-form__consent-label" for="consent">
+                    Согласие на обработку персональных данных в соответствии с
+                    <a class="user-form__consent-link" href="#">пользовательским соглашением</a>
+                  </label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Зарегистрироваться</button><a class="user-form__login" href="#">Уже зарегистрированы</a>
+              </form>
+              <form class="user-form recovery" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="recovery-email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="recovery-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__recover-text">На данную почту вам придет письмо со ссылкой для восстановления пароля</p>
+                <button class="user-form__btn" type="submit">восстановить пароль</button>
+              </form>
+              <div class="nav__sub">
+                <ul class="nav__social">
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Instagram">
+                      <svg class="nav__social-icon" width="19" height="19" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Facebook">
+                      <svg class="nav__social-icon" width="8" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на VK">
+                      <svg class="nav__social-icon" width="20" height="11" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Youtube">
+                      <svg class="nav__social-icon" width="23" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-youtube"></use>
+                      </svg></a></li>
+                </ul><a class="nav__lang" href="#" aria-label="Read in English">eng</a>
+              </div>
+            </nav>
+          </div>
+          <form class="search" method="get" action="#">
+            <button class="search__close" type="button" aria-label="Закрыть поиск">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search__wrapper">
+              <svg class="search__icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+              </svg>
+              <input class="search__input" type="search" id="search" name="search" aria-label="Поиск по сайту"/>
+            </div>
+          </form><a class="header__search-btn search-btn" href="#" aria-label="Открыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+            </svg></a>
+          <button class="header__burger" type="button" aria-label="Открыть меню">
+            <svg width="30" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="people">
+        <div class="page-title">
+          <h1 class="page-title__wrapper">Участники</h1>
+        </div>
+        <section class="people__carousel carousel">
+          <div class="people__carousel-wrapper">
+            <h2 class="visually-hidden">Интересные участники</h2>
+            <div class="people__carousel-hidde">
+              <ul class="carousel__wrapper">
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-1.jpg" srcset="img/people/people-1@2x.jpg 2x" alt="Кристиан Фридель"></div>
+                      <h2 class="people__name" href="#">Кристиан Фридель</h2></a><span class="people__profesion">Оператор</span><span class="people__place">Театр Пикколо</span><span class="people__from">Милан, Италия</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-2.jpg" srcset="img/people/people-2@2x.jpg 2x" alt="Йонас Фридрих"></div>
+                      <h2 class="people__name" href="#">Йонас Фридрих</h2></a><span class="people__profesion">Художник-технолог</span><span class="people__place">Театральная компания Эль Локаль</span><span class="people__from">Барселона, Испания</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-3.jpg" srcset="img/people/people-3@2x.jpg 2x" alt="Джанин Ортис"></div>
+                      <h2 class="people__name" href="#">Джанин Ортис</h2></a><span class="people__profesion">Драматург</span><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-4.jpg" srcset="img/people/people-4@2x.jpg 2x" alt="Матиас Хартманн"></div>
+                      <h2 class="people__name" href="#">Матиас Хартманн</h2></a><span class="people__profesion">Режиссёр</span><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-5.jpg" srcset="img/people/people-5@2x.jpg 2x" alt="Тина Клоемпкен"></div>
+                      <h2 class="people__name" href="#">Тина Клоемпкен</h2></a><span class="people__profesion">Сценограф</span><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-6.jpg" srcset="img/people/people-6@2x.jpg 2x" alt="Йотам Шлезингер"></div>
+                      <h2 class="people__name" href="#">Йотам Шлезингер</h2></a><span class="people__profesion">Композитор</span><span class="people__place">Театр Шаушпильхаус</span><span class="people__from">Дюссельдорф, Германия</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-1.jpg" srcset="img/people/people-1@2x.jpg 2x" alt="Катлин Бауманн"></div>
+                      <h2 class="people__name" href="#">Катлин Бауманн</h2></a><span class="people__profesion">Режиссёр</span><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-2.jpg" srcset="img/people/people-2@2x.jpg 2x" alt="Таку Бенволио"></div>
+                      <h2 class="people__name" href="#">Таку Бенволио</h2></a><span class="people__profesion">Композитор</span><span class="people__place">Театр Шаушпильхаус</span><span class="people__from">Дюссельдорф, Германия</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-3.jpg" srcset="img/people/people-3@2x.jpg 2x" alt="Людмила Бурченкова"></div>
+                      <h2 class="people__name" href="#">Людмила Бурченкова</h2></a><span class="people__profesion">Оператор</span><span class="people__place">Театр Пикколо</span><span class="people__from">Милан, Италия</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-4.jpg" srcset="img/people/people-4@2x.jpg 2x" alt="Хайнц Ваничек"></div>
+                      <h2 class="people__name" href="#">Хайнц Ваничек</h2></a><span class="people__profesion">Сценограф</span><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-5.jpg" srcset="img/people/people-5@2x.jpg 2x" alt="Сергей Васильев"></div>
+                      <h2 class="people__name" href="#">Сергей Васильев</h2></a><span class="people__profesion">Лектор</span><span class="people__place">Национальный театр</span><span class="people__from">Хельсинки, Финляндия</span></article>
+                </li>
+                <li class="people__carousel-item carousel__item">
+                  <article class="people__card"><a class="people__link" href="#">
+                      <div class="people__image"><img width="164" height="210" src="img/people/people-6.jpg" srcset="img/people/people-6@2x.jpg 2x" alt="Вольфганг Вехтер"></div>
+                      <h2 class="people__name" href="#">Вольфганг Вехтер</h2></a><span class="people__profesion">Актер</span><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></article>
+                </li>
+              </ul>
+            </div>
+            <ul class="carousel-btns people__carousel-btns" aria-hidden="true">
+              <li class="carousel-btns__item">
+                <button class="carousel-btns__btn carousel-btns__btn--prev carousel-btns__btn--disabled" type="button" title="Предыдущее"></button>
+              </li>
+              <li class="carousel-btns__item">
+                <button class="carousel-btns__btn carousel-btns__btn--next" type="button" title="Следующее"></button>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <aside class="people__aside">
+          <div class="container">
+            <button class="filter-button people__filter-button-open" type="button">Фильтр</button>
+            <div class="filter people__filter">
+              <button class="filter__button-close people__filter-button-close" type="button"></button>
+              <form class="filter__form people__filter-form" action="#">
+                <select class="filter-select filter-select--forever people__filter-select" name="country" multiple="multiple" id="country">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Страна</option>
+                  <option value="all">все</option>
+                  <option value="Italy">Италия</option>
+                  <option value="France">Франция</option>
+                  <option value="Russia">Россия</option>
+                  <option value="USA">США</option>
+                  <option value="Germany">Германия</option>
+                  <option value="Canada">Канада</option>
+                </select>
+                <select class="filter-select filter-select--forever people__filter-select" name="place" multiple="multiple" id="place">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Площадка</option>
+                  <option value="all">все</option>
+                  <option value="St. Petersburg Theater «Music Hall»">Санкт-Петербургский Театр «Мюзик-Холл»</option>
+                  <option value="Alexandrinsky Theater. Main stage">Александринский театр. Основная сцена</option>
+                  <option value="Khabarovsk Regional Drama Theater, Khabarovsk">Хабаровский краевой театр драмы, Хабаровск</option>
+                </select>
+                <select class="filter-select filter-select--forever people__filter-select" name="program" multiple="multiple" id="program">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Программа</option>
+                  <option value="all">все</option>
+                  <option value="MTFthem.Chekhov">МТФ им. Чехова</option>
+                  <option value="Access point">Точка доступа</option>
+                  <option value="Golden mask">Золотая маска</option>
+                  <option value="Baltic house">Балтийский дом</option>
+                  <option value="NET">NET</option>
+                </select>
+                <select class="filter-select filter-select--forever people__filter-select" name="profesion" multiple="multiple" id="profesion">
+                  <option class="visually-hidden" value="select-title" selected="selected" disabled="disabled">Профессия</option>
+                  <option value="all">все</option>
+                  <option value="Producer">Режиссёр</option>
+                  <option value="Composer">Композитор</option>
+                  <option value="Operator">Оператор</option>
+                  <option value="Set designer">Сценограф</option>
+                  <option value="Lecturer">Лектор</option>
+                  <option value="Actor">Актер</option>
+                  <option value="Playwright">Драматург</option>
+                  <option value="Choreographer">Хореограф</option>
+                  <option value="Painter">Художник</option>
+                  <option value="Technologist">Художник-технолог</option>
+                  <option value="Costume designer">Художник по костюмам</option>
+                </select>
+              </form>
+            </div>
+            <div class="filter-results people__filter-results"></div>
+          </div>
+        </aside>
+        <form class="alphabet symbols" method="GET" action="#">
+          <ul class="alphabet__list">
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="all" name="alphabet" value="all" checked>
+              <label class="alphabet__label" for="all">все</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="а" name="alphabet" value="а">
+              <label class="alphabet__label" for="а">а</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="б" name="alphabet" value="б">
+              <label class="alphabet__label" for="б">б</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="в" name="alphabet" value="в">
+              <label class="alphabet__label" for="в">в</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="г" name="alphabet" value="г">
+              <label class="alphabet__label" for="г">г</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="д" name="alphabet" value="д">
+              <label class="alphabet__label" for="д">д</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="е" name="alphabet" value="е">
+              <label class="alphabet__label" for="е">е</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="ж" name="alphabet" value="ж">
+              <label class="alphabet__label" for="ж">ж</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="з" name="alphabet" value="з">
+              <label class="alphabet__label" for="з">з</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="и" name="alphabet" value="и">
+              <label class="alphabet__label" for="и">и</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="к" name="alphabet" value="к">
+              <label class="alphabet__label" for="к">к</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="л" name="alphabet" value="л">
+              <label class="alphabet__label" for="л">л</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="м" name="alphabet" value="м">
+              <label class="alphabet__label" for="м">м</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="н" name="alphabet" value="н">
+              <label class="alphabet__label" for="н">н</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="о" name="alphabet" value="о">
+              <label class="alphabet__label" for="о">о</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="п" name="alphabet" value="п">
+              <label class="alphabet__label" for="п">п</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="р" name="alphabet" value="р">
+              <label class="alphabet__label" for="р">р</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="с" name="alphabet" value="с">
+              <label class="alphabet__label" for="с">с</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="т" name="alphabet" value="т">
+              <label class="alphabet__label" for="т">т</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="у" name="alphabet" value="у">
+              <label class="alphabet__label" for="у">у</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="ф" name="alphabet" value="ф">
+              <label class="alphabet__label" for="ф">ф</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="х" name="alphabet" value="х">
+              <label class="alphabet__label" for="х">х</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="ц" name="alphabet" value="ц">
+              <label class="alphabet__label" for="ц">ц</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="ч" name="alphabet" value="ч">
+              <label class="alphabet__label" for="ч">ч</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="ш" name="alphabet" value="ш">
+              <label class="alphabet__label" for="ш">ш</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="щ" name="alphabet" value="щ">
+              <label class="alphabet__label" for="щ">щ</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="э" name="alphabet" value="э">
+              <label class="alphabet__label" for="э">э</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="ю" name="alphabet" value="ю">
+              <label class="alphabet__label" for="ю">ю</label>
+            </li>
+            <li class="alphabet__item">
+              <input class="alphabet__input visually-hidden" type="radio" id="я" name="alphabet" value="я">
+              <label class="alphabet__label" for="я">я</label>
+            </li>
+          </ul>
+        </form>
+        <ul class="people__list fill-content">
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Катлин Бауманн</a><span class="people__profesion">Режиссёр</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Таку Бенволио</a><span class="people__profesion">Композитор</span></div>
+            <div class="people__second"><span class="people__place">Театр Шаушпильхаус</span><span class="people__from">Дюссельдорф, Германия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Людмила Бурченкова</a><span class="people__profesion">Оператор</span></div>
+            <div class="people__second"><span class="people__place">Театр Пикколо</span><span class="people__from">Милан, Италия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Хайнц Ваничек</a><span class="people__profesion">Сценограф</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Сергей Васильев</a><span class="people__profesion">Лектор</span></div>
+            <div class="people__second"><span class="people__place">Национальный театр</span><span class="people__from">Хельсинки, Финляндия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Вольфганг Вехтер</a><span class="people__profesion">Актер</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Андрей Виорел</a><span class="people__profesion">Художник-технолог</span></div>
+            <div class="people__second"><span class="people__place">Театральная компания Эль Локаль</span><span class="people__from">Барселона, Испания</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Томас Виттманн</a><span class="people__profesion">Драматург</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Бимтер Гленн</a><span class="people__profesion">Художник</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Стефан Горски</a><span class="people__profesion">Хореограф</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Мориц Грюниг</a><span class="people__profesion">Художник-технолог</span></div>
+            <div class="people__second"><span class="people__place">Александринский театр</span><span class="people__from">Санкт-Петербург, Россия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Бернадетт Зонненбихлер</a><span class="people__profesion">Художник по костюмам</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Андре Качмарчик</a><span class="people__profesion">Режиссёр</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Тания Крамбергер</a><span class="people__profesion">Композитор</span></div>
+            <div class="people__second"><span class="people__place">Театр Шаушпильхаус</span><span class="people__from">Дюссельдорф, Германия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Тина Клоемпкен</a><span class="people__profesion">Оператор</span></div>
+            <div class="people__second"><span class="people__place">Театр Пикколо </span><span class="people__from">Милан, Италия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Иван Кушнир</a><span class="people__profesion">Сценограф</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Роберт Ленигер</a><span class="people__profesion">Лектор</span></div>
+            <div class="people__second"><span class="people__place">Национальный театр</span><span class="people__from">Хельсинки, Финляндия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Малте К. Лахманн</a><span class="people__profesion">Актер</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Мари-Франсуаза Ли Ракпол</a><span class="people__profesion">Художник-технолог</span></div>
+            <div class="people__second"><span class="people__place">Театральная компания Эль Локаль</span><span class="people__from">Барселона, Испания</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Константин Линдхорст</a><span class="people__profesion">Драматург</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Алексей Лохманн</a><span class="people__profesion">Режиссёр</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Евгений Мандельштам</a><span class="people__profesion">Хореограф</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Парвиз Мир-Али</a><span class="people__profesion">Художник-технолог</span></div>
+            <div class="people__second"><span class="people__place">Александринский театр</span><span class="people__from">Санкт-Петербург, Россия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Лев Николаев</a><span class="people__profesion">Художник по костюмам</span></div>
+            <div class="people__second"><span class="people__place">Театр Шаушпильхаус</span><span class="people__from">Дюссельдорф, Германия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Галя Солодовникова</a><span class="people__profesion"></span></div>
+            <div class="people__second"><span class="people__place">Театр Пикколо</span><span class="people__from">Милан, Италия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Ольга Павлюк</a><span class="people__profesion"></span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Джанин Ортис</a><span class="people__profesion">Оператор</span></div>
+            <div class="people__second"><span class="people__place">Театр Шаушпильхаус</span><span class="people__from">Дюссельдорф, Германия</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Константина Соннесона</a><span class="people__profesion">Сценограф</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Йоханна Свертфегер</a><span class="people__profesion">Художник</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Виктория Тьере-Чаплин</a><span class="people__profesion">Композитор</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Ален Тэннер</a><span class="people__profesion">Драматург</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Эмануэль Феллмер</a><span class="people__profesion">Лектор</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Кристиан Фридель</a><span class="people__profesion">Актер</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Йонас Фридрих</a><span class="people__profesion">Композитор</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Матиас Хартманн</a><span class="people__profesion">Художник-технолог</span></div>
+            <div class="people__second"><span class="people__place">Театральная компания Эль Локаль</span><span class="people__from">Барселона, Испания</span></div>
+          </li>
+          <li class="people__item">
+            <div class="people__first"><a class="people__name" href="#">Йотам Шлезингер</a><span class="people__profesion">Оператор</span></div>
+            <div class="people__second"><span class="people__place">Компания Аурелии Тьере</span><span class="people__from">Париж, Франция</span></div>
+          </li>
+        </ul>
+        <div class="template playbill-page-header" id="filter-result-template">
+          <div class="filter-result playbill-page-header__filter-result">
+            <p class="filter-result__text"></p>
+            <button class="filter-result__button" type="button" aria-label="удалить фильтр">
+              <svg>
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"><span class="footer__rights">ⓒ All rights reserved.</span><a class="footer__link" href="#">Политика конфиденциальности</a><span class="footer__credits">разработка<a href="#">
+            <svg width="70" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#greenlabs"></use>
+            </svg><span class="visually-hidden">Greenlabs</span></a></span></footer>
+    </div>
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/formdata.min.js"></script>
+    <script src="libs/ofi.min.js"></script>
+    <script src="libs/nice-select/nice-select.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+.collection {
+  padding-bottom: 170px;
+
+  @include mobile {
+    padding-bottom: 95px;
+  }
+}
+
+.collection__info {
+  margin-bottom: 136px;
+
+  @include mobile {
+    margin-bottom: 42px;
+  }
+}
+
+.collection__info-text {
+  margin: 0;
+  margin-bottom: 57px;
+
+  font-size: 20px;
+  line-height: 1.5;
+  color: $dark-blue-color;
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 1.44;
+
+    margin-bottom: 37px;
+
+    p {
+      margin-bottom: 25px;
+    }
+  }
+
+  @include mobile-s {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,23 @@
+include _social
+
+mixin companions(data)
+  section.companions
+    ul.companions__list
+      each item, index in data
+        li.companions__item
+          h3.companions__title= item[0].title
+          .companions__logo-container
+              each img, index in item[0].logo
+                .companions__logo-wrap
+                  img.companions__logo(src= img alt= item.caption)
+                  if item[0].desc.length > 0
+                    p.companions__desc= item[0].desc[index]
+    +social
+
+
+
+
+
+
+
+

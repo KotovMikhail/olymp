@@ -1,0 +1,109 @@
+@import './general/normalize';
+@import './general/fonts';
+@import './general/variables';
+@import './general/mixins';
+@import './general/global';
+@import './blocks/card';
+@import '../libs/swiper/swiper';
+@import './blocks/header';
+@import './blocks/nav';
+@import './blocks/user-form';
+@import './blocks/search';
+@import './blocks/carousel';
+@import './blocks/carousel-btns';
+@import './blocks/main-title';
+@import './blocks/main-section';
+@import './blocks/main-gallery';
+@import './blocks/main-banner';
+@import './blocks/main-partners';
+@import './blocks/subscription';
+@import './blocks/page-title';
+@import './blocks/filter';
+@import './blocks/footer';
+@import './blocks/alphabet';
+@import './blocks/container';
+@import './blocks/text-container';
+@import './blocks/image-container';
+@import './blocks/template';
+@import './blocks/gallery-slider/gallery-slider';
+@import './blocks/button-star/button-star';
+@import './blocks/button-arrow/button-arrow';
+@import './blocks/links/link';
+@import './blocks/links/dark-link';
+@import './blocks/filter/filter';
+@import './blocks/person/person';
+@import './blocks/collection-card/collection-card';
+@import './blocks/date-link/date-link';
+@import './blocks/filter-button/filter-button';
+@import './blocks/filter-select/filter-select';
+@import './blocks/filter-results/filter-results';
+@import './blocks/filter-result/filter-result';
+@import './blocks/popup-message/popup-message';
+@import './blocks/platforms';
+@import './blocks/people';
+
+// playbill
+@import './blocks/playbill/playbill-page-header';
+@import './blocks/playbill/playbill';
+@import './blocks/character-filter/character-filter';
+@import './blocks/card-tile/card-tile';
+@import './blocks/card-list/card-list';
+@import './blocks/mailing/mailing';
+
+//news
+@import './blocks/news/news';
+@import './blocks/news/one-news';
+@import './blocks/news/one-article';
+@import './blocks/news/arrow-back';
+@import './blocks/news/page-counter';
+
+//about
+@import './blocks/about/about';
+@import './blocks/about/history';
+
+//contacts
+@import './blocks/contacts/contacts';
+@import './blocks/contacts/addresses';
+
+//partners
+@import './blocks/partners/partners';
+@import './blocks/partners/companions';
+
+// event
+@import './blocks/event/event-page-header';
+@import './blocks/party-card-list/party-card-list';
+@import './blocks/event/event';
+@import './blocks/event-info/event-info';
+@import './blocks/request-info/request-info';
+@import './blocks/event/reviews';
+@import './blocks/most-interesting/most-interesting';
+@import './blocks/related-events/related-events';
+
+@import './blocks/gallery.scss';
+@import './blocks/album.scss';
+//exhibition
+@import './blocks/exhibition/exhibition';
+
+//one-collection
+@import './blocks/collection/collection';
+@import './blocks/collection/collection-page-header';
+
+//participan
+@import './blocks/participant/participant';
+@import './blocks/participant/participant-page-header';
+
+//place
+@import './blocks/place/place';
+@import './blocks/place/place-page-header';
+
+//search-results
+@import './blocks/search-results/search-page-header';
+@import './blocks/search-results/search-results';
+@import './blocks/search-results/search-result';
+
+@import './blocks/lk';
+
+//404
+@import './blocks/404/404';
+
+@import './blocks/comitet';

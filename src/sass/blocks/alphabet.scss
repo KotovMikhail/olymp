@@ -1,0 +1,97 @@
+.alphabet {
+  display: block;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 59px;
+  font-weight: 300;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: $media-md) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: $media-tb) {
+    padding: 0 20px;
+  }
+
+  &__list {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 27px 0;
+    justify-content: space-between;
+    list-style: none;
+
+    @media (max-width: $media-xs) {
+      padding: 27px 0 11px;
+    }
+  }
+
+  &__item {
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 10px;
+
+      @media (max-width: $media-md) {
+        margin-right: 0px;
+        padding-right: 59px;
+      }
+    }
+
+    &:first-child {
+      margin-right: 37px;
+    }
+
+    @media (max-width: $media-xs) {
+      margin-right: 12px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    width: 36px;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 20px;
+    color: $putty-color;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover,
+    &:focus {
+      color: $white-color;
+      background: $putty-color;
+    }
+
+    @media (max-width: $media-tb) {
+      &:hover,
+      &:focus {
+        color: $putty-color;
+        background: none;
+      }
+
+      &:active {
+        color: $white-color;
+        background: $putty-color;
+      }
+    }
+  }
+
+  &__item:first-child &__label {
+    padding: 2px 0 8px;
+  }
+
+  &__input:checked ~ &__label {
+    border-bottom: 2px solid $putty-color;
+    pointer-events: none;
+  }
+}

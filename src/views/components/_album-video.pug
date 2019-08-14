@@ -1,0 +1,15 @@
+section.album(data-id)
+  .album__content
+    button.album__close(type='button' aria-label='Закрыть альбом')
+    .album__head
+      a.album__title(href='#')= data.albums[0].title
+      .rambler-share
+      time.album__publish-data(data-datetime= data.albums[0].systemData)= data.albums[0].publishData
+    .album__wrapper
+      .album__video(style="padding:36.25% 0 0 0;position:relative;")
+        iframe(src="https://player.vimeo.com/video/142445392?autoplay=1&color=bbae92&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+      .album__meta(aria-hidden='true')
+        span.album__meta-author
+        span.album__meta-title
+
+  script(src="https://player.vimeo.com/api/player.js")

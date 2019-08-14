@@ -1,0 +1,210 @@
+.card-tile {
+  position: relative;
+}
+
+.card-tile__interactive-block {
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .card-tile__wrap img {
+      transform: scale(1.15);
+    }
+
+    .link {
+      color: $white-color;
+
+      background-color: $putty-color;
+    }
+  }
+}
+
+.card-tile__link {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  padding-top: 59.8%;
+  margin-bottom: 15px;
+
+  color: $white-color;
+  overflow: hidden;
+}
+
+.card-tile__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 16px 16px 14px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+
+    object-fit: cover;
+    transition: 0.5s;
+  }
+
+  @include mobile {
+    padding: 16px 17px 14px 20px;
+  }
+}
+
+.card-tile__top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-tile__day {
+  margin: 0;
+  margin-bottom: 6px;
+
+  font-weight: 300;
+  font-size: 32px;
+  line-height: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+
+.card-tile__time-week {
+  margin: 0;
+  margin-left: 2px;
+  font-size: 15px;
+  line-height: 1.47;
+}
+
+.card-tile__type {
+  margin: 0;
+  margin-right: 34px;
+
+  font-size: 10px;
+  line-height: 20px;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  @include mobile {
+    margin: -2px 29px 0 0;
+  }
+}
+
+.card-tile__button-star {
+  @include reset-button;
+
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  z-index: 5;
+
+  width: 21px;
+  height: 20px;
+
+  @include mobile {
+    top: 12px;
+    right: 16px;
+  }
+}
+
+.card-tile__bottom-inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.card-tile__regalia {
+  margin: 0;
+  margin-left: 10px;
+  margin-bottom: 3px;
+
+  font-size: 10px;
+  line-height: 14px;
+  color: $white-color;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  text-align: right;
+
+  span {
+    padding: 4px 0 2px;
+    background-color: $putty-color;
+    position: relative;
+
+    box-shadow: 13px 0 0 $putty-color, -13px 0 0 $putty-color;
+  }
+}
+
+.card-tile__age-restrictions {
+  margin: 0;
+  margin-left: 24px;
+
+  font-size: 18px;
+  letter-spacing: 2.6px;
+}
+
+.card-tile__title {
+  margin: 0;
+  margin-bottom: 9px;
+
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 1.08;
+  color: $dark-blue-color;
+  letter-spacing: normal;
+
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+
+.card-tile__producer {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.47;
+  color: $putty-color;
+
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+
+.card-tile__country {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-size: 15px;
+  line-height: 1.47;
+  color: $putty-color;
+
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+
+.card-tile__place {
+  font-size: 15px;
+  line-height: 1.33;
+  color: $dark-blue-color;
+  letter-spacing: normal;
+
+  @include mobile {
+    padding: 0 20px;
+    display: block;
+  }
+}

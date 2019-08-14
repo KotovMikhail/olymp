@@ -1,0 +1,11 @@
+- var alphabet = ['а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'э', 'ю', 'я'];
+
+form.alphabet.symbols(method='GET' action='#')
+  ul.alphabet__list
+    li.alphabet__item
+      input.alphabet__input.visually-hidden(type='radio' id='all' name='alphabet' value='all' checked)
+      label.alphabet__label(for='all') все
+    each letter, index in alphabet
+      li.alphabet__item
+        input.alphabet__input.visually-hidden(type='radio' id=letter name='alphabet' value=letter)
+        label.alphabet__label(for=letter)= letter

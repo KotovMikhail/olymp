@@ -1,0 +1,47 @@
+mixin card(data)
+  article.card(class!=attributes.className)
+    -var titleTop = data.titleTop;
+    a.card__link(href=data.url)
+      h3.card__title(class=titleTop?'card__title--top':'')
+        span !{data.title}
+      .card__wrapper
+        img.card__image(src=data.image + '.jpg' srcset= data.image + '@2x.jpg 2x'  alt=data.title rel='nofollow')
+        .card__overlay
+          .card__overlay-top
+            .card__when
+              if data.date
+                span.card__date= data.date
+              if data.time
+                span.card__time= data.time
+            if data.favorite
+              span.card__type= data.favorite
+              button.button-star(class='card-tile__button-star' type='button' aria-label='Добавить в избранное' title='Добавить в избранное')
+                svg
+                  use(xlink:href='img/sprite/sprite.svg#icon-star')
+                  span.button-star__hint добавить в избранное
+          .card__overlay-bottom
+            if data.program
+              .card__program
+                span= data.program
+            if data.age
+              span.card__age= data.age
+    .card__star
+      if data.type
+        span.card__type= data.type
+        if !data.isNoStar
+          button.button-star(class='card-tile__button-star' type='button' aria-label='Добавить в избранное' title='Добавить в избранное')
+            svg
+              use(xlink:href='img/sprite/sprite.svg#icon-star')
+              span.button-star__hint добавить в избранное
+    if data.author
+      span.card__author= data.author
+    if data.from
+      span.card__from= data.from
+    if data.place
+      a.card__place(href='one-place.html')= data.place
+    if data.desc
+      p.card__desc= data.desc
+    if data.publishData
+      time.card__publish-data(datetime=data.systemData)= data.publishData
+    if data.eventsCount
+      span.card__events-count= data.eventsCount

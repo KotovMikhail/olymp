@@ -1,0 +1,18 @@
+extends layouts/_layout
+include components/_header
+include components/_page-title
+include components/_addresses
+
+block title
+  | Контакты
+
+block header
+  +header('Контакты')
+
+block main
+  main.contacts
+    +pageTitle('Контакты','contacts')
+    +addresses(data.contacts)
+
+block footer
+  include components/_footer

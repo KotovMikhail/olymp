@@ -1,0 +1,60 @@
+.event-info__place {
+  font-size: 18px;
+  line-height: 1.33;
+  color: $dark-blue-color;
+  margin-bottom: 11px;
+}
+
+.event-info__list {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.event-info__item {
+  margin-bottom: 11px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mobile {
+    margin-bottom: 6px;
+  }
+}
+
+.event-info__termin {
+  display: inline-block;
+  margin-right: 5px;
+
+  vertical-align: baseline;
+  color: $putty-color;
+
+  &:empty {
+    margin-right: 0;
+
+    & + .event-info__description {
+      margin-left: -4px;
+    }
+  }
+
+  @include mobile {
+    font-size: 15px;
+    line-height: 1.47;
+    margin-right: 0;
+  }
+}
+
+.event-info__description {
+  display: inline;
+  margin-left: 0;
+
+  vertical-align: baseline;
+  color: $dark-blue-color;
+
+  @include mobile {
+    font-size: 15px;
+    line-height: 1.47;
+  }
+}

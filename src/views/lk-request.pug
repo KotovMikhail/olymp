@@ -1,0 +1,45 @@
+extends layouts/_layout
+include components/_header
+include components/_card
+
+block title 
+  | Театральная олимпиада 2019 | Личный кабинет
+
+block meta  
+  link(href="libs/nice-select/nice-select.css", rel="stylesheet")
+
+block header  
+  +header
+
+block main  
+  main.lk 
+    h1.visually-hidden Личный кабинет 
+    aside.lk__menu  
+      .container  
+        ul.lk__menu-list.lk__menu-list--alon  
+          li.lk__menu-item  
+            a.lk__menu-link(href='lk-favorites.html') Избранное 
+          li.lk__menu-item  
+            a.lk__menu-link.lk__menu-link--active(href='lk-request.html') Заявки  
+          li.lk__menu-item  
+            a.lk__menu-link(href='lk-editor.html') Личные данные  
+    section.lk__events  
+      h2.visually-hidden Ваши заявки  
+      .container  
+        ul.lk__events-list
+          each request in data.lkRequest
+            li.lk__event
+              +card(request)(className='lk__events-card card--events')
+              .lk__request
+                if request.rejected
+                  span.lk__status.lk__status--rejected заявка отклонена
+                if request.confirmed
+                  span.lk__status.lk__status--confirmed заявка подтверждена
+                if request.notConfirmed
+                  span.lk__status.lk__status--not-confirmed заявка не подтверждена
+                if request.rejected
+                  button.lk__cancel(type='button') удалить
+                else
+                  button.lk__cancel(type='button') отменить заявку
+block footer      
+  include components/_footer

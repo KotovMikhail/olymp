@@ -1,0 +1,228 @@
+.filter-select {
+  position: relative;
+
+  height: 2.3em;
+  padding-right: 18px;
+  padding-left: 0;
+
+  font-size: 15px;
+  color: $putty-color;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+
+  &:after {
+    right: 1px;
+
+    width: 5px;
+    height: 5px;
+    margin-top: -2px;
+
+    border-right: 1px solid $putty-color;
+    border-bottom: 1px solid $putty-color;
+  }
+
+  .list {
+    margin-top: 0;
+    padding: 7px 0 14px;
+    margin-top: 0;
+    box-shadow: none;
+
+    color: $putty-color;
+
+    box-shadow: none;
+    background-color: $white-color;
+    border: solid 2px $putty-color;
+    border-radius: 0;
+    transform: scale(0.75) translate(-37px, -21px);
+
+    & :first-child {
+      display: none;
+    }
+  }
+
+  &.nice-select.open .list {
+    transform: scale(1) translate(-37px, 0);
+  }
+
+  .option {
+    padding: 0 86px 0 35px;
+  }
+
+  &.nice-select .option:hover {
+    background-color: $pampas-color;
+  }
+
+  &.open {
+    color: $dark-blue-color;
+
+    &::after {
+      border-color: $dark-blue-color;
+    }
+  }
+
+  &.nice-select .option.selected {
+    position: relative;
+
+    font-weight: normal;
+
+    background: transparent !important;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: $pampas-color;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $dark-blue-color;
+
+    &::after {
+      border-color: $dark-blue-color;
+    }
+  }
+
+  @include mobile {
+    font-size: 15px;
+    padding: 26px 25px 26px 20px;
+    height: auto;
+    position: relative;
+    white-space: pre-wrap;
+    line-height: normal;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: calc(100% - 40px);
+      bottom: 0;
+      height: 2px;
+      background-color: $putty-color;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    &::after {
+      right: 20px;
+      transform: rotate(-45deg);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $pampas-color;
+      color: $putty-color;
+
+      &::after {
+        border-color: $putty-color;
+      }
+    }
+
+    .list {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border: none;
+      margin: 0;
+      padding-top: 62px;
+      z-index: 500;
+      overflow-y: auto;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        background-color: $putty-color;
+        top: 26px;
+        right: 16px;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &.nice-select.open .list {
+      transform: scale(1) translate(0, 0);
+    }
+
+    &.nice-select .option.focus {
+      background: $pampas-color !important;
+    }
+
+    &.nice-select .option.selected {
+      background: $pampas-color !important;
+
+      &::before,
+      &::after {
+        content: none;
+      }
+
+      & + .option {
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    .option {
+      position: relative;
+      padding: 15.5px 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: calc(100% - 40px);
+        top: 0;
+        height: 2px;
+        background-color: $putty-color;
+        left: 20px;
+      }
+
+      &:nth-child(2) {
+        &::before {
+          content: none;
+        }
+      }
+
+      &:last-child {
+        &::after{
+          content: "";
+          position: absolute;
+          width: calc(100% - 40px);
+          bottom: 0;
+          height: 2px;
+          background-color: $putty-color;
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.month-select {
+  .current {
+    color: $dark-blue-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}

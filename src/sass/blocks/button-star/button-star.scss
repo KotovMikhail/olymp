@@ -1,0 +1,68 @@
+.button-star {
+  @include reset-button;
+  position: absolute;
+
+  color: $white-color;
+  transition: 0.2s;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $putty-color;
+
+    .button-star__hint {
+      transform: scaleY(1) translateY(100%);
+
+      opacity: 1;
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    fill: transparent;
+    stroke: currentColor;
+  }
+
+  &--full {
+    svg {
+      fill: currentColor;
+    }
+  }
+}
+
+.button-star__hint {
+  position: absolute;
+  right: -16px;
+  bottom: -23px;
+
+  opacity: 1;
+  min-width: 205px;
+  margin: 0;
+  padding: 16px 20px 16px 25px;
+
+  font-size: 15px;
+  line-height: 1.33;
+  color: $white-color;
+  transition: 0.2s;
+
+  background-color: $putty-color;
+  transform-origin: 100% 50%;
+
+  transform: scaleY(0) translateY(100%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 20px;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: $putty-color;
+    transform: rotate(45deg);
+  }
+}

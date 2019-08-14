@@ -1,0 +1,46 @@
+.about {
+  margin-bottom: 268px;
+
+  &__title-wrapper {
+    padding-bottom: 19px;
+  }
+
+  .event__party-card-list {
+    &::before {
+      content: none;
+    }
+  }
+
+  .playbill-page-header__title {
+    text-align: left;
+  }
+
+  .subscription__popup {
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
+  }
+
+  @include desktop {
+    margin-bottom: 155px;
+  }
+}
+
+.about__link-inner {
+  width: 276px;
+}
+
+.about__title-inner {
+  background-color: $putty-color;
+}
+
+.about__persons {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    width: 164px;
+    margin-right: 20px;
+  }
+}

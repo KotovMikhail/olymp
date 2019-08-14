@@ -1,0 +1,18 @@
+extends layouts/_layout
+include components/_header
+include components/_page-title
+include components/_companions
+
+block title
+  | Партнеры
+
+block header
+  +header('Партнеры')
+
+block main
+  main.partners
+    +pageTitle('Партнеры','partners')
+    +companions(data.partners)
+
+block footer
+  include components/_footer

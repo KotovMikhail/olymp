@@ -1,0 +1,31 @@
+mixin card-list(opt, className, isRepeat)
+  article.card-list(class=className ? `card-tile ${className}__card` : 'card-tile')
+    button.button-star(class=opt.fullStar ? 'card-tile__button-star card-list__button-star button-star--full' : 'card-tile__button-star card-list__button-star' type='button')
+      svg
+        use(xlink:href='img/sprite/sprite.svg#icon-star')
+      if opt.fullStar
+        span.button-star__hint в избранном
+      else
+        span.button-star__hint добавить в избранное
+    p.card-list__date(class=isRepeat ? 'card-list__date--repeat' : '')
+      span.card-list__day= opt.day
+      span.card-list__time-week= `${opt.time}, ${opt.dayWeek}`
+    div.card-list__wrap
+      div.card-list__top-inner
+        a.card-list__title-link(href=opt.href ? opt.href : '#')
+          h2.card-tile__title(class=('card-list__title'))= opt.title
+        if (opt.regalias)
+          p.card-tile__regalia(class='card-list__regalia')
+            span= opt.regalias
+        if (opt.type)
+          p.card-list__type= opt.type
+        p.card-tile__age-restrictions(class='card-list__age-restrictions')= opt.age
+
+      div.card-list__bottom-inner
+        div.card-list__info
+          if (opt.additionalInfo)
+            p.card-list__additional-info= opt.additionalInfo
+          p.card-tile__producer= opt.author
+          p.card-tile__country= opt.from
+        p.card-list__program= opt.program
+        a.card-tile__place(class='card-list__place' href=opt.placeHref ? opt.placeHref : '#')= opt.place

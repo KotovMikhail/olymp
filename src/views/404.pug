@@ -1,0 +1,25 @@
+extends layouts/_layout
+include components/_header
+include components/_page-title
+include components/_companions
+
+block title
+  | Страница не найдена
+block header
+  +header
+block main
+  main.error
+    .error__top-wrap
+    .error__wrap
+      p.error__message Страница не найдена
+      p.error__advice Вы можете перейти на <a class="error__link-main" href="main.html">главную</a> страницу или воспользоваться поиском
+      form.error__search(method='get' action='#')
+        .error__search-wrapper
+          svg.error__search-icon(width='20' height='20' aria-hidden='true')
+            use(xlink:href='img/sprite/sprite.svg#icon-search')
+          input.error__search-input(type='search' id='search-error' name='search' aria-label='Поиск по сайту')
+      .error__number-wrap
+        div.error__number 404
+
+block footer
+  include components/_footer

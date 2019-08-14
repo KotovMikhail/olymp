@@ -1,0 +1,116 @@
+.carousel-btns {
+  display: flex;
+  margin: 0;
+  padding: 2px 0 0;
+  list-style: none;
+
+  &--one-news {
+    position: absolute;
+    bottom: 24px;
+    right: 0px;
+  }
+
+  &__item {
+    margin-left: 32px;
+
+    @media (max-width: $media-tb) {
+      margin-left: 24px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    width: 65px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+
+    @media (max-width: $media-tb) {
+      width: 40px;
+      height: 25px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: $putty-color;
+      transition: 0.2s;
+      transition-property: opacity;
+
+      @media (max-width: $media-tb) {
+        height: 2px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -6px;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-bottom: 4px solid $putty-color;
+      border-right: 4px solid $putty-color;
+      transition: 0.2s;
+
+      @media (max-width: $media-tb) {
+        top: -4px;
+        width: 15px;
+        height: 15px;
+        border-width: 2px;
+      }
+    }
+
+    &--next::after {
+      right: -2px;
+      transform-origin: 100% 100%;
+      transform: rotate(-45deg) scale(0);
+
+      @media (max-width: $media-sd) {
+        transform: rotate(-45deg) scale(1);
+      }
+    }
+
+    &--prev::after {
+      right: 103%;
+      transform-origin: 100% 100%;
+      transform: rotate(135deg) scale(0);
+
+      @media (max-width: $media-sd) {
+        transform: rotate(135deg) scale(1);
+      }
+    }
+
+    &--next:hover::after,
+    &--next:focus::after {
+      transform: rotate(-45deg) scale(1);
+    }
+
+    &--prev:hover::after,
+    &--prev:focus::after {
+      transform: rotate(135deg) scale(1);
+    }
+
+    @media (max-width: $media-sd) {
+      &:active {
+        &::before {
+          background: $pampas-color;
+        }
+        &::after {
+          border-color: $pampas-color;
+        }
+      }
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.card {
+  position: relative;
+
+  display: flex;
+  width: 500px;
+
+  flex-direction: column;
+
+  &--gallery-big {
+    width: 100%;
+  }
+
+  &--gallery-small {
+    width: 100%;
+    margin-bottom: 34px;
+  }
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+
+  order: 1;
+}
+
+.card__title {
+  margin: 16px 0 8px;
+
+  order: 2;
+
+  font-size: 26px;
+
+  a {
+    color: $dark-blue-color;
+  }
+}
+
+.card--gallery-big .card__title {
+  margin-left: 55px;
+}
+
+.card__desc {
+  margin: 0;
+  margin-bottom: 4px;
+
+  order: 3;
+
+  font-size: 14px;
+
+  color: $putty-color;
+}
+
+.card__place {
+  margin: 7px 0;
+
+  order: 4;
+
+  font-size: 14px;
+
+  color: $dark-blue-color;
+}
+
+.card__publish-data {
+  order: 5;
+
+  color: $putty-color;
+}
+
+.card--gallery-big .card__publish-data {
+  margin-left: 55px;
+}
+
+.card__when {
+  position: absolute;
+  top: 17px;
+  left: 19px;
+
+  color: $white-color;
+}
+
+.card__date {
+  display: block;
+  margin-bottom: 7px;
+
+  font-size: 32px;
+}
+
+.card__time {
+  font-size: 14px;
+}
+
+.card__type {
+  position: absolute;
+  top: 19px;
+  right: 45px;
+
+  font-size: 10px;
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+
+  color: $white-color;
+}
+
+.card__fav-btn {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+
+  padding: 0;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  svg {
+    stroke: $white-color;
+  }
+
+  &:hover svg {
+    stroke: $putty-color;
+  }
+}

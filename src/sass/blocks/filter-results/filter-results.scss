@@ -1,0 +1,9 @@
+.filter-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  &:empty {
+    border-color: transparent;
+  }
+}

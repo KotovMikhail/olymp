@@ -1,0 +1,127 @@
+.main-section {
+  position: relative;
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto 70px;
+  align-items: flex-start;
+
+  @media (max-width: $media-tb) {
+    margin-top: 36px;
+    margin-bottom: 45px;
+    padding-bottom: 3px;
+  }
+
+  &__title {
+    margin: 16px 58px 0 55px;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: right;
+    color: $putty-color;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+
+    @media (max-width: $media-md) {
+      margin: 12px 28px 0 28px;
+    }
+
+    @media (max-width: $media-tb) {
+      margin: 12px 35px 0 18px;
+      font-size: 24px;
+    }
+  }
+
+  &__wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  &__head {
+    display: flex;
+    padding-right: 59px;
+    margin-bottom: 31px;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $media-md) {
+      padding-right: 30px;
+    }
+
+    @media (max-width: $media-tb) {
+      padding-right: 20px;
+      margin-bottom: 21px;
+    }
+  }
+
+  &__all-link {
+    font-size: 18px;
+    text-transform: lowercase;
+    color: $putty-color;
+
+    &:hover,
+    &:focus {
+      color: $dark-blue-color;
+    }
+
+    @media (max-width: $media-tb) {
+      padding-top: 5px;
+      font-size: 12px;
+    }
+  }
+
+  &__item {
+    width: 500px;
+    margin-right: 60px;
+
+    article {
+      margin: 0;
+      width: 100%;
+    }
+
+    .card__publish-data {
+      margin-top: 0px;
+    }
+
+    @media (max-width: $media-tb) {
+      width: 100%;
+      margin: 0;
+      padding-right: 20px;
+
+      .card__title,
+      .card__author,
+      .card__from,
+      .card__place,
+      .card__desc,
+      .card__publish-data {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__events-card {
+    @media (max-width: $media-tb) {
+      .card__title {
+        margin-top: 14px;
+        margin-bottom: 10px;
+      }
+
+      .card__author {
+        margin-bottom: 2px;
+      }
+
+      .card__place {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &__news-card {
+    .card__title {
+      margin-bottom: 5px;
+    }
+
+    .card__desc {
+      margin-bottom: 9px;
+    }
+  }
+}

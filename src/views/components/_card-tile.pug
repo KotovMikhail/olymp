@@ -1,0 +1,32 @@
+mixin card-tile(opt, className)
+  article.card-tile(class=className ? `${className}__card`:'')
+    button.button-star(class=opt.fullStar ? 'card-tile__button-star button-star--full' : 'card-tile__button-star' type='button' aria-label='Добавить в избранное' title='Добавить в избранное')
+      svg
+        use(xlink:href='img/sprite/sprite.svg#icon-star')
+      if opt.fullStar
+        span.button-star__hint в избранном
+      else
+        span.button-star__hint добавить в избранное
+    a.card-tile__interactive-block(href=opt.href ? opt.href : '#')
+      div(class=`card-tile__link ${className}__card-image-link`)
+        div.card-tile__wrap
+          img(src=opt.image srcset=opt.image2x alt=opt.title width='388' height='232')
+          div.card-tile__top-inner
+            div.card-tile__date-info
+              p.card-tile__day= `${opt.day} — ${opt.month}`
+              span.card-tile__time-week= `${opt.time}, ${opt.dayWeek}`
+            p.card-tile__type= opt.type
+          div.card-tile__bottom-inner
+            if (opt.regalias)
+              p.card-tile__regalia
+                span= opt.regalias
+            p.card-tile__age-restrictions= opt.age
+      h2.card-tile__title
+        span.link= opt.title
+    p.card-tile__producer= opt.author
+    p.card-tile__country= opt.from
+    a.card-tile__place(class='link' href=opt.placeHref ? opt.placeHref : '#')= opt.place
+
+
+
+

@@ -1,0 +1,21 @@
+mixin character-filter(opt, className, today)
+  div.character-filter
+    form.character-filter__form(class=className ? `${className}__character-filter symbols` : 'symbols')
+      ul.character-filter__list
+        if typeof opt == 'number'
+          -for (var day = 1; day <= opt; day++)
+            li.character-filter__item
+              if (day < today)
+                input.character-filter__input(type='checkbox' name="day" value=day id=`day${day}`)
+                label.character-filter__label(class='character-filter__label--past' for=`day${day}`)= day
+              else if (day == today)
+                input.character-filter__input(type='checkbox' name="day" value=day id=`day${day}`)
+                label.character-filter__label(class='character-filter__label--today' for=`day${day}`)= day
+              else
+                input.character-filter__input(type='checkbox' name="day" value=day id=`day${day}`)
+                label.character-filter__label(for=`day${day}`)= day
+        else
+          each item in opt
+            li.character-filter__item
+              input.character-filter__input(type='checkbox' name="symbol" value=day id=`${item}-symbol`)
+              label.character-filter__label(for=`${item}-symbol`)= item

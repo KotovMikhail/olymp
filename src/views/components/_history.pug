@@ -1,0 +1,39 @@
+include _social
+include _gallery-slider
+
+mixin history(data)
+  section.history
+    h2.history__title= data.title
+    .history__content
+      != data.firstDesc
+      if data.slider.length === 1
+        figure.history__image
+          img(src=data.slider[0].image srcset=data.slider[0].image2x alt=data.slider[0].caption)
+          figcaption= data.slider[0].caption
+      else
+        +gallery-slider(data.slider, 'history')
+      != data.secondDesc
+      != data.titleThirdDesc
+      != data.thirdDesc
+      != data.titleFourthDesc
+      ol.history__numbered-list
+        li.history__numbered-item= data.rulesFirst[0]
+          ol.history__numbered-sublist
+            - for(var i = 1; i < data.rulesFirst.length; i++)
+                li.history__numbered-subitem= data.rulesFirst[i]
+        li.history__numbered-item= data.rulesSecond[0]
+          ol.history__numbered-sublist
+            - for(var i = 1; i < data.rulesSecond.length; i++)
+                li.history__numbered-subitem= data.rulesSecond[i]
+                  ul.history__nested-list
+                    - for(var i = 0; i < data.rulesThird.length; i++)
+                      li.history__nested-item= data.rulesThird[i]
+      != data.titleFifthDesc
+      ul.history__list
+        each item in data.photoBanks
+          li.history__item
+            a.history__list-link(href="#")= item
+
+      .history__male
+          |  Контакты для СМИ: <a href="media@culturalforum.ru">media@culturalforum.ru</a>
+    +social

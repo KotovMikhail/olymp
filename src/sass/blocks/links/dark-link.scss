@@ -1,0 +1,20 @@
+.dark-link {
+  display: block;
+  padding: 15px;
+  text-align: center;
+
+  font-size: 22px;
+  color: $white-color;
+
+  background-color: $dark-blue-color;
+
+  transition: 0.2s;
+  &:hover,
+  &:focus {
+    background-color: $putty-color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

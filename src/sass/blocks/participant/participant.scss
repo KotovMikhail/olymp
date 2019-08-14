@@ -1,0 +1,49 @@
+.participant {
+  padding-bottom: 265px;
+
+  @include mobile {
+    padding-bottom: 100px;
+  }
+}
+
+.participant__participant-page-header {
+  margin-bottom: 66px;
+
+  @include mobile {
+    margin-bottom: 41px;
+  }
+}
+
+.participant__social {
+  margin-top: auto;
+}
+
+.participant__info {
+  margin-bottom: 128px;
+
+  font-size: 22px;
+  line-height: 1.47;
+  color: $putty-color;
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+
+  @include mobile-s {
+    font-size: 16px;
+  }
+}
+
+.participant__related-events {
+  margin-bottom: 73px;
+
+  @include mobile {
+    margin-bottom: 11px;
+  }
+}

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Театральная олимпиада 2019 | Главная
+    </title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/svgxuse.min.js" async defer></script>
+  </head>
+  <body>
+    <div class="overflowWrap">
+      <header class="header header--black">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Театральная олимпиада 2019">
+            <svg width="120" height="143" aria-hidden="true">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg></a><a class="header__monogram" href="#" aria-label="Год театра в России">
+            <svg class="header__monogram-color" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram.svg#monogram"></use>
+            </svg>
+            <svg class="header__monogram-white" width="90" height="71" aria-hidden="true">
+              <use xlink:href="img/logo-monogram-white.svg#monogram"></use>
+            </svg></a>
+          <div class="header__content">
+            <button class="header__close" type="button" aria-label="Закрыть меню">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav__pages">
+                <li class="nav__pages-item nav__pages-item--with-sub">
+                  <input class="nav__pages-checkbox visually-hidden" type="checkbox" id="0" tabindex="0"/>
+                  <label class="nav__pages-link nav__pages-link--with-sub" for="0">Олимпиада</label>
+                  <ul class="nav__sub-pages">
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="about.html">О проекте</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="comitet.html">Международный комитет</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="platforms.html">Площадки</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="#">Пресс-центр</a></li>
+                    <li class="nav__sub-pages-item"><a class="nav__sub-pages-link" href="gallery.html">Галерея</a></li>
+                  </ul>
+                </li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="news.html">Новости</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="playbill.html">Афиша</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="people.html">Участники</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="partners.html">Партнеры</a></li>
+                <li class="nav__pages-item"><a class="nav__pages-link" href="contacts.html">Контакты</a></li>
+              </ul><a class="nav__search-btn search-btn" href="#" aria-label="Открыть поиск">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+                </svg></a>
+              <div class="nav__user"><a class="nav__user-btn nav__user-btn--login" href="#"><span class="nav__user-text">регистрация</span></a>
+              </div>
+              <form class="user-form login" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="login-email" name="login-email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="login-password" name="login-password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="login-password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Войти</button><a class="user-form__recovery" href="lk-reset-password.html">Забыли пароль?</a><a class="user-form__register" href="#">Зарегистрироваться</a>
+              </form>
+              <form class="user-form registration" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="name" name="name" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="name">Имя</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="text" id="surname" name="surname" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="surname">Фамилия</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="password" id="password" name="password" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="password">Пароль</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__part">
+                  <input class="user-form__consent-input" type="checkbox" id="consent" name="consent" required="required"/>
+                  <label class="user-form__consent-label" for="consent">
+                    Согласие на обработку персональных данных в соответствии с
+                    <a class="user-form__consent-link" href="#">пользовательским соглашением</a>
+                  </label><span class="invalid-text"></span>
+                </p>
+                <button class="user-form__btn" type="submit">Зарегистрироваться</button><a class="user-form__login" href="#">Уже зарегистрированы</a>
+              </form>
+              <form class="user-form recovery" action="#">
+                <button class="user-form__close" type="button" aria-label="Открыть меню">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <p class="user-form__part">
+                  <input class="user-form__input" type="email" id="recovery-email" name="email" placeholder=" " required="required"/>
+                  <label class="user-form__label" for="recovery-email">E-mail</label><span class="invalid-text"></span>
+                </p>
+                <p class="user-form__recover-text">На данную почту вам придет письмо со ссылкой для восстановления пароля</p>
+                <button class="user-form__btn" type="submit">восстановить пароль</button>
+              </form>
+              <div class="nav__sub">
+                <ul class="nav__social">
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Instagram">
+                      <svg class="nav__social-icon" width="19" height="19" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Facebook">
+                      <svg class="nav__social-icon" width="8" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на VK">
+                      <svg class="nav__social-icon" width="20" height="11" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-vk"></use>
+                      </svg></a></li>
+                  <li class="nav__social-item"><a class="nav__social-link" href="#" aria-label="Наша страница на Youtube">
+                      <svg class="nav__social-icon" width="23" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite/sprite.svg#icon-youtube"></use>
+                      </svg></a></li>
+                </ul><a class="nav__lang" href="#" aria-label="Read in English">eng</a>
+              </div>
+            </nav>
+          </div>
+          <form class="search" method="get" action="#">
+            <button class="search__close" type="button" aria-label="Закрыть поиск">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="search__wrapper">
+              <svg class="search__icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+              </svg>
+              <input class="search__input" type="search" id="search" name="search" aria-label="Поиск по сайту"/>
+            </div>
+          </form><a class="header__search-btn search-btn" href="#" aria-label="Открыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
+            </svg></a>
+          <button class="header__burger" type="button" aria-label="Открыть меню">
+            <svg width="30" height="22" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <div class="main-title">
+          <div class="main-title__wrapper carousel">
+            <ul class="main-title__carousel carousel__wrapper" aria-hidden="true">
+              <li class="main-title__carousel-item carousel__item">
+                <div class="main-title__image-container">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/main/header-1-m.jpg"><img class="main-title__image" width="1400" height="750" src="img/main/header-1.jpg" srcset="img/main/header-1@2x.jpg 2x" alt="Крассивые кадры">
+                  </picture>
+                </div>
+              </li>
+              <li class="main-title__carousel-item carousel__item">
+                <div class="main-title__image-container">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/main/header-2-m.jpg"><img class="main-title__image" width="1400" height="750" src="img/main/header-2.jpg" srcset="img/main/header-2@2x.jpg 2x" alt="Крассивые кадры">
+                  </picture>
+                </div>
+              </li>
+              <li class="main-title__carousel-item carousel__item">
+                <div class="main-title__image-container">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/main/header-3-m.jpg"><img class="main-title__image" width="1400" height="750" src="img/main/header-3.jpg" srcset="img/main/header-3@2x.jpg 2x" alt="Крассивые кадры">
+                  </picture>
+                </div>
+              </li>
+            </ul>
+            <div class="main-title__text">
+              <ul class="carousel-btns main-title__btns" aria-hidden="true">
+                <li class="carousel-btns__item">
+                  <button class="carousel-btns__btn carousel-btns__btn--prev carousel-btns__btn--disabled" type="button" title="Предыдущее"></button>
+                </li>
+                <li class="carousel-btns__item">
+                  <button class="carousel-btns__btn carousel-btns__btn--next" type="button" title="Следующее"></button>
+                </li>
+              </ul>
+              <h1 class="main-title__name">Театральная<br>олимпиада</h1><span class="main-title__age">20</span><span class="main-title__year">19</span>
+            </div>
+          </div>
+        </div>
+        <section class="main-section carousel">
+          <h2 class="main-section__title"><a class="main-section__title-link" href="playbill.html">Афиша</a></h2>
+          <div class="main-section__wrapper">
+            <div class="main-section__head"><a class="main-section__all-link" href="playbill.html">Все</a>
+              <ul class="carousel-btns" aria-hidden="true">
+                <li class="carousel-btns__item">
+                  <button class="carousel-btns__btn carousel-btns__btn--prev carousel-btns__btn--disabled" type="button" title="Предыдущее"></button>
+                </li>
+                <li class="carousel-btns__item">
+                  <button class="carousel-btns__btn carousel-btns__btn--next" type="button" title="Следующее"></button>
+                </li>
+              </ul>
+            </div>
+            <ul class="carousel__wrapper">
+              <li class="main-section__item carousel__item">
+                <article class="card main-section__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Мать</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-1.jpg" srcset="img/afisha/afisha-1@2x.jpg 2x" alt="Мать" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">11 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                          <div class="card__program"><span>золотая маска</span></div><span class="card__age">14+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Cпектакль</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Габриэла Карризо</span><span class="card__from">Брюссель, Бельгия</span><a class="card__place" href="one-place.html">Новая сцена Александринского театра</a>
+                </article>
+              </li>
+              <li class="main-section__item carousel__item">
+                <article class="card main-section__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Все, что произошло и могло произойти</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-2.jpg" srcset="img/afisha/afisha-2@2x.jpg 2x" alt="Все, что произошло и могло произойти" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">10 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                          <div class="card__program"><span>Программа Международного комитета  Театральной олимпиады-2019</span></div><span class="card__age">12+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Балет</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Хайнер Гёббельс</span><span class="card__from">Манчестер, UK</span><a class="card__place" href="one-place.html">Artplay</a>
+                </article>
+              </li>
+              <li class="main-section__item carousel__item">
+                <article class="card main-section__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Трагедия мщения</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-5.jpg" srcset="img/afisha/afisha-5@2x.jpg 2x" alt="Трагедия мщения" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">11 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                          <div class="card__program"><span>net</span></div><span class="card__age">18+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Cпектакль</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Деклан Доннелан</span><span class="card__from">Театр Пикколо, Милан, Италия</span><a class="card__place" href="one-place.html">Александринский театр. Основная сцена</a>
+                </article>
+              </li>
+              <li class="main-section__item carousel__item">
+                <article class="card main-section__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Карусель</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-3.jpg" srcset="img/afisha/afisha-3@2x.jpg 2x" alt="Карусель" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">11 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                          <div class="card__program"><span>net</span></div><span class="card__age">18+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Cпектакль</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Андрей Щербан</span><span class="card__from">Театр Буландра, Бухарест, Румыния</span><a class="card__place" href="one-place.html">Молодёжный театр на Фонтанке</a>
+                </article>
+              </li>
+              <li class="main-section__item carousel__item">
+                <article class="card main-section__events-card card--events"><a class="card__link" href="event.html">
+                    <h3 class="card__title"><span>Песочный человек</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/afisha/afisha-4.jpg" srcset="img/afisha/afisha-4@2x.jpg 2x" alt="Песочный человек" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when"><span class="card__date">12 — 06</span><span class="card__time">17:00</span>
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom"><span class="card__age">18+</span>
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star"><span class="card__type">Опера</span>
+                    <button class="button-star card-tile__button-star" type="button" aria-label="Добавить в избранное" title="Добавить в избранное">
+                      <svg>
+                        <use xlink:href="img/sprite/sprite.svg#icon-star"></use><span class="button-star__hint">добавить в избранное</span>
+                      </svg>
+                    </button>
+                  </div><span class="card__author">Роберт Уилсон</span><span class="card__from">Театр Буландра, Бухарест, Румыния</span><a class="card__place" href="one-place.html">Театр-фестиваль «Балтийский дом»</a>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="main-section carousel">
+          <h2 class="main-section__title"><a class="main-section__title-link" herf="news.html">Новости</a></h2>
+          <div class="main-section__wrapper">
+            <div class="main-section__head"><a class="main-section__all-link" href="news.html">Все</a>
+              <ul class="carousel-btns" aria-hidden="true">
+                <li class="carousel-btns__item">
+                  <button class="carousel-btns__btn carousel-btns__btn--prev carousel-btns__btn--disabled" type="button" title="Предыдущее"></button>
+                </li>
+                <li class="carousel-btns__item">
+                  <button class="carousel-btns__btn carousel-btns__btn--next" type="button" title="Следующее"></button>
+                </li>
+              </ul>
+            </div>
+            <ul class="carousel__wrapper">
+              <li class="main-section__item carousel__item">
+                <article class="card main-section__news-card"><a class="card__link" href="one-news.html">
+                    <h3 class="card__title"><span>Сотрудничество между российскими и зарубежными культурными институтами обсудили в Сочи</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/news/news-1.jpg" srcset="img/news/news-1@2x.jpg 2x" alt="Сотрудничество между российскими и зарубежными культурными институтами обсудили в Сочи" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star">
+                  </div>
+                  <p class="card__desc">Совместно с Форумом в рамках XII Зимнего международного фестиваля искусств прошли конференция и выставка</p>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="main-section__item carousel__item">
+                <article class="card main-section__news-card"><a class="card__link" href="one-news.html">
+                    <h3 class="card__title"><span>Определены даты Санкт-Петербургского международного культурного форума на ближайшие три года</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/news/news-3.jpg" srcset="img/news/news-3@2x.jpg 2x" alt="Определены даты Санкт-Петербургского международного культурного форума на ближайшие три года" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star">
+                  </div>
+                  <p class="card__desc">Форум пройдет с 14 по 16 ноября 2019 года, с 12 по 14 ноября 2020-го, с 11 по 13 ноября 2021-го.</p>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="main-section__item carousel__item">
+                <article class="card main-section__news-card"><a class="card__link" href="one-news.html">
+                    <h3 class="card__title"><span>Культурные планы</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/news/news-4.jpg" srcset="img/news/news-4@2x.jpg 2x" alt="Культурные планы" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star">
+                  </div>
+                  <p class="card__desc">Шемякин и дзен, частушки и рэп-баттлы, итальянская и японская киноклассика, Бах и Моцарт — события, которые мы рекомендуем посетить в ближайшие две недели в Санкт-Петербурге.</p>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="main-section__item carousel__item">
+                <article class="card main-section__news-card"><a class="card__link" href="one-news.html">
+                    <h3 class="card__title"><span>Всероссийский театральный марафон открылся на Приморской сцене Мариинского театра</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/news/news-5.jpg" srcset="img/news/news-5@2x.jpg 2x" alt="Всероссийский театральный марафон открылся на Приморской сцене Мариинского театра" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star">
+                  </div>
+                  <p class="card__desc">Старт марафону дала 18 января постановка «Спящая красавица».</p>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="subscription" action="#">
+          <div class="subscription__wrapper">
+            <h2 class="subscription__title">Регистрация</h2>
+            <div class="subscription__field">
+              <div class="subscription__label">Зарегистрируйтесь, чтобы первыми узнавать о полезных новостях и билетах на спектакли. Вы сможете формировать свой календарь событий, регистрироваться на образовательные мероприятия и получать напоминания</div><a class="subscription__btn" href="#">регистрация</a>
+            </div>
+          </div>
+        </div>
+        <section class="main-gallery carousel">
+          <div class="main-gallery__head">
+            <h2 class="main-gallery__title"><a class="main-gallery__title-link" href="gallery.html">Галерея</a></h2>
+            <ul class="carousel-btns main-gallery__btns" aria-hidden="true">
+              <li class="carousel-btns__item">
+                <button class="carousel-btns__btn carousel-btns__btn--prev carousel-btns__btn--disabled" type="button" title="Предыдущее"></button>
+              </li>
+              <li class="carousel-btns__item">
+                <button class="carousel-btns__btn carousel-btns__btn--next" type="button" title="Следующее"></button>
+              </li>
+            </ul><a class="main-gallery__all-link" href="gallery.html">Все</a>
+          </div>
+          <div class="main-gallery__carousel">
+            <ul class="main-gallery__carousel-wrapper carousel__wrapper">
+              <li class="main-gallery__item carousel__item main-gallery__item--big">
+                <article class="card"><a class="card__link">
+                    <h3 class="card__title"><span>Театр классического балета дебютирует на лучших сценах Москвы</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/news/news-1.jpg" srcset="img/news/news-1@2x.jpg 2x" alt="Театр классического балета дебютирует на лучших сценах Москвы" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star">
+                  </div>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="main-gallery__item carousel__item main-gallery__item--small">
+                <article class="card"><a class="card__link">
+                    <h3 class="card__title"><span>Опасная жалость</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/news/news-3.jpg" srcset="img/news/news-3@2x.jpg 2x" alt="Опасная жалость" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star">
+                  </div>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="main-gallery__item carousel__item main-gallery__item--small">
+                <article class="card"><a class="card__link">
+                    <h3 class="card__title"><span>Love Circle</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/news/news-4.jpg" srcset="img/news/news-4@2x.jpg 2x" alt="Love Circle" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star">
+                  </div>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="main-gallery__item carousel__item main-gallery__item--big">
+                <article class="card"><a class="card__link">
+                    <h3 class="card__title"><span>Театр классического балета дебютирует на лучших сценах Москвы</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/news/news-5.jpg" srcset="img/news/news-5@2x.jpg 2x" alt="Театр классического балета дебютирует на лучших сценах Москвы" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star">
+                  </div>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="main-gallery__item carousel__item main-gallery__item--small">
+                <article class="card"><a class="card__link">
+                    <h3 class="card__title"><span>Опасная жалость</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/news/news-6.jpg" srcset="img/news/news-6@2x.jpg 2x" alt="Опасная жалость" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star">
+                  </div>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+              <li class="main-gallery__item carousel__item main-gallery__item--small">
+                <article class="card"><a class="card__link">
+                    <h3 class="card__title"><span>Love Circle</span></h3>
+                    <div class="card__wrapper"><img class="card__image" src="img/news/news-7.jpg" srcset="img/news/news-7@2x.jpg 2x" alt="Love Circle" rel="nofollow"/>
+                      <div class="card__overlay">
+                        <div class="card__overlay-top">
+                          <div class="card__when">
+                          </div>
+                        </div>
+                        <div class="card__overlay-bottom">
+                        </div>
+                      </div>
+                    </div></a>
+                  <div class="card__star">
+                  </div>
+                  <time class="card__publish-data" datetime="2019-06-19">19—06—2019</time>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="main-banner"><a class="main-banner__link" href="#"><img class="main-banner__image" src="img/main/header-2.jpg" srcset="img/main/header-2@2x.jpg 2x" alt="Банер"></a></div>
+        <section class="main-partners">
+          <h2 class="main-partners__title">Генеральные<br>партнеры</h2>
+          <ul class="main-partners__list">
+            <li class="main-partners__item"><a class="main-partners__link" href="#" title="Риа новости"><img class="main-partners__image" width="142" height="35" src="img/partners/ria.png" srcset="img/partners/ria@2x.png 2x" alt="Риа новости"></a></li>
+            <li class="main-partners__item"><a class="main-partners__link" href="#" title="Телеканал Культура"><img class="main-partners__image" width="153" height="35" src="img/partners/kultyra.png" srcset="img/partners/kultyra@2x.png 2x" alt="Телеканал Культура"></a></li>
+            <li class="main-partners__item"><a class="main-partners__link" href="#" title="ТАСС"><img class="main-partners__image" width="62" height="80" src="img/partners/tass.png" srcset="img/partners/tass@2x.png 2x" alt="ТАСС"></a></li>
+            <li class="main-partners__item"><a class="main-partners__link" href="#" title="Radio Monte Carlo"><img class="main-partners__image" width="130" height="77" src="img/partners/montecarlo.png" srcset="img/partners/montecarlo@2x.png 2x" alt="Radio Monte Carlo"></a></li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer"><span class="footer__rights">ⓒ All rights reserved.</span><a class="footer__link" href="#">Политика конфиденциальности</a><span class="footer__credits">разработка<a href="#">
+            <svg width="70" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite/sprite.svg#greenlabs"></use>
+            </svg><span class="visually-hidden">Greenlabs</span></a></span></footer>
+    </div>
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/formdata.min.js"></script>
+    <script src="libs/ofi.min.js"></script>
+    <script src="libs/nice-select/nice-select.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

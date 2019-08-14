@@ -1,0 +1,3 @@
+mixin pageTitle(title, className)
+  .page-title(class=className ? `${className}__title` : '')
+    h1.page-title__wrapper(class=className ? `${className}__title-wrapper` : '')!= title

@@ -1,0 +1,5 @@
+mixin filter-select(data, className)
+  select.filter-select.filter-select--forever(class=`${className}__filter-select` name=data.name multiple id=data.name)
+    option.visually-hidden(value='select-title' selected disabled)= data.value
+    each item in data.options
+      option(value=item.value)= item.name

@@ -1,0 +1,22 @@
+extends layouts/_layout
+
+block main
+  .container
+    .history__content
+      ol.history__numbered-list
+        li.history__numbered-item= data.aboutUs[0].rulesFirst[0]
+          ol.history__numbered-sublist
+            - for(var i = 1; i < data.aboutUs[0].rulesFirst.length; i++)
+                li.history__numbered-subitem= data.aboutUs[0].rulesFirst[i]
+        li.history__numbered-item= data.aboutUs[0].rulesSecond[0]
+          ol.history__numbered-sublist
+            - for(var i = 1; i < data.aboutUs[0].rulesSecond.length; i++)
+                li.history__numbered-subitem= data.aboutUs[0].rulesSecond[i]
+                  ul.history__nested-list
+                    - for(var i = 0; i < data.aboutUs[0].rulesThird.length; i++)
+                      li.history__nested-item= data.aboutUs[0].rulesThird[i]
+    != data.aboutUs[0].titleFifthDesc
+    ul.history__list
+      each item in data.aboutUs[0].photoBanks
+        li.history__item
+          a.history__list-link(href="#")= item

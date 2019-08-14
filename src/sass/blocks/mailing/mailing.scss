@@ -1,0 +1,173 @@
+.mailing {
+  width: 100%;
+  min-height: 250px;
+
+  color: $putty-color;
+
+  background-color: $pampas-color;
+
+  @include mobile {
+    min-height: 208px;
+  }
+}
+
+.mailing__container {
+  position: relative;
+
+  padding: 49px 170px;
+
+  @include tablet {
+    padding-left: 100px;
+    padding-right: 30px;
+  }
+
+  @include mobile {
+    padding: 19px;
+    padding-left: 57px;
+    padding-top: 15px;
+  }
+}
+
+.mailing__title {
+  position: absolute;
+  left: 31px;
+
+  margin-top: 28px;
+
+  font-weight: normal;
+  font-size: 24px;
+
+  transform: rotate(-90deg);
+  transform-origin: 50% 100%;
+
+  @media (max-width: $media-tb) {
+    left: 2px;
+
+    margin-top: 40px;
+
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+}
+
+.mailing__description {
+  margin: 0;
+  margin-bottom: 43px;
+
+  font-weight: normal;
+  font-size: 18px;
+  color: $putty-color;
+}
+
+.mailing__form {
+  width: 724px;
+}
+
+.mailing__field {
+  flex-grow: 1;
+  padding: 0;
+  padding-top: 8px;
+
+  border: none;
+
+  @media (max-width: $media-tb) {
+    padding: 20px 0 5px 21px;
+  }
+}
+
+.mailing__label {
+  display: block;
+  margin-bottom: 23px;
+
+  font-size: 17px;
+  color: $putty-color;
+  letter-spacing: 0.5px;
+  border-radius: none;
+
+  @media (max-width: $media-tb) {
+    margin-bottom: 7px;
+
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+}
+
+.mailing__strip {
+  width: 724px;
+  height: 2px;
+  background-color: $putty-color;
+  margin-bottom: 37px;
+  transition: 0.2s;
+
+  @include tablet {
+    width: 655px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.mailing__input {
+  @include placeholder;
+  position: relative;
+  width: 724px;
+  padding: 22px 0;
+  padding-right: 115px;
+
+  font-size: 17px;
+  color: $putty-color;
+  letter-spacing: 0.4px;
+
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: none;
+
+  &:hover,
+  &:focus {
+    & + .mailing__strip {
+      background-color: $dark-blue-color;
+    }
+  }
+
+  @include tablet {
+    width: 655px;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 11px 0;
+  }
+}
+
+.mailing__submit {
+  position: absolute;
+  bottom: 106px;
+  left: 787px;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: lowercase;
+  border: none;
+  background: none;
+  color: $dark-blue-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $putty-color;
+  }
+
+  @include tablet {
+    left: 651px;
+  }
+
+  @media (max-width: $media-tb) {
+    right: 20px;
+    left: auto;
+    bottom: 16px;
+  }
+}
